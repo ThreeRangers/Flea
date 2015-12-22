@@ -1,10 +1,4 @@
-//
-//  ViewController.swift
-//  PinterestSwift
-//
-//  Created by Nicholas Tau on 6/30/14.
-//  Copyright (c) 2014 Nicholas Tau. All rights reserved.
-//
+
 
 import UIKit
 
@@ -18,18 +12,14 @@ class NavigationControllerDelegate: NSObject, UINavigationControllerDelegate{
     }
 }
 
-class NTWaterfallViewController:UICollectionViewController,CHTCollectionViewDelegateWaterfallLayout, NTTransitionProtocol, NTWaterFallViewControllerProtocol{
-//    class var sharedInstance: NSInteger = 0 Are u kidding me?
+class MarketPlaceViewController:UICollectionViewController,CHTCollectionViewDelegateWaterfallLayout, NTTransitionProtocol, NTWaterFallViewControllerProtocol{
+
     var imageNameList : Array <NSString> = []
     let delegateHolder = NavigationControllerDelegate()
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        self.navigationController!.delegate = delegateHolder
-        self.view.backgroundColor = UIColor.yellowColor()
-        
+    
+    func loadData() {
         var index = 0
-        while(index<14){
+        while(index<9){
             let imageName = NSString(format: "%d.jpg", index)
             imageNameList.append(imageName)
             index++
@@ -39,34 +29,17 @@ class NTWaterfallViewController:UICollectionViewController,CHTCollectionViewDele
         collection.frame = screenBounds
         collection.setCollectionViewLayout(CHTCollectionViewWaterfallLayout(), animated: false)
         collection.backgroundColor = UIColor.grayColor()
-        collection.registerClass(NTWaterfallViewCell.self, forCellWithReuseIdentifier: waterfallViewCellIdentify)
+        collection.registerClass(MarketViewCell.self, forCellWithReuseIdentifier: waterfallViewCellIdentify)
         collection.reloadData()
-
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize{
-        let image:UIImage! = UIImage(named: self.imageNameList[indexPath.row] as String)
-        let imageHeight = image.size.height*gridWidth/image.size.width
-        return CGSizeMake(gridWidth, imageHeight)
-    }
-    
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
-        let collectionCell: NTWaterfallViewCell = collectionView.dequeueReusableCellWithReuseIdentifier(waterfallViewCellIdentify, forIndexPath: indexPath) as! NTWaterfallViewCell
-        collectionCell.imageName = self.imageNameList[indexPath.row] as String
-        collectionCell.setNeedsLayout()
-        return collectionCell;
-    }
-    
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
-        return imageNameList.count;
-    }
-    
-    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath){
-        let pageViewController =
-        NTHorizontalPageViewController(collectionViewLayout: pageViewControllerLayout(), currentIndexPath:indexPath)
-        pageViewController.imageNameList = imageNameList
-        collectionView.setToIndexPath(indexPath)
-        navigationController!.pushViewController(pageViewController, animated: true)
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        self.navigationController!.delegate = delegateHolder
+        self.view.backgroundColor = UIColor.yellowColor()
+       
+        loadData()
     }
     
     func pageViewControllerLayout () -> UICollectionViewFlowLayout {
@@ -97,16 +70,39 @@ class NTWaterfallViewController:UICollectionViewController,CHTCollectionViewDele
             collectionView.scrollToItemAtIndexPath(currentIndexPath, atScrollPosition: position, animated: false)
         }
     }
+}
+
+
+
+extension MarketPlaceViewController {
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize{
+        let image:UIImage! = UIImage(named: self.imageNameList[indexPath.row] as String)
+        
+        let imageHeight = image.size.height * gridWidth/image.size.width
+        return CGSizeMake(gridWidth, imageHeight)
+    }
+    
+    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
+        let collectionCell: MarketViewCell = collectionView.dequeueReusableCellWithReuseIdentifier(waterfallViewCellIdentify, forIndexPath: indexPath) as! MarketViewCell
+        collectionCell.imageName = self.imageNameList[indexPath.row] as String
+        collectionCell.setNeedsLayout()
+        return collectionCell;
+    }
+    
+    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
+        return imageNameList.count;
+    }
+    
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath){
+        let pageViewController =
+        VendorViewController(collectionViewLayout: pageViewControllerLayout(), currentIndexPath:indexPath)
+        pageViewController.imageNameList = imageNameList
+        collectionView.setToIndexPath(indexPath)
+        navigationController!.pushViewController(pageViewController, animated: true)
+    }
     
     func transitionCollectionView() -> UICollectionView!{
         return collectionView
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 

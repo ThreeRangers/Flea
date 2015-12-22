@@ -21,6 +21,6 @@ import UIKit
     func viewWillAppearWithPageIndex(pageIndex : NSInteger)
 }
 
-@objc protocol NTHorizontalPageViewControllerProtocol : NTTransitionProtocol{
+@objc protocol VendorControllerProtocol : NTTransitionProtocol{
     func pageViewCellScrollViewContentOffset() -> CGPoint
 }

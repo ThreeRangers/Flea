@@ -23,13 +23,24 @@
 		BA5F53C61C255FD90071EB3F /* CHTCollectionViewWaterfallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5F53BC1C255FD90071EB3F /* CHTCollectionViewWaterfallLayout.swift */; };
 		BA5F53C71C255FD90071EB3F /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5F53BD1C255FD90071EB3F /* Extension.swift */; };
 		BA5F53C81C255FD90071EB3F /* Macro.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5F53BE1C255FD90071EB3F /* Macro.swift */; };
-		BA5F53C91C255FD90071EB3F /* NTHorizontalPageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5F53BF1C255FD90071EB3F /* NTHorizontalPageViewCell.swift */; };
-		BA5F53CA1C255FD90071EB3F /* NTHorizontalPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5F53C01C255FD90071EB3F /* NTHorizontalPageViewController.swift */; };
+		BA5F53C91C255FD90071EB3F /* VendorViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5F53BF1C255FD90071EB3F /* VendorViewCell.swift */; };
+		BA5F53CA1C255FD90071EB3F /* VendorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5F53C01C255FD90071EB3F /* VendorViewController.swift */; };
 		BA5F53CB1C255FD90071EB3F /* NTNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5F53C11C255FD90071EB3F /* NTNavigationController.swift */; };
 		BA5F53CC1C255FD90071EB3F /* NTTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5F53C21C255FD90071EB3F /* NTTransition.swift */; };
 		BA5F53CD1C255FD90071EB3F /* NTTransitionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5F53C31C255FD90071EB3F /* NTTransitionProtocol.swift */; };
-		BA5F53CE1C255FD90071EB3F /* NTWaterfallViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5F53C41C255FD90071EB3F /* NTWaterfallViewCell.swift */; };
-		BA5F53CF1C255FD90071EB3F /* NTWaterfallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5F53C51C255FD90071EB3F /* NTWaterfallViewController.swift */; };
+		BA5F53CE1C255FD90071EB3F /* MarketViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5F53C41C255FD90071EB3F /* MarketViewCell.swift */; };
+		BA5F53CF1C255FD90071EB3F /* MarketPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5F53C51C255FD90071EB3F /* MarketPlaceViewController.swift */; };
+		BAB6CC301C28698B0092FF21 /* 10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BAB6CC251C28698B0092FF21 /* 10.jpg */; };
+		BAB6CC311C28698B0092FF21 /* 9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BAB6CC261C28698B0092FF21 /* 9.jpg */; };
+		BAB6CC321C28698B0092FF21 /* 8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BAB6CC271C28698B0092FF21 /* 8.jpg */; };
+		BAB6CC331C28698B0092FF21 /* 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BAB6CC281C28698B0092FF21 /* 7.jpg */; };
+		BAB6CC341C28698B0092FF21 /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BAB6CC291C28698B0092FF21 /* 6.jpg */; };
+		BAB6CC351C28698B0092FF21 /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BAB6CC2A1C28698B0092FF21 /* 5.jpg */; };
+		BAB6CC361C28698B0092FF21 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BAB6CC2B1C28698B0092FF21 /* 4.jpg */; };
+		BAB6CC371C28698B0092FF21 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BAB6CC2C1C28698B0092FF21 /* 3.jpg */; };
+		BAB6CC381C28698B0092FF21 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BAB6CC2D1C28698B0092FF21 /* 2.jpg */; };
+		BAB6CC391C28698B0092FF21 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BAB6CC2E1C28698B0092FF21 /* 1.jpg */; };
+		BAB6CC3A1C28698B0092FF21 /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BAB6CC2F1C28698B0092FF21 /* 0.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,13 +85,24 @@
 		BA5F53BC1C255FD90071EB3F /* CHTCollectionViewWaterfallLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CHTCollectionViewWaterfallLayout.swift; path = Extensions/CHTCollectionViewWaterfallLayout.swift; sourceTree = "<group>"; };
 		BA5F53BD1C255FD90071EB3F /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extension.swift; path = Extensions/Extension.swift; sourceTree = "<group>"; };
 		BA5F53BE1C255FD90071EB3F /* Macro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Macro.swift; path = Extensions/Macro.swift; sourceTree = "<group>"; };
-		BA5F53BF1C255FD90071EB3F /* NTHorizontalPageViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NTHorizontalPageViewCell.swift; path = Extensions/NTHorizontalPageViewCell.swift; sourceTree = "<group>"; };
-		BA5F53C01C255FD90071EB3F /* NTHorizontalPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NTHorizontalPageViewController.swift; path = Extensions/NTHorizontalPageViewController.swift; sourceTree = "<group>"; };
+		BA5F53BF1C255FD90071EB3F /* VendorViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VendorViewCell.swift; path = Extensions/VendorViewCell.swift; sourceTree = "<group>"; };
+		BA5F53C01C255FD90071EB3F /* VendorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VendorViewController.swift; path = Extensions/VendorViewController.swift; sourceTree = "<group>"; };
 		BA5F53C11C255FD90071EB3F /* NTNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NTNavigationController.swift; path = Extensions/NTNavigationController.swift; sourceTree = "<group>"; };
 		BA5F53C21C255FD90071EB3F /* NTTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NTTransition.swift; path = Extensions/NTTransition.swift; sourceTree = "<group>"; };
 		BA5F53C31C255FD90071EB3F /* NTTransitionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NTTransitionProtocol.swift; path = Extensions/NTTransitionProtocol.swift; sourceTree = "<group>"; };
-		BA5F53C41C255FD90071EB3F /* NTWaterfallViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NTWaterfallViewCell.swift; path = Extensions/NTWaterfallViewCell.swift; sourceTree = "<group>"; };
-		BA5F53C51C255FD90071EB3F /* NTWaterfallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NTWaterfallViewController.swift; path = Extensions/NTWaterfallViewController.swift; sourceTree = "<group>"; };
+		BA5F53C41C255FD90071EB3F /* MarketViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MarketViewCell.swift; path = Extensions/MarketViewCell.swift; sourceTree = "<group>"; };
+		BA5F53C51C255FD90071EB3F /* MarketPlaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MarketPlaceViewController.swift; path = Extensions/MarketPlaceViewController.swift; sourceTree = "<group>"; };
+		BAB6CC251C28698B0092FF21 /* 10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 10.jpg; path = images/10.jpg; sourceTree = "<group>"; };
+		BAB6CC261C28698B0092FF21 /* 9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 9.jpg; path = images/9.jpg; sourceTree = "<group>"; };
+		BAB6CC271C28698B0092FF21 /* 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 8.jpg; path = images/8.jpg; sourceTree = "<group>"; };
+		BAB6CC281C28698B0092FF21 /* 7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 7.jpg; path = images/7.jpg; sourceTree = "<group>"; };
+		BAB6CC291C28698B0092FF21 /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 6.jpg; path = images/6.jpg; sourceTree = "<group>"; };
+		BAB6CC2A1C28698B0092FF21 /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 5.jpg; path = images/5.jpg; sourceTree = "<group>"; };
+		BAB6CC2B1C28698B0092FF21 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 4.jpg; path = images/4.jpg; sourceTree = "<group>"; };
+		BAB6CC2C1C28698B0092FF21 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 3.jpg; path = images/3.jpg; sourceTree = "<group>"; };
+		BAB6CC2D1C28698B0092FF21 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 2.jpg; path = images/2.jpg; sourceTree = "<group>"; };
+		BAB6CC2E1C28698B0092FF21 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 1.jpg; path = images/1.jpg; sourceTree = "<group>"; };
+		BAB6CC2F1C28698B0092FF21 /* 0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 0.jpg; path = images/0.jpg; sourceTree = "<group>"; };
 		FED34CB362B9056C5D26139F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,12 +168,12 @@
 		04F733B51C223E1B004A4D7A /* Flea */ = {
 			isa = PBXGroup;
 			children = (
+				BAB6CC241C2869610092FF21 /* images */,
 				045C9F301C25748B0005B278 /* Parse */,
 				BA5F53D51C2560B20071EB3F /* Modal */,
 				04F733B61C223E1B004A4D7A /* AppDelegate.swift */,
 				BA5F53D41C25602C0071EB3F /* Views */,
 				BA5F53D31C2560260071EB3F /* Controllers */,
-				BA5F53D21C25601C0071EB3F /* Cells */,
 				BA5F53D01C255FE40071EB3F /* Extensions */,
 				04F733BA1C223E1B004A4D7A /* Main.storyboard */,
 				04F733BD1C223E1B004A4D7A /* Assets.xcassets */,
@@ -221,21 +243,12 @@
 			name = Transition;
 			sourceTree = "<group>";
 		};
-		BA5F53D21C25601C0071EB3F /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				BA5F53BF1C255FD90071EB3F /* NTHorizontalPageViewCell.swift */,
-				BA5F53C41C255FD90071EB3F /* NTWaterfallViewCell.swift */,
-			);
-			name = Cells;
-			sourceTree = "<group>";
-		};
 		BA5F53D31C2560260071EB3F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				0409C33E1C2652EC0083AC53 /* LogInViewController.swift */,
-				BA5F53C01C255FD90071EB3F /* NTHorizontalPageViewController.swift */,
-				BA5F53C51C255FD90071EB3F /* NTWaterfallViewController.swift */,
+				BA5F53C01C255FD90071EB3F /* VendorViewController.swift */,
+				BA5F53C51C255FD90071EB3F /* MarketPlaceViewController.swift */,
 				04F733B81C223E1B004A4D7A /* AddingShopViewController.swift */,
 			);
 			name = Controllers;
@@ -244,6 +257,8 @@
 		BA5F53D41C25602C0071EB3F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BA5F53C41C255FD90071EB3F /* MarketViewCell.swift */,
+				BA5F53BF1C255FD90071EB3F /* VendorViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -253,6 +268,24 @@
 			children = (
 			);
 			name = Modal;
+			sourceTree = "<group>";
+		};
+		BAB6CC241C2869610092FF21 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				BAB6CC251C28698B0092FF21 /* 10.jpg */,
+				BAB6CC261C28698B0092FF21 /* 9.jpg */,
+				BAB6CC271C28698B0092FF21 /* 8.jpg */,
+				BAB6CC281C28698B0092FF21 /* 7.jpg */,
+				BAB6CC291C28698B0092FF21 /* 6.jpg */,
+				BAB6CC2A1C28698B0092FF21 /* 5.jpg */,
+				BAB6CC2B1C28698B0092FF21 /* 4.jpg */,
+				BAB6CC2C1C28698B0092FF21 /* 3.jpg */,
+				BAB6CC2D1C28698B0092FF21 /* 2.jpg */,
+				BAB6CC2E1C28698B0092FF21 /* 1.jpg */,
+				BAB6CC2F1C28698B0092FF21 /* 0.jpg */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,8 +398,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAB6CC371C28698B0092FF21 /* 3.jpg in Resources */,
+				BAB6CC391C28698B0092FF21 /* 1.jpg in Resources */,
+				BAB6CC321C28698B0092FF21 /* 8.jpg in Resources */,
 				04F733C11C223E1B004A4D7A /* LaunchScreen.storyboard in Resources */,
+				BAB6CC341C28698B0092FF21 /* 6.jpg in Resources */,
+				BAB6CC351C28698B0092FF21 /* 5.jpg in Resources */,
 				04F733BE1C223E1B004A4D7A /* Assets.xcassets in Resources */,
+				BAB6CC381C28698B0092FF21 /* 2.jpg in Resources */,
+				BAB6CC331C28698B0092FF21 /* 7.jpg in Resources */,
+				BAB6CC301C28698B0092FF21 /* 10.jpg in Resources */,
+				BAB6CC3A1C28698B0092FF21 /* 0.jpg in Resources */,
+				BAB6CC311C28698B0092FF21 /* 9.jpg in Resources */,
+				BAB6CC361C28698B0092FF21 /* 4.jpg in Resources */,
 				04F733BC1C223E1B004A4D7A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,15 +487,15 @@
 				04F733B91C223E1B004A4D7A /* AddingShopViewController.swift in Sources */,
 				04F733B71C223E1B004A4D7A /* AppDelegate.swift in Sources */,
 				BA5F53CC1C255FD90071EB3F /* NTTransition.swift in Sources */,
-				BA5F53CA1C255FD90071EB3F /* NTHorizontalPageViewController.swift in Sources */,
+				BA5F53CA1C255FD90071EB3F /* VendorViewController.swift in Sources */,
 				BA5F53C61C255FD90071EB3F /* CHTCollectionViewWaterfallLayout.swift in Sources */,
-				BA5F53C91C255FD90071EB3F /* NTHorizontalPageViewCell.swift in Sources */,
+				BA5F53C91C255FD90071EB3F /* VendorViewCell.swift in Sources */,
 				045C9F341C25754A0005B278 /* ParseInterface.swift in Sources */,
 				BA5F53CD1C255FD90071EB3F /* NTTransitionProtocol.swift in Sources */,
-				BA5F53CE1C255FD90071EB3F /* NTWaterfallViewCell.swift in Sources */,
+				BA5F53CE1C255FD90071EB3F /* MarketViewCell.swift in Sources */,
 				BA5F53CB1C255FD90071EB3F /* NTNavigationController.swift in Sources */,
 				0409C33F1C2652EC0083AC53 /* LogInViewController.swift in Sources */,
-				BA5F53CF1C255FD90071EB3F /* NTWaterfallViewController.swift in Sources */,
+				BA5F53CF1C255FD90071EB3F /* MarketPlaceViewController.swift in Sources */,
 				BA5F53C71C255FD90071EB3F /* Extension.swift in Sources */,
 				BA5F53C81C255FD90071EB3F /* Macro.swift in Sources */,
 			);

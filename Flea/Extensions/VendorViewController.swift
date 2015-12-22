@@ -1,17 +1,10 @@
-//
-//  NTHorizontalPageViewController.swift
-//  PinterestSwift
-//
-//  Created by Nicholas Tau on 7/1/14.
-//  Copyright (c) 2014 Nicholas Tau. All rights reserved.
-//
 
 import Foundation
 import UIKit
 
 let horizontalPageViewCellIdentify = "horizontalPageViewCellIdentify"
 
-class NTHorizontalPageViewController : UICollectionViewController, NTTransitionProtocol ,NTHorizontalPageViewControllerProtocol{
+class VendorViewController : UICollectionViewController, NTTransitionProtocol , VendorControllerProtocol{
     
     var imageNameList : Array <NSString> = []
     var pullOffset = CGPointZero
@@ -20,7 +13,7 @@ class NTHorizontalPageViewController : UICollectionViewController, NTTransitionP
         super.init(collectionViewLayout:layout)
         let collectionView :UICollectionView = self.collectionView!;
         collectionView.pagingEnabled = true
-        collectionView.registerClass(NTHorizontalPageViewCell.self, forCellWithReuseIdentifier: horizontalPageViewCellIdentify)
+        collectionView.registerClass(VendorViewCell.self, forCellWithReuseIdentifier: horizontalPageViewCellIdentify)
         collectionView.setToIndexPath(indexPath)
         collectionView.performBatchUpdates({collectionView.reloadData()}, completion: { finished in
             if finished {
@@ -37,7 +30,7 @@ class NTHorizontalPageViewController : UICollectionViewController, NTTransitionP
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
-        let collectionCell: NTHorizontalPageViewCell = collectionView.dequeueReusableCellWithReuseIdentifier(horizontalPageViewCellIdentify, forIndexPath: indexPath) as! NTHorizontalPageViewCell
+        let collectionCell: VendorViewCell = collectionView.dequeueReusableCellWithReuseIdentifier(horizontalPageViewCellIdentify, forIndexPath: indexPath) as! VendorViewCell
         collectionCell.imageName = self.imageNameList[indexPath.row] as String
         collectionCell.tappedAction = {}
         collectionCell.pullAction = { offset in
