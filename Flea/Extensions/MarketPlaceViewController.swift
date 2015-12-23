@@ -2,7 +2,7 @@
 
 import UIKit
 
-let waterfallViewCellIdentify = "waterfallViewCellIdentify"
+let marketViewCellIdentify = "marketViewCellIdentify"
 
 class NavigationControllerDelegate: NSObject, UINavigationControllerDelegate{
     func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning?{
@@ -29,7 +29,7 @@ class MarketPlaceViewController:UICollectionViewController,CHTCollectionViewDele
         collection.frame = screenBounds
         collection.setCollectionViewLayout(CHTCollectionViewWaterfallLayout(), animated: false)
         collection.backgroundColor = UIColor.grayColor()
-        collection.registerClass(MarketViewCell.self, forCellWithReuseIdentifier: waterfallViewCellIdentify)
+        collection.registerClass(MarketViewCell.self, forCellWithReuseIdentifier: marketViewCellIdentify)
         collection.reloadData()
     }
     
@@ -58,7 +58,7 @@ class MarketPlaceViewController:UICollectionViewController,CHTCollectionViewDele
         UICollectionViewScrollPosition.CenteredHorizontally.intersect(.CenteredVertically)
         let image:UIImage! = UIImage(named: self.imageNameList[pageIndex] as String)
         let imageHeight = image.size.height*gridWidth/image.size.width
-        if imageHeight > 400 {//whatever you like, it's the max value for height of image
+        if imageHeight > 400 {
            position = .Top
         }
         let currentIndexPath = NSIndexPath(forRow: pageIndex, inSection: 0)
@@ -83,8 +83,10 @@ extension MarketPlaceViewController {
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
-        let collectionCell: MarketViewCell = collectionView.dequeueReusableCellWithReuseIdentifier(waterfallViewCellIdentify, forIndexPath: indexPath) as! MarketViewCell
+        let collectionCell: MarketViewCell = collectionView.dequeueReusableCellWithReuseIdentifier(marketViewCellIdentify, forIndexPath: indexPath) as! MarketViewCell
+        
         collectionCell.imageName = self.imageNameList[indexPath.row] as String
+        
         collectionCell.setNeedsLayout()
         return collectionCell;
     }

@@ -1,9 +1,23 @@
+//
+//  MarketViewCell.swift
+//  Flea
+//
+//  Created by minh on 12/23/15.
+//  Copyright © 2015 ThreeStrangers. All rights reserved.
+//
 
 
 import UIKit
 
 class MarketViewCell :UICollectionViewCell, NTTansitionWaterfallGridViewProtocol{
     var imageName : String?
+    
+    @IBOutlet weak var marketImage: UIImageView!
+    
+    @IBOutlet weak var startDateLabel: UILabel!
+    @IBOutlet weak var marketLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    
     
     var imageViewContent : UIImageView = UIImageView()
     

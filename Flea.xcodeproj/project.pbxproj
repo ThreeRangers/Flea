@@ -28,8 +28,8 @@
 		BA5F53CB1C255FD90071EB3F /* NTNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5F53C11C255FD90071EB3F /* NTNavigationController.swift */; };
 		BA5F53CC1C255FD90071EB3F /* NTTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5F53C21C255FD90071EB3F /* NTTransition.swift */; };
 		BA5F53CD1C255FD90071EB3F /* NTTransitionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5F53C31C255FD90071EB3F /* NTTransitionProtocol.swift */; };
-		BA5F53CE1C255FD90071EB3F /* MarketViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5F53C41C255FD90071EB3F /* MarketViewCell.swift */; };
 		BA5F53CF1C255FD90071EB3F /* MarketPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5F53C51C255FD90071EB3F /* MarketPlaceViewController.swift */; };
+		BA97ED2E1C2A5F91009B5548 /* MarketViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA97ED2D1C2A5F91009B5548 /* MarketViewCell.swift */; };
 		BAB6CC301C28698B0092FF21 /* 10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BAB6CC251C28698B0092FF21 /* 10.jpg */; };
 		BAB6CC311C28698B0092FF21 /* 9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BAB6CC261C28698B0092FF21 /* 9.jpg */; };
 		BAB6CC321C28698B0092FF21 /* 8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BAB6CC271C28698B0092FF21 /* 8.jpg */; };
@@ -90,8 +90,8 @@
 		BA5F53C11C255FD90071EB3F /* NTNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NTNavigationController.swift; path = Extensions/NTNavigationController.swift; sourceTree = "<group>"; };
 		BA5F53C21C255FD90071EB3F /* NTTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NTTransition.swift; path = Extensions/NTTransition.swift; sourceTree = "<group>"; };
 		BA5F53C31C255FD90071EB3F /* NTTransitionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NTTransitionProtocol.swift; path = Extensions/NTTransitionProtocol.swift; sourceTree = "<group>"; };
-		BA5F53C41C255FD90071EB3F /* MarketViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MarketViewCell.swift; path = Extensions/MarketViewCell.swift; sourceTree = "<group>"; };
 		BA5F53C51C255FD90071EB3F /* MarketPlaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MarketPlaceViewController.swift; path = Extensions/MarketPlaceViewController.swift; sourceTree = "<group>"; };
+		BA97ED2D1C2A5F91009B5548 /* MarketViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketViewCell.swift; sourceTree = "<group>"; };
 		BAB6CC251C28698B0092FF21 /* 10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 10.jpg; path = images/10.jpg; sourceTree = "<group>"; };
 		BAB6CC261C28698B0092FF21 /* 9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 9.jpg; path = images/9.jpg; sourceTree = "<group>"; };
 		BAB6CC271C28698B0092FF21 /* 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 8.jpg; path = images/8.jpg; sourceTree = "<group>"; };
@@ -257,8 +257,8 @@
 		BA5F53D41C25602C0071EB3F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BA5F53C41C255FD90071EB3F /* MarketViewCell.swift */,
 				BA5F53BF1C255FD90071EB3F /* VendorViewCell.swift */,
+				BA97ED2D1C2A5F91009B5548 /* MarketViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -492,11 +492,11 @@
 				BA5F53C91C255FD90071EB3F /* VendorViewCell.swift in Sources */,
 				045C9F341C25754A0005B278 /* ParseInterface.swift in Sources */,
 				BA5F53CD1C255FD90071EB3F /* NTTransitionProtocol.swift in Sources */,
-				BA5F53CE1C255FD90071EB3F /* MarketViewCell.swift in Sources */,
 				BA5F53CB1C255FD90071EB3F /* NTNavigationController.swift in Sources */,
 				0409C33F1C2652EC0083AC53 /* LogInViewController.swift in Sources */,
 				BA5F53CF1C255FD90071EB3F /* MarketPlaceViewController.swift in Sources */,
 				BA5F53C71C255FD90071EB3F /* Extension.swift in Sources */,
+				BA97ED2E1C2A5F91009B5548 /* MarketViewCell.swift in Sources */,
 				BA5F53C81C255FD90071EB3F /* Macro.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

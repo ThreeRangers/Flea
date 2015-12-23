@@ -2,7 +2,7 @@
 import Foundation
 import UIKit
 
-let horizontalPageViewCellIdentify = "horizontalPageViewCellIdentify"
+let VendorViewCellIdentify = "VendorViewCellIdentify"
 
 class VendorViewController : UICollectionViewController, NTTransitionProtocol , VendorControllerProtocol{
     
@@ -13,7 +13,7 @@ class VendorViewController : UICollectionViewController, NTTransitionProtocol , 
         super.init(collectionViewLayout:layout)
         let collectionView :UICollectionView = self.collectionView!;
         collectionView.pagingEnabled = true
-        collectionView.registerClass(VendorViewCell.self, forCellWithReuseIdentifier: horizontalPageViewCellIdentify)
+        collectionView.registerClass(VendorViewCell.self, forCellWithReuseIdentifier: VendorViewCellIdentify)
         collectionView.setToIndexPath(indexPath)
         collectionView.performBatchUpdates({collectionView.reloadData()}, completion: { finished in
             if finished {
@@ -30,7 +30,7 @@ class VendorViewController : UICollectionViewController, NTTransitionProtocol , 
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
-        let collectionCell: VendorViewCell = collectionView.dequeueReusableCellWithReuseIdentifier(horizontalPageViewCellIdentify, forIndexPath: indexPath) as! VendorViewCell
+        let collectionCell: VendorViewCell = collectionView.dequeueReusableCellWithReuseIdentifier(VendorViewCellIdentify, forIndexPath: indexPath) as! VendorViewCell
         collectionCell.imageName = self.imageNameList[indexPath.row] as String
         collectionCell.tappedAction = {}
         collectionCell.pullAction = { offset in
