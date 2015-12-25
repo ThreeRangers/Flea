@@ -41,6 +41,7 @@
 		BAB6CC381C28698B0092FF21 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BAB6CC2D1C28698B0092FF21 /* 2.jpg */; };
 		BAB6CC391C28698B0092FF21 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BAB6CC2E1C28698B0092FF21 /* 1.jpg */; };
 		BAB6CC3A1C28698B0092FF21 /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BAB6CC2F1C28698B0092FF21 /* 0.jpg */; };
+		BAFC7A2B1C2C56030034DC66 /* Market.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFC7A2A1C2C56030034DC66 /* Market.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		BAB6CC2D1C28698B0092FF21 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 2.jpg; path = images/2.jpg; sourceTree = "<group>"; };
 		BAB6CC2E1C28698B0092FF21 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 1.jpg; path = images/1.jpg; sourceTree = "<group>"; };
 		BAB6CC2F1C28698B0092FF21 /* 0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 0.jpg; path = images/0.jpg; sourceTree = "<group>"; };
+		BAFC7A2A1C2C56030034DC66 /* Market.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Market.swift; sourceTree = "<group>"; };
 		FED34CB362B9056C5D26139F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -168,6 +170,7 @@
 		04F733B51C223E1B004A4D7A /* Flea */ = {
 			isa = PBXGroup;
 			children = (
+				BAFC7A291C2C55F30034DC66 /* Modal */,
 				BAB6CC241C2869610092FF21 /* images */,
 				045C9F301C25748B0005B278 /* Parse */,
 				BA5F53D51C2560B20071EB3F /* Modal */,
@@ -286,6 +289,14 @@
 				BAB6CC2F1C28698B0092FF21 /* 0.jpg */,
 			);
 			name = images;
+			sourceTree = "<group>";
+		};
+		BAFC7A291C2C55F30034DC66 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				BAFC7A2A1C2C56030034DC66 /* Market.swift */,
+			);
+			name = Modal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -498,6 +509,7 @@
 				BA5F53C71C255FD90071EB3F /* Extension.swift in Sources */,
 				BA97ED2E1C2A5F91009B5548 /* MarketViewCell.swift in Sources */,
 				BA5F53C81C255FD90071EB3F /* Macro.swift in Sources */,
+				BAFC7A2B1C2C56030034DC66 /* Market.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

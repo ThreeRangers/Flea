@@ -12,24 +12,26 @@ class NavigationControllerDelegate: NSObject, UINavigationControllerDelegate{
     }
 }
 
-class MarketPlaceViewController:UICollectionViewController,CHTCollectionViewDelegateWaterfallLayout, NTTransitionProtocol, NTWaterFallViewControllerProtocol{
+class MarketPlaceViewController:UICollectionViewController ,CHTCollectionViewDelegateWaterfallLayout, NTTransitionProtocol, NTWaterFallViewControllerProtocol{
 
+    
+    @IBOutlet var collection: UICollectionView!
+    
     var imageNameList : Array <NSString> = []
     let delegateHolder = NavigationControllerDelegate()
     
     func loadData() {
+        
+        // this should getting form parse
         var index = 0
-        while(index<9){
-            let imageName = NSString(format: "%d.jpg", index)
+        while(index<5){
+            let imageName = NSString(format: "image%d", index)
             imageNameList.append(imageName)
             index++
         }
         
-        let collection :UICollectionView = collectionView!;
-        collection.frame = screenBounds
-        collection.setCollectionViewLayout(CHTCollectionViewWaterfallLayout(), animated: false)
         collection.backgroundColor = UIColor.grayColor()
-        collection.registerClass(MarketViewCell.self, forCellWithReuseIdentifier: marketViewCellIdentify)
+        collection.setCollectionViewLayout(CHTCollectionViewWaterfallLayout(), animated: false)
         collection.reloadData()
     }
     
@@ -56,6 +58,7 @@ class MarketPlaceViewController:UICollectionViewController,CHTCollectionViewDele
     func viewWillAppearWithPageIndex(pageIndex : NSInteger) {
         var position : UICollectionViewScrollPosition =
         UICollectionViewScrollPosition.CenteredHorizontally.intersect(.CenteredVertically)
+        
         let image:UIImage! = UIImage(named: self.imageNameList[pageIndex] as String)
         let imageHeight = image.size.height*gridWidth/image.size.width
         if imageHeight > 400 {
@@ -77,7 +80,6 @@ class MarketPlaceViewController:UICollectionViewController,CHTCollectionViewDele
 extension MarketPlaceViewController {
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize{
         let image:UIImage! = UIImage(named: self.imageNameList[indexPath.row] as String)
-        
         let imageHeight = image.size.height * gridWidth/image.size.width
         return CGSizeMake(gridWidth, imageHeight)
     }
@@ -85,9 +87,16 @@ extension MarketPlaceViewController {
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
         let collectionCell: MarketViewCell = collectionView.dequeueReusableCellWithReuseIdentifier(marketViewCellIdentify, forIndexPath: indexPath) as! MarketViewCell
         
-        collectionCell.imageName = self.imageNameList[indexPath.row] as String
+        let data = [
+            "name" : "test",
+            "imageName" : self.imageNameList[indexPath.row] as String
+        ]
         
-        collectionCell.setNeedsLayout()
+        let market = Market(dictionary: NSDictionary(dictionary: data))
+        collectionCell.market = market
+        
+//        collectionCell.setNeedsLayout()
+        
         return collectionCell;
     }
     
