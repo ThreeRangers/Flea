@@ -45,6 +45,6 @@ class Market: NSObject {
     
     // load shops by market
     func loadShops(completion: () -> ()) {
-        ParseClient.
+//        ParseClient.
     }
 }

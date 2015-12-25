@@ -6,7 +6,7 @@ let VendorViewCellIdentify = "VendorViewCellIdentify"
 
 class VendorViewController : UICollectionViewController, NTTransitionProtocol , VendorControllerProtocol{
     var market : Market!
-    var shops : [Shop]!
+//    var shops : [Shop]!
     var pullOffset = CGPointZero
     
     // load shops data to collection view by the market
