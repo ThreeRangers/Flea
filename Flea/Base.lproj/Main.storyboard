@@ -27,19 +27,16 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dST-30-bCW">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="440"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="440" id="PgK-aA-sKN"/>
-                                            </constraints>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="489"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05/15/2015 Tuesday" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9S-no-fwx">
-                                            <rect key="frame" x="189" y="24" width="123" height="16"/>
+                                            <rect key="frame" x="189" y="12" width="123" height="16"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Cv-ma-eIj">
-                                            <rect key="frame" x="0.0" y="387" width="320" height="52"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Cv-ma-eIj">
+                                            <rect key="frame" x="0.0" y="437" width="320" height="52"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tan Binh  Flea market" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CfM-Zm-Jnw">
                                                     <rect key="frame" x="8" y="8" width="304" height="18"/>
@@ -48,20 +45,20 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12, Ly thuong kiet" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ohr-AT-494">
-                                                    <rect key="frame" x="8" y="28" width="122" height="14.5"/>
+                                                    <rect key="frame" x="8" y="28" width="312" height="14.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" red="0.12637259066104889" green="0.12639245390892029" blue="0.12636536359786987" alpha="0.16291094653179192" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstItem="Ohr-AT-494" firstAttribute="top" secondItem="CfM-Zm-Jnw" secondAttribute="bottom" constant="2" id="45G-r1-8kX"/>
                                                 <constraint firstItem="CfM-Zm-Jnw" firstAttribute="leading" secondItem="6Cv-ma-eIj" secondAttribute="leading" constant="8" id="49r-Tf-uy2"/>
                                                 <constraint firstItem="CfM-Zm-Jnw" firstAttribute="top" secondItem="6Cv-ma-eIj" secondAttribute="top" constant="8" id="Xdf-KD-grb"/>
                                                 <constraint firstItem="Ohr-AT-494" firstAttribute="leading" secondItem="6Cv-ma-eIj" secondAttribute="leading" constant="8" id="Zep-zC-zEb"/>
                                                 <constraint firstAttribute="height" constant="52" id="diu-Ex-0re"/>
-                                                <constraint firstAttribute="trailing" secondItem="Ohr-AT-494" secondAttribute="trailing" constant="190" id="hkC-6K-saX"/>
+                                                <constraint firstAttribute="trailing" secondItem="Ohr-AT-494" secondAttribute="trailing" id="hkC-6K-saX"/>
                                                 <constraint firstAttribute="trailing" secondItem="CfM-Zm-Jnw" secondAttribute="trailing" constant="8" id="wYW-2l-QHO"/>
                                             </constraints>
                                         </view>
@@ -73,9 +70,10 @@
                                     <constraint firstItem="dST-30-bCW" firstAttribute="leading" secondItem="QX4-Yn-LCV" secondAttribute="leading" id="JP0-O0-Wfh"/>
                                     <constraint firstAttribute="trailing" secondItem="dST-30-bCW" secondAttribute="trailing" id="JUQ-jg-sob"/>
                                     <constraint firstItem="dST-30-bCW" firstAttribute="top" secondItem="QX4-Yn-LCV" secondAttribute="top" id="LMd-DL-crV"/>
-                                    <constraint firstAttribute="bottom" secondItem="6Cv-ma-eIj" secondAttribute="bottom" constant="50" id="Lmy-GI-QpO"/>
+                                    <constraint firstAttribute="bottom" secondItem="6Cv-ma-eIj" secondAttribute="bottom" id="Lmy-GI-QpO"/>
                                     <constraint firstAttribute="trailing" secondItem="h9S-no-fwx" secondAttribute="trailing" constant="8" id="V5f-QZ-WNI"/>
-                                    <constraint firstItem="h9S-no-fwx" firstAttribute="top" secondItem="QX4-Yn-LCV" secondAttribute="top" constant="24" id="jo6-yA-6cb"/>
+                                    <constraint firstAttribute="bottom" secondItem="dST-30-bCW" secondAttribute="bottom" id="ahe-p2-BX2"/>
+                                    <constraint firstItem="h9S-no-fwx" firstAttribute="top" secondItem="QX4-Yn-LCV" secondAttribute="top" constant="12" id="jo6-yA-6cb"/>
                                     <constraint firstItem="6Cv-ma-eIj" firstAttribute="leading" secondItem="QX4-Yn-LCV" secondAttribute="leading" id="t9L-Ja-Thm"/>
                                 </constraints>
                                 <connections>

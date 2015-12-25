@@ -7,6 +7,9 @@ let VendorViewCellIdentify = "VendorViewCellIdentify"
 class VendorViewController : UICollectionViewController, NTTransitionProtocol , VendorControllerProtocol{
     
     var imageNameList : Array <NSString> = []
+    
+    var market : Market!
+    
     var pullOffset = CGPointZero
     
     init(collectionViewLayout layout: UICollectionViewLayout!, currentIndexPath indexPath: NSIndexPath){
@@ -31,7 +34,15 @@ class VendorViewController : UICollectionViewController, NTTransitionProtocol , 
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
         let collectionCell: VendorViewCell = collectionView.dequeueReusableCellWithReuseIdentifier(VendorViewCellIdentify, forIndexPath: indexPath) as! VendorViewCell
+        
+        
+        
+        
+        
         collectionCell.imageName = self.imageNameList[indexPath.row] as String
+        
+        
+        
         collectionCell.tappedAction = {}
         collectionCell.pullAction = { offset in
             self.pullOffset = offset

@@ -24,7 +24,13 @@ class MarketViewCell :UICollectionViewCell, NTTansitionWaterfallGridViewProtocol
     var market : Market! {
         didSet {
             self.marketLabel.text = market.name!
-            self.marketImage.image = UIImage(named: market.imageName!)
+            self.marketImage.image = market.image
+            self.locationLabel.text = market.location
+            
+            
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateFormat = "dd/MM h:mm"
+            self.startDateLabel.text = dateFormatter.stringFromDate(market.fromDate!)
         }
     }
     

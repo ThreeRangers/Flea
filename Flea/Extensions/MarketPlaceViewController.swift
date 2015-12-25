@@ -14,25 +14,21 @@ class NavigationControllerDelegate: NSObject, UINavigationControllerDelegate{
 
 class MarketPlaceViewController:UICollectionViewController ,CHTCollectionViewDelegateWaterfallLayout, NTTransitionProtocol, NTWaterFallViewControllerProtocol{
 
-    
+    var data = [Market]()
     @IBOutlet var collection: UICollectionView!
     
     var imageNameList : Array <NSString> = []
     let delegateHolder = NavigationControllerDelegate()
     
+    // load data from Parse
     func loadData() {
+        ParseClient.getAllMaket({ (data) -> () in
+            self.data = data;
+            self.collection.reloadData()
+        })
         
-        // this should getting form parse
-        var index = 0
-        while(index<5){
-            let imageName = NSString(format: "image%d", index)
-            imageNameList.append(imageName)
-            index++
-        }
-        
-        collection.backgroundColor = UIColor.grayColor()
+        collection.backgroundColor = UIColor.whiteColor()
         collection.setCollectionViewLayout(CHTCollectionViewWaterfallLayout(), animated: false)
-        collection.reloadData()
     }
     
     override func viewDidLoad() {
@@ -60,6 +56,7 @@ class MarketPlaceViewController:UICollectionViewController ,CHTCollectionViewDel
         UICollectionViewScrollPosition.CenteredHorizontally.intersect(.CenteredVertically)
         
         let image:UIImage! = UIImage(named: self.imageNameList[pageIndex] as String)
+        
         let imageHeight = image.size.height*gridWidth/image.size.width
         if imageHeight > 400 {
            position = .Top
@@ -67,6 +64,8 @@ class MarketPlaceViewController:UICollectionViewController ,CHTCollectionViewDel
         let currentIndexPath = NSIndexPath(forRow: pageIndex, inSection: 0)
         let collectionView = self.collectionView!;
         collectionView.setToIndexPath(currentIndexPath)
+        
+        
         if pageIndex<2{
             collectionView.setContentOffset(CGPointZero, animated: false)
         }else{
@@ -75,45 +74,48 @@ class MarketPlaceViewController:UICollectionViewController ,CHTCollectionViewDel
     }
 }
 
-
-
 extension MarketPlaceViewController {
+    func transitionCollectionView() -> UICollectionView!{
+        return collectionView
+    }
+    
+    // dynamic resize for the image cell view
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize{
-        let image:UIImage! = UIImage(named: self.imageNameList[indexPath.row] as String)
-        let imageHeight = image.size.height * gridWidth/image.size.width
+        let market = self.data[indexPath.row]
+        let imageHeight = market.imageHeight! * gridWidth/market.imageWidth!
         return CGSizeMake(gridWidth, imageHeight)
     }
     
+    // init cell collection view
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
         let collectionCell: MarketViewCell = collectionView.dequeueReusableCellWithReuseIdentifier(marketViewCellIdentify, forIndexPath: indexPath) as! MarketViewCell
+
+        print("reload cell")
         
-        let data = [
-            "name" : "test",
-            "imageName" : self.imageNameList[indexPath.row] as String
-        ]
-        
-        let market = Market(dictionary: NSDictionary(dictionary: data))
-        collectionCell.market = market
-        
-//        collectionCell.setNeedsLayout()
+        collectionCell.market = self.data[indexPath.row] as Market
+        if collectionCell.market.image == nil {
+            collectionCell.market.loadImage { () -> () in
+                self.collection.reloadData()
+            }
+        }
         
         return collectionCell;
     }
     
+    // total count for view
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
-        return imageNameList.count;
+        return self.data.count;
     }
     
+    // select cell event
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath){
-        let pageViewController =
-        VendorViewController(collectionViewLayout: pageViewControllerLayout(), currentIndexPath:indexPath)
+        let pageViewController = VendorViewController(collectionViewLayout: pageViewControllerLayout(), currentIndexPath:indexPath)
+        
         pageViewController.imageNameList = imageNameList
+        
         collectionView.setToIndexPath(indexPath)
         navigationController!.pushViewController(pageViewController, animated: true)
     }
     
-    func transitionCollectionView() -> UICollectionView!{
-        return collectionView
-    }
 }
 
