@@ -26,6 +26,7 @@ class Market: NSObject {
         self.imageHeight = object["imageHeight"] as? CGFloat
     }
     
+    // load image market
     func loadImage(completion: () -> ()) {
         self.imageFile!.getDataInBackgroundWithBlock {
             (imageData: NSData?, error: NSError?) -> Void in
@@ -40,7 +41,10 @@ class Market: NSObject {
                 }
             }
         }
-
-        
+    }
+    
+    // load shops by market
+    func loadShops(completion: () -> ()) {
+        ParseClient.
     }
 }

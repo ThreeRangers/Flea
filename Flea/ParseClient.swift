@@ -11,7 +11,7 @@ import Parse
 
 class ParseClient: NSObject {
 
-
+    // load all market
     static func getAllMaket( completion:(data: [Market]) -> ()  )  {
         var result = [Market]()
         
@@ -37,5 +37,10 @@ class ParseClient: NSObject {
                 print("Error: \(error!) \(error!.userInfo)")
             }
         }
+    }
+    
+    // load shop by the market
+    static func getVendorShops( market: Market, completion:(data: [Market]) -> () ) {
+    
     }
 }

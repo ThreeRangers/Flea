@@ -40,6 +40,8 @@ class MarketPlaceViewController:UICollectionViewController ,CHTCollectionViewDel
         loadData()
     }
     
+    
+    // need refactor !!!
     func pageViewControllerLayout () -> UICollectionViewFlowLayout {
         let flowLayout = UICollectionViewFlowLayout()
         let itemSize  = self.navigationController!.navigationBarHidden ?
@@ -51,6 +53,7 @@ class MarketPlaceViewController:UICollectionViewController ,CHTCollectionViewDel
         return flowLayout
     }
     
+    // need refactor !!!
     func viewWillAppearWithPageIndex(pageIndex : NSInteger) {
         var position : UICollectionViewScrollPosition =
         UICollectionViewScrollPosition.CenteredHorizontally.intersect(.CenteredVertically)
@@ -90,8 +93,6 @@ extension MarketPlaceViewController {
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
         let collectionCell: MarketViewCell = collectionView.dequeueReusableCellWithReuseIdentifier(marketViewCellIdentify, forIndexPath: indexPath) as! MarketViewCell
 
-        print("reload cell")
-        
         collectionCell.market = self.data[indexPath.row] as Market
         if collectionCell.market.image == nil {
             collectionCell.market.loadImage { () -> () in
@@ -111,7 +112,7 @@ extension MarketPlaceViewController {
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath){
         let pageViewController = VendorViewController(collectionViewLayout: pageViewControllerLayout(), currentIndexPath:indexPath)
         
-        pageViewController.imageNameList = imageNameList
+        pageViewController.market = self.data[indexPath.row] as Market
         
         collectionView.setToIndexPath(indexPath)
         navigationController!.pushViewController(pageViewController, animated: true)
