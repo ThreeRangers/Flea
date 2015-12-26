@@ -34,8 +34,8 @@ protocol RAMItemAnimationProtocol {
 class RAMItemAnimation: NSObject, RAMItemAnimationProtocol {
 
     @IBInspectable var duration : CGFloat = 0.5
-    @IBInspectable var textSelectedColor: UIColor = UIColor.init(red: 0, green: 0.478431, blue: 1, alpha: 1)
-    @IBInspectable var iconSelectedColor: UIColor!
+    @IBInspectable var textSelectedColor: UIColor = UIColor(red: 255/255.0, green: 187/255.0, blue: 0/255.0, alpha: 1.0)
+    @IBInspectable var iconSelectedColor: UIColor = UIColor(red: 255/255.0, green: 187/255.0, blue: 0/255.0, alpha: 1.0)
 
     func playAnimation(icon : UIImageView, textLabel : UILabel) {
     }

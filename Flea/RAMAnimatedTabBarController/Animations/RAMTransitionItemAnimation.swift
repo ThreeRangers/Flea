@@ -58,7 +58,7 @@ class RAMTransitionItemAniamtions : RAMItemAnimation {
 
     func selectedColor(icon : UIImageView, textLabel : UILabel) {
 
-        if let iconImage = icon.image where iconSelectedColor != nil {
+        if let iconImage = icon.image  {
             let renderImage = iconImage.imageWithRenderingMode(.AlwaysTemplate)
             icon.image = renderImage
             icon.tintColor = iconSelectedColor
