@@ -7,18 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0409C33F1C2652EC0083AC53 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409C33E1C2652EC0083AC53 /* LogInViewController.swift */; };
 		041FB7711C2562BB00F31EDE /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041FB76E1C2562BB00F31EDE /* FBSDKCoreKit.framework */; };
 		041FB7721C2562BB00F31EDE /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041FB76F1C2562BB00F31EDE /* FBSDKLoginKit.framework */; };
 		041FB7731C2562BB00F31EDE /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041FB7701C2562BB00F31EDE /* FBSDKShareKit.framework */; };
-		045C9F341C25754A0005B278 /* ParseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045C9F331C25754A0005B278 /* ParseInterface.swift */; };
 		046CBB221C2B6D61005AA0DD /* DisplayShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046CBB211C2B6D61005AA0DD /* DisplayShopViewController.swift */; };
 		046CBB241C2B759A005AA0DD /* shopDisplayInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046CBB231C2B759A005AA0DD /* shopDisplayInfoTableViewCell.swift */; };
 		0477EEC21C27DB9A00C12BF6 /* shopInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0477EEC11C27DB9A00C12BF6 /* shopInfoTableViewCell.swift */; };
 		0477EEC41C27DFD700C12BF6 /* shopGalleryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0477EEC31C27DFD700C12BF6 /* shopGalleryTableViewCell.swift */; };
 		047ABFEB1C298C4F00916D0A /* MyColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047ABFEA1C298C4F00916D0A /* MyColor.swift */; };
-		049E059A1C2D6F7700980193 /* Shop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 049E05981C2D6F7700980193 /* Shop.storyboard */; };
-		04E29C4C1C2D0CC700299F64 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E29C4B1C2D0CC700299F64 /* Shop.swift */; };
 		04F503901C2D43BB0076DF5E /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5038F1C2D43BB0076DF5E /* GalleryCollectionViewCell.swift */; };
 		04F733B71C223E1B004A4D7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F733B61C223E1B004A4D7A /* AppDelegate.swift */; };
 		04F733B91C223E1B004A4D7A /* AddingShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F733B81C223E1B004A4D7A /* AddingShopViewController.swift */; };
@@ -28,8 +24,14 @@
 		04F733CC1C223E1B004A4D7A /* FleaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F733CB1C223E1B004A4D7A /* FleaTests.swift */; };
 		04F733D71C223E1B004A4D7A /* FleaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F733D61C223E1B004A4D7A /* FleaUITests.swift */; };
 		53A43922D20B3F6BB59E20E9 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB8F118833FF577E5D81E38 /* Pods.framework */; };
-		BA5F53CA1C255FD90071EB3F /* VendorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5F53C01C255FD90071EB3F /* VendorViewController.swift */; };
-		BA5F53CF1C255FD90071EB3F /* MarketPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5F53C51C255FD90071EB3F /* MarketPlaceViewController.swift */; };
+		BA3424B11C2EF4A3009C3374 /* ParseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3424B01C2EF4A3009C3374 /* ParseInterface.swift */; };
+		BA3424B31C2EF4D3009C3374 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3424B21C2EF4D3009C3374 /* LogInViewController.swift */; };
+		BA3424B51C2EF4F2009C3374 /* _MarketPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3424B41C2EF4F2009C3374 /* _MarketPlaceViewController.swift */; };
+		BA3424B81C2EF509009C3374 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3424B61C2EF509009C3374 /* SignUpViewController.swift */; };
+		BA3424B91C2EF509009C3374 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3424B71C2EF509009C3374 /* SignInViewController.swift */; };
+		BA3424BB1C2EF516009C3374 /* _VendorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3424BA1C2EF516009C3374 /* _VendorViewController.swift */; };
+		BA3424BF1C2EF5A1009C3374 /* shopImgCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3424BE1C2EF5A1009C3374 /* shopImgCollectionCell.swift */; };
+		BA3424C11C2EF5AD009C3374 /* ParseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3424C01C2EF5AD009C3374 /* ParseError.swift */; };
 		BA675A901C2D760E003B3DC0 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA675A8F1C2D760E003B3DC0 /* Shop.swift */; };
 		BA675A931C2E3702003B3DC0 /* ShopViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA675A911C2E3702003B3DC0 /* ShopViewCell.swift */; };
 		BA675A961C2E6F30003B3DC0 /* MarketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA675A951C2E6F30003B3DC0 /* MarketCell.swift */; };
@@ -71,19 +73,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0409C33E1C2652EC0083AC53 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		041FB76E1C2562BB00F31EDE /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../../../../../Downloads/FacebookSDKs-iOS-20151111/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		041FB76F1C2562BB00F31EDE /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../../../../../Downloads/FacebookSDKs-iOS-20151111/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
 		041FB7701C2562BB00F31EDE /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "../../../../../Downloads/FacebookSDKs-iOS-20151111/FBSDKShareKit.framework"; sourceTree = "<group>"; };
 		041FB7741C2563B600F31EDE /* Flea-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Flea-Bridging-Header.h"; sourceTree = "<group>"; };
-		045C9F331C25754A0005B278 /* ParseInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseInterface.swift; sourceTree = "<group>"; };
 		046CBB211C2B6D61005AA0DD /* DisplayShopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayShopViewController.swift; sourceTree = "<group>"; };
 		046CBB231C2B759A005AA0DD /* shopDisplayInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = shopDisplayInfoTableViewCell.swift; sourceTree = "<group>"; };
 		0477EEC11C27DB9A00C12BF6 /* shopInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = shopInfoTableViewCell.swift; sourceTree = "<group>"; };
 		0477EEC31C27DFD700C12BF6 /* shopGalleryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = shopGalleryTableViewCell.swift; sourceTree = "<group>"; };
 		047ABFEA1C298C4F00916D0A /* MyColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyColor.swift; sourceTree = "<group>"; };
-		049E05991C2D6F7700980193 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Shop.storyboard; sourceTree = "<group>"; };
-		04E29C4B1C2D0CC700299F64 /* Shop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		04F5038F1C2D43BB0076DF5E /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 		04F733B31C223E1B004A4D7A /* Flea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F733B61C223E1B004A4D7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,8 +98,14 @@
 		04F733D81C223E1B004A4D7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BB8F118833FF577E5D81E38 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CDF51B042A53150E8CDE283 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		BA5F53C01C255FD90071EB3F /* VendorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VendorViewController.swift; path = Extensions/VendorViewController.swift; sourceTree = "<group>"; };
-		BA5F53C51C255FD90071EB3F /* MarketPlaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MarketPlaceViewController.swift; path = Extensions/MarketPlaceViewController.swift; sourceTree = "<group>"; };
+		BA3424B01C2EF4A3009C3374 /* ParseInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseInterface.swift; sourceTree = "<group>"; };
+		BA3424B21C2EF4D3009C3374 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		BA3424B41C2EF4F2009C3374 /* _MarketPlaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _MarketPlaceViewController.swift; sourceTree = "<group>"; };
+		BA3424B61C2EF509009C3374 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		BA3424B71C2EF509009C3374 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		BA3424BA1C2EF516009C3374 /* _VendorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _VendorViewController.swift; sourceTree = "<group>"; };
+		BA3424BE1C2EF5A1009C3374 /* shopImgCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = shopImgCollectionCell.swift; sourceTree = "<group>"; };
+		BA3424C01C2EF5AD009C3374 /* ParseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseError.swift; sourceTree = "<group>"; };
 		BA675A8F1C2D760E003B3DC0 /* Shop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		BA675A911C2E3702003B3DC0 /* ShopViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopViewCell.swift; sourceTree = "<group>"; };
 		BA675A951C2E6F30003B3DC0 /* MarketCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketCell.swift; sourceTree = "<group>"; };
@@ -158,8 +162,9 @@
 		045C9F301C25748B0005B278 /* Parse */ = {
 			isa = PBXGroup;
 			children = (
-				045C9F331C25754A0005B278 /* ParseInterface.swift */,
+				BA3424C01C2EF5AD009C3374 /* ParseError.swift */,
 				BAF07CD91C2D3A74002F173D /* ParseClient.swift */,
+				BA3424B01C2EF4A3009C3374 /* ParseInterface.swift */,
 			);
 			name = Parse;
 			sourceTree = "<group>";
@@ -206,12 +211,6 @@
 				BA5F53D41C25602C0071EB3F /* Views */,
 				BA5F53D31C2560260071EB3F /* Controllers */,
 				BA5F53D01C255FE40071EB3F /* Extensions */,
-				04F733BA1C223E1B004A4D7A /* Main.storyboard */,
-				049E05981C2D6F7700980193 /* Shop.storyboard */,
-				04F733BD1C223E1B004A4D7A /* Assets.xcassets */,
-				04F733BF1C223E1B004A4D7A /* LaunchScreen.storyboard */,
-				04F733C21C223E1B004A4D7A /* Info.plist */,
-				041FB7741C2563B600F31EDE /* Flea-Bridging-Header.h */,
 			);
 			path = Flea;
 			sourceTree = "<group>";
@@ -267,9 +266,12 @@
 		BA5F53D31C2560260071EB3F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				0409C33E1C2652EC0083AC53 /* LogInViewController.swift */,
-				BA5F53C01C255FD90071EB3F /* VendorViewController.swift */,
-				BA5F53C51C255FD90071EB3F /* MarketPlaceViewController.swift */,
+				BA3424BA1C2EF516009C3374 /* _VendorViewController.swift */,
+				BA3424B61C2EF509009C3374 /* SignUpViewController.swift */,
+				BA3424B71C2EF509009C3374 /* SignInViewController.swift */,
+				BA3424B41C2EF4F2009C3374 /* _MarketPlaceViewController.swift */,
+				BA3424B21C2EF4D3009C3374 /* LogInViewController.swift */,
+				046CBB211C2B6D61005AA0DD /* DisplayShopViewController.swift */,
 				04F733B81C223E1B004A4D7A /* AddingShopViewController.swift */,
 				BA675AA21C2E71D5003B3DC0 /* MarketViewController.swift */,
 				BA675AA61C2E9D84003B3DC0 /* ShopViewController.swift */,
@@ -282,8 +284,7 @@
 		BA5F53D41C25602C0071EB3F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BA5F53BF1C255FD90071EB3F /* NTHorizontalPageViewCell.swift */,
-				BA5F53C41C255FD90071EB3F /* NTWaterfallViewCell.swift */,
+				BA3424BE1C2EF5A1009C3374 /* shopImgCollectionCell.swift */,
 				0477EEC11C27DB9A00C12BF6 /* shopInfoTableViewCell.swift */,
 				0477EEC31C27DFD700C12BF6 /* shopGalleryTableViewCell.swift */,
 				046CBB231C2B759A005AA0DD /* shopDisplayInfoTableViewCell.swift */,
@@ -299,11 +300,6 @@
 		BA5F53D51C2560B20071EB3F /* Modal */ = {
 			isa = PBXGroup;
 			children = (
-				0409C33E1C2652EC0083AC53 /* LogInViewController.swift */,
-				BA5F53C01C255FD90071EB3F /* NTHorizontalPageViewController.swift */,
-				BA5F53C51C255FD90071EB3F /* NTWaterfallViewController.swift */,
-				04F733B81C223E1B004A4D7A /* AddingShopViewController.swift */,
-				046CBB211C2B6D61005AA0DD /* DisplayShopViewController.swift */,
 				BAFC7A2A1C2C56030034DC66 /* Market.swift */,
 				BA675A8F1C2D760E003B3DC0 /* Shop.swift */,
 			);
@@ -322,9 +318,7 @@
 		BA675A9E1C2E7087003B3DC0 /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				04E29C4B1C2D0CC700299F64 /* Shop.swift */,
 				04F733B61C223E1B004A4D7A /* AppDelegate.swift */,
-				041FB7741C2563B600F31EDE /* Flea-Bridging-Header.h */,
 			);
 			name = Others;
 			sourceTree = "<group>";
@@ -332,8 +326,9 @@
 		BA675A9F1C2E709C003B3DC0 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				04F733C21C223E1B004A4D7A /* Info.plist */,
 				04F733BD1C223E1B004A4D7A /* Assets.xcassets */,
+				04F733C21C223E1B004A4D7A /* Info.plist */,
+				041FB7741C2563B600F31EDE /* Flea-Bridging-Header.h */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -463,7 +458,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				049E059A1C2D6F7700980193 /* Shop.storyboard in Resources */,
 				04F733C11C223E1B004A4D7A /* LaunchScreen.storyboard in Resources */,
 				04F733BE1C223E1B004A4D7A /* Assets.xcassets in Resources */,
 				04F733BC1C223E1B004A4D7A /* Main.storyboard in Resources */,
@@ -539,30 +533,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA3424B81C2EF509009C3374 /* SignUpViewController.swift in Sources */,
 				046CBB221C2B6D61005AA0DD /* DisplayShopViewController.swift in Sources */,
 				04F733B91C223E1B004A4D7A /* AddingShopViewController.swift in Sources */,
+				BA3424B51C2EF4F2009C3374 /* _MarketPlaceViewController.swift in Sources */,
+				BA3424B31C2EF4D3009C3374 /* LogInViewController.swift in Sources */,
 				BA7FF60B1C2EB9CA00ED35C9 /* RAMAnimatedTabBarController.swift in Sources */,
 				BA675A9B1C2E703A003B3DC0 /* UIColor.swift in Sources */,
 				04F733B71C223E1B004A4D7A /* AppDelegate.swift in Sources */,
-				04E29C4C1C2D0CC700299F64 /* Shop.swift in Sources */,
-				BA5F53CC1C255FD90071EB3F /* NTTransition.swift in Sources */,
-				BA5F53CA1C255FD90071EB3F /* NTHorizontalPageViewController.swift in Sources */,
-				BA5F53C61C255FD90071EB3F /* CHTCollectionViewWaterfallLayout.swift in Sources */,
-				BA5F53C91C255FD90071EB3F /* NTHorizontalPageViewCell.swift in Sources */,
 				0477EEC41C27DFD700C12BF6 /* shopGalleryTableViewCell.swift in Sources */,
-				045C9F341C25754A0005B278 /* ParseInterface.swift in Sources */,
 				0477EEC21C27DB9A00C12BF6 /* shopInfoTableViewCell.swift in Sources */,
-				BA5F53CD1C255FD90071EB3F /* NTTransitionProtocol.swift in Sources */,
 				047ABFEB1C298C4F00916D0A /* MyColor.swift in Sources */,
-				BA5F53CE1C255FD90071EB3F /* NTWaterfallViewCell.swift in Sources */,
-				BA5F53CB1C255FD90071EB3F /* NTNavigationController.swift in Sources */,
-				0409C33F1C2652EC0083AC53 /* LogInViewController.swift in Sources */,
-				BA5F53CF1C255FD90071EB3F /* NTWaterfallViewController.swift in Sources */,
 				046CBB241C2B759A005AA0DD /* shopDisplayInfoTableViewCell.swift in Sources */,
-				BA5F53C71C255FD90071EB3F /* Extension.swift in Sources */,
 				04F503901C2D43BB0076DF5E /* GalleryCollectionViewCell.swift in Sources */,
-				BA5F53C81C255FD90071EB3F /* Macro.swift in Sources */,
-				BA5F53CA1C255FD90071EB3F /* VendorViewController.swift in Sources */,
 				BA675AA71C2E9D84003B3DC0 /* ShopViewController.swift in Sources */,
 				BA675A961C2E6F30003B3DC0 /* MarketCell.swift in Sources */,
 				BA675AA91C2E9DCB003B3DC0 /* ProfileViewController.swift in Sources */,
@@ -572,13 +555,15 @@
 				BAF07CDA1C2D3A74002F173D /* ParseClient.swift in Sources */,
 				BA675AA31C2E71D5003B3DC0 /* MarketViewController.swift in Sources */,
 				BA7FF6181C2EBA1500ED35C9 /* RAMBadge.swift in Sources */,
-				045C9F341C25754A0005B278 /* ParseInterface.swift in Sources */,
 				BA7FF6151C2EBA0600ED35C9 /* RAMRotationAnimation.swift in Sources */,
 				BA7FF6131C2EBA0600ED35C9 /* RAMFrameItemAnimation.swift in Sources */,
+				BA3424BB1C2EF516009C3374 /* _VendorViewController.swift in Sources */,
+				BA3424BF1C2EF5A1009C3374 /* shopImgCollectionCell.swift in Sources */,
+				BA3424B91C2EF509009C3374 /* SignInViewController.swift in Sources */,
 				BA675A901C2D760E003B3DC0 /* Shop.swift in Sources */,
-				0409C33F1C2652EC0083AC53 /* LogInViewController.swift in Sources */,
-				BA5F53CF1C255FD90071EB3F /* MarketPlaceViewController.swift in Sources */,
 				BA7FF6121C2EBA0600ED35C9 /* RAMBounceAnimation.swift in Sources */,
+				BA3424B11C2EF4A3009C3374 /* ParseInterface.swift in Sources */,
+				BA3424C11C2EF5AD009C3374 /* ParseError.swift in Sources */,
 				BA7FF6161C2EBA0600ED35C9 /* RAMTransitionItemAnimation.swift in Sources */,
 				BA97ED2E1C2A5F91009B5548 /* MarketViewCell.swift in Sources */,
 				BA675AAB1C2E9DE6003B3DC0 /* SettingViewController.swift in Sources */,
@@ -620,14 +605,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		049E05981C2D6F7700980193 /* Shop.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				049E05991C2D6F7700980193 /* Base */,
-			);
-			name = Shop.storyboard;
-			sourceTree = "<group>";
-		};
 		04F733BA1C223E1B004A4D7A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -63,7 +63,7 @@ class AddingShopViewController: UIViewController {
     }
     
     func upLoadShopToParse(newShop: Shop) {
-        newShop.uploadInfoDataWithImg()
+//        newShop.uploadInfoDataWithImg()
     }
     
     

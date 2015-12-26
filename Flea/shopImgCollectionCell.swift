@@ -6,7 +6,7 @@
 //  Copyright © 2015 ThreeStrangers. All rights reserved.
 //
 
-import Cocoa
+import UIKit
 
 class shopImgCollectionCell: UICollectionViewCell {
 
