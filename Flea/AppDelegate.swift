@@ -28,12 +28,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If you would like all objects to be private by default, remove this line.
         defaultACL.publicReadAccess = true
         
+        
+        // register subclass of parse so that it could be cast
+        Market.registerSubclass()
+        Shop.registerSubclass()
+        
+        
+        // override select color of tabbard
+
+        
+    
         PFACL.setDefaultACL(defaultACL, withAccessForCurrentUser:true)
         PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
         
         return true
     }
-    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
         return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
     }
     

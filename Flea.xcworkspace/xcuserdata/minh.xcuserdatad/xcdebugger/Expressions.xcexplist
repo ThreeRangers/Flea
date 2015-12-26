@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "NTWaterfallViewController.viewDidLoad() -&gt; ():NTWaterfallViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "delegateHolder">
+            </PersistentString>
+            <PersistentString
+               value = "self.navigationController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MarketPlaceViewController.collectionView(UICollectionView, cellForItemAtIndexPath : NSIndexPath) -&gt; UICollectionViewCell:MarketPlaceViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.imageNameList[indexPath.row]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "NTWaterfallViewController.collectionView(UICollectionView, layout : UICollectionViewLayout, sizeForItemAtIndexPath : NSIndexPath) -&gt; CGSize:NTWaterfallViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.imageNameList[indexPath.row]">
+            </PersistentString>
+            <PersistentString
+               value = "imageNameList">
+            </PersistentString>
+            <PersistentString
+               value = "self.imageNameList">
+            </PersistentString>
+            <PersistentString
+               value = "image">
+            </PersistentString>
+            <PersistentString
+               value = "indexPath.row">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

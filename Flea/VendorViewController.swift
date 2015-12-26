@@ -1,18 +1,18 @@
 //
-//  NTHorizontalPageViewController.swift
-//  PinterestSwift
+//  VendorViewController.swift
+//  Flea
 //
-//  Created by Nicholas Tau on 7/1/14.
-//  Copyright (c) 2014 Nicholas Tau. All rights reserved.
+//  Created by minh on 12/19/15.
+//  Copyright © 2015 ThreeStrangers. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 let horizontalPageViewCellIdentify = "horizontalPageViewCellIdentify"
 
-class NTHorizontalPageViewController : UICollectionViewController, NTTransitionProtocol ,NTHorizontalPageViewControllerProtocol{
-    
+
+class VendorViewController : UICollectionViewController, NTTransitionProtocol ,NTHorizontalPageViewControllerProtocol{
+
     var imageNameList : Array <NSString> = []
     var pullOffset = CGPointZero
     
@@ -27,7 +27,7 @@ class NTHorizontalPageViewController : UICollectionViewController, NTTransitionP
                 collectionView.scrollToItemAtIndexPath(indexPath,atScrollPosition:.CenteredHorizontally, animated: false)
             }});
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -59,4 +59,5 @@ class NTHorizontalPageViewController : UICollectionViewController, NTTransitionP
     func pageViewCellScrollViewContentOffset() -> CGPoint{
         return self.pullOffset
     }
+
 }

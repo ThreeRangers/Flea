@@ -28,16 +28,29 @@
 		04F733CC1C223E1B004A4D7A /* FleaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F733CB1C223E1B004A4D7A /* FleaTests.swift */; };
 		04F733D71C223E1B004A4D7A /* FleaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F733D61C223E1B004A4D7A /* FleaUITests.swift */; };
 		53A43922D20B3F6BB59E20E9 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB8F118833FF577E5D81E38 /* Pods.framework */; };
-		BA5F53C61C255FD90071EB3F /* CHTCollectionViewWaterfallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5F53BC1C255FD90071EB3F /* CHTCollectionViewWaterfallLayout.swift */; };
-		BA5F53C71C255FD90071EB3F /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5F53BD1C255FD90071EB3F /* Extension.swift */; };
-		BA5F53C81C255FD90071EB3F /* Macro.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5F53BE1C255FD90071EB3F /* Macro.swift */; };
-		BA5F53C91C255FD90071EB3F /* NTHorizontalPageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5F53BF1C255FD90071EB3F /* NTHorizontalPageViewCell.swift */; };
-		BA5F53CA1C255FD90071EB3F /* NTHorizontalPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5F53C01C255FD90071EB3F /* NTHorizontalPageViewController.swift */; };
-		BA5F53CB1C255FD90071EB3F /* NTNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5F53C11C255FD90071EB3F /* NTNavigationController.swift */; };
-		BA5F53CC1C255FD90071EB3F /* NTTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5F53C21C255FD90071EB3F /* NTTransition.swift */; };
-		BA5F53CD1C255FD90071EB3F /* NTTransitionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5F53C31C255FD90071EB3F /* NTTransitionProtocol.swift */; };
-		BA5F53CE1C255FD90071EB3F /* NTWaterfallViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5F53C41C255FD90071EB3F /* NTWaterfallViewCell.swift */; };
-		BA5F53CF1C255FD90071EB3F /* NTWaterfallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5F53C51C255FD90071EB3F /* NTWaterfallViewController.swift */; };
+		BA5F53CA1C255FD90071EB3F /* VendorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5F53C01C255FD90071EB3F /* VendorViewController.swift */; };
+		BA5F53CF1C255FD90071EB3F /* MarketPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5F53C51C255FD90071EB3F /* MarketPlaceViewController.swift */; };
+		BA675A901C2D760E003B3DC0 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA675A8F1C2D760E003B3DC0 /* Shop.swift */; };
+		BA675A931C2E3702003B3DC0 /* ShopViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA675A911C2E3702003B3DC0 /* ShopViewCell.swift */; };
+		BA675A961C2E6F30003B3DC0 /* MarketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA675A951C2E6F30003B3DC0 /* MarketCell.swift */; };
+		BA675A991C2E6FE7003B3DC0 /* UltravisualLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA675A981C2E6FE7003B3DC0 /* UltravisualLayout.swift */; };
+		BA675A9B1C2E703A003B3DC0 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA675A9A1C2E703A003B3DC0 /* UIColor.swift */; };
+		BA675A9D1C2E7058003B3DC0 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA675A9C1C2E7058003B3DC0 /* UIImage.swift */; };
+		BA675AA31C2E71D5003B3DC0 /* MarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA675AA21C2E71D5003B3DC0 /* MarketViewController.swift */; };
+		BA675AA71C2E9D84003B3DC0 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA675AA61C2E9D84003B3DC0 /* ShopViewController.swift */; };
+		BA675AA91C2E9DCB003B3DC0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA675AA81C2E9DCB003B3DC0 /* ProfileViewController.swift */; };
+		BA675AAB1C2E9DE6003B3DC0 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA675AAA1C2E9DE6003B3DC0 /* SettingViewController.swift */; };
+		BA7FF60B1C2EB9CA00ED35C9 /* RAMAnimatedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7FF6091C2EB9CA00ED35C9 /* RAMAnimatedTabBarController.swift */; };
+		BA7FF60C1C2EB9CA00ED35C9 /* RAMItemAnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7FF60A1C2EB9CA00ED35C9 /* RAMItemAnimationProtocol.swift */; };
+		BA7FF6121C2EBA0600ED35C9 /* RAMBounceAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7FF60D1C2EBA0600ED35C9 /* RAMBounceAnimation.swift */; };
+		BA7FF6131C2EBA0600ED35C9 /* RAMFrameItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7FF60E1C2EBA0600ED35C9 /* RAMFrameItemAnimation.swift */; };
+		BA7FF6141C2EBA0600ED35C9 /* RAMFumeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7FF60F1C2EBA0600ED35C9 /* RAMFumeAnimation.swift */; };
+		BA7FF6151C2EBA0600ED35C9 /* RAMRotationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7FF6101C2EBA0600ED35C9 /* RAMRotationAnimation.swift */; };
+		BA7FF6161C2EBA0600ED35C9 /* RAMTransitionItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7FF6111C2EBA0600ED35C9 /* RAMTransitionItemAnimation.swift */; };
+		BA7FF6181C2EBA1500ED35C9 /* RAMBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7FF6171C2EBA1500ED35C9 /* RAMBadge.swift */; };
+		BA97ED2E1C2A5F91009B5548 /* MarketViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA97ED2D1C2A5F91009B5548 /* MarketViewCell.swift */; };
+		BAF07CDA1C2D3A74002F173D /* ParseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF07CD91C2D3A74002F173D /* ParseClient.swift */; };
+		BAFC7A2B1C2C56030034DC66 /* Market.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFC7A2A1C2C56030034DC66 /* Market.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,16 +100,29 @@
 		04F733D81C223E1B004A4D7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BB8F118833FF577E5D81E38 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CDF51B042A53150E8CDE283 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		BA5F53BC1C255FD90071EB3F /* CHTCollectionViewWaterfallLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CHTCollectionViewWaterfallLayout.swift; path = Extensions/CHTCollectionViewWaterfallLayout.swift; sourceTree = "<group>"; };
-		BA5F53BD1C255FD90071EB3F /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extension.swift; path = Extensions/Extension.swift; sourceTree = "<group>"; };
-		BA5F53BE1C255FD90071EB3F /* Macro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Macro.swift; path = Extensions/Macro.swift; sourceTree = "<group>"; };
-		BA5F53BF1C255FD90071EB3F /* NTHorizontalPageViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NTHorizontalPageViewCell.swift; path = Extensions/NTHorizontalPageViewCell.swift; sourceTree = "<group>"; };
-		BA5F53C01C255FD90071EB3F /* NTHorizontalPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NTHorizontalPageViewController.swift; path = Extensions/NTHorizontalPageViewController.swift; sourceTree = "<group>"; };
-		BA5F53C11C255FD90071EB3F /* NTNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NTNavigationController.swift; path = Extensions/NTNavigationController.swift; sourceTree = "<group>"; };
-		BA5F53C21C255FD90071EB3F /* NTTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NTTransition.swift; path = Extensions/NTTransition.swift; sourceTree = "<group>"; };
-		BA5F53C31C255FD90071EB3F /* NTTransitionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NTTransitionProtocol.swift; path = Extensions/NTTransitionProtocol.swift; sourceTree = "<group>"; };
-		BA5F53C41C255FD90071EB3F /* NTWaterfallViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NTWaterfallViewCell.swift; path = Extensions/NTWaterfallViewCell.swift; sourceTree = "<group>"; };
-		BA5F53C51C255FD90071EB3F /* NTWaterfallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NTWaterfallViewController.swift; path = Extensions/NTWaterfallViewController.swift; sourceTree = "<group>"; };
+		BA5F53C01C255FD90071EB3F /* VendorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VendorViewController.swift; path = Extensions/VendorViewController.swift; sourceTree = "<group>"; };
+		BA5F53C51C255FD90071EB3F /* MarketPlaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MarketPlaceViewController.swift; path = Extensions/MarketPlaceViewController.swift; sourceTree = "<group>"; };
+		BA675A8F1C2D760E003B3DC0 /* Shop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
+		BA675A911C2E3702003B3DC0 /* ShopViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopViewCell.swift; sourceTree = "<group>"; };
+		BA675A951C2E6F30003B3DC0 /* MarketCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketCell.swift; sourceTree = "<group>"; };
+		BA675A981C2E6FE7003B3DC0 /* UltravisualLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UltravisualLayout.swift; sourceTree = "<group>"; };
+		BA675A9A1C2E703A003B3DC0 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		BA675A9C1C2E7058003B3DC0 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		BA675AA21C2E71D5003B3DC0 /* MarketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketViewController.swift; sourceTree = "<group>"; };
+		BA675AA61C2E9D84003B3DC0 /* ShopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		BA675AA81C2E9DCB003B3DC0 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		BA675AAA1C2E9DE6003B3DC0 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		BA7FF6091C2EB9CA00ED35C9 /* RAMAnimatedTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RAMAnimatedTabBarController.swift; path = RAMAnimatedTabBarController/RAMAnimatedTabBarController.swift; sourceTree = "<group>"; };
+		BA7FF60A1C2EB9CA00ED35C9 /* RAMItemAnimationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RAMItemAnimationProtocol.swift; path = RAMAnimatedTabBarController/RAMItemAnimationProtocol.swift; sourceTree = "<group>"; };
+		BA7FF60D1C2EBA0600ED35C9 /* RAMBounceAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RAMBounceAnimation.swift; path = RAMAnimatedTabBarController/Animations/RAMBounceAnimation.swift; sourceTree = "<group>"; };
+		BA7FF60E1C2EBA0600ED35C9 /* RAMFrameItemAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RAMFrameItemAnimation.swift; path = RAMAnimatedTabBarController/Animations/RAMFrameItemAnimation.swift; sourceTree = "<group>"; };
+		BA7FF60F1C2EBA0600ED35C9 /* RAMFumeAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RAMFumeAnimation.swift; path = RAMAnimatedTabBarController/Animations/RAMFumeAnimation.swift; sourceTree = "<group>"; };
+		BA7FF6101C2EBA0600ED35C9 /* RAMRotationAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RAMRotationAnimation.swift; path = RAMAnimatedTabBarController/Animations/RAMRotationAnimation.swift; sourceTree = "<group>"; };
+		BA7FF6111C2EBA0600ED35C9 /* RAMTransitionItemAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RAMTransitionItemAnimation.swift; path = RAMAnimatedTabBarController/Animations/RAMTransitionItemAnimation.swift; sourceTree = "<group>"; };
+		BA7FF6171C2EBA1500ED35C9 /* RAMBadge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RAMBadge.swift; path = RAMAnimatedTabBarController/RAMBadge.swift; sourceTree = "<group>"; };
+		BA97ED2D1C2A5F91009B5548 /* MarketViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketViewCell.swift; sourceTree = "<group>"; };
+		BAF07CD91C2D3A74002F173D /* ParseClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseClient.swift; sourceTree = "<group>"; };
+		BAFC7A2A1C2C56030034DC66 /* Market.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Market.swift; sourceTree = "<group>"; };
 		FED34CB362B9056C5D26139F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				045C9F331C25754A0005B278 /* ParseInterface.swift */,
+				BAF07CD91C2D3A74002F173D /* ParseClient.swift */,
 			);
 			name = Parse;
 			sourceTree = "<group>";
@@ -171,12 +198,13 @@
 			isa = PBXGroup;
 			children = (
 				047ABFEC1C298C5500916D0A /* Utils */,
+				BA675A9F1C2E709C003B3DC0 /* Assets */,
+				BA675A9E1C2E7087003B3DC0 /* Others */,
+				BA675A971C2E6F4C003B3DC0 /* Storyboards */,
 				045C9F301C25748B0005B278 /* Parse */,
 				BA5F53D51C2560B20071EB3F /* Modal */,
-				04F733B61C223E1B004A4D7A /* AppDelegate.swift */,
 				BA5F53D41C25602C0071EB3F /* Views */,
 				BA5F53D31C2560260071EB3F /* Controllers */,
-				BA5F53D21C25601C0071EB3F /* Cells */,
 				BA5F53D01C255FE40071EB3F /* Extensions */,
 				04F733BA1C223E1B004A4D7A /* Main.storyboard */,
 				049E05981C2D6F7700980193 /* Shop.storyboard */,
@@ -229,25 +257,29 @@
 		BA5F53D01C255FE40071EB3F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				BA5F53D11C255FF50071EB3F /* Transition */,
+				BA7FF6081C2EB9A200ED35C9 /* TabBarAnimated */,
+				BA675A9A1C2E703A003B3DC0 /* UIColor.swift */,
+				BA675A9C1C2E7058003B3DC0 /* UIImage.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
 		};
-		BA5F53D11C255FF50071EB3F /* Transition */ = {
+		BA5F53D31C2560260071EB3F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BA5F53BC1C255FD90071EB3F /* CHTCollectionViewWaterfallLayout.swift */,
-				BA5F53BD1C255FD90071EB3F /* Extension.swift */,
-				BA5F53BE1C255FD90071EB3F /* Macro.swift */,
-				BA5F53C11C255FD90071EB3F /* NTNavigationController.swift */,
-				BA5F53C21C255FD90071EB3F /* NTTransition.swift */,
-				BA5F53C31C255FD90071EB3F /* NTTransitionProtocol.swift */,
+				0409C33E1C2652EC0083AC53 /* LogInViewController.swift */,
+				BA5F53C01C255FD90071EB3F /* VendorViewController.swift */,
+				BA5F53C51C255FD90071EB3F /* MarketPlaceViewController.swift */,
+				04F733B81C223E1B004A4D7A /* AddingShopViewController.swift */,
+				BA675AA21C2E71D5003B3DC0 /* MarketViewController.swift */,
+				BA675AA61C2E9D84003B3DC0 /* ShopViewController.swift */,
+				BA675AA81C2E9DCB003B3DC0 /* ProfileViewController.swift */,
+				BA675AAA1C2E9DE6003B3DC0 /* SettingViewController.swift */,
 			);
-			name = Transition;
+			name = Controllers;
 			sourceTree = "<group>";
 		};
-		BA5F53D21C25601C0071EB3F /* Cells */ = {
+		BA5F53D41C25602C0071EB3F /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				BA5F53BF1C255FD90071EB3F /* NTHorizontalPageViewCell.swift */,
@@ -256,25 +288,10 @@
 				0477EEC31C27DFD700C12BF6 /* shopGalleryTableViewCell.swift */,
 				046CBB231C2B759A005AA0DD /* shopDisplayInfoTableViewCell.swift */,
 				04F5038F1C2D43BB0076DF5E /* GalleryCollectionViewCell.swift */,
-			);
-			name = Cells;
-			sourceTree = "<group>";
-		};
-		BA5F53D31C2560260071EB3F /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				0409C33E1C2652EC0083AC53 /* LogInViewController.swift */,
-				BA5F53C01C255FD90071EB3F /* NTHorizontalPageViewController.swift */,
-				BA5F53C51C255FD90071EB3F /* NTWaterfallViewController.swift */,
-				04F733B81C223E1B004A4D7A /* AddingShopViewController.swift */,
-				046CBB211C2B6D61005AA0DD /* DisplayShopViewController.swift */,
-			);
-			name = Controllers;
-			sourceTree = "<group>";
-		};
-		BA5F53D41C25602C0071EB3F /* Views */ = {
-			isa = PBXGroup;
-			children = (
+				BA97ED2D1C2A5F91009B5548 /* MarketViewCell.swift */,
+				BA675A911C2E3702003B3DC0 /* ShopViewCell.swift */,
+				BA675A951C2E6F30003B3DC0 /* MarketCell.swift */,
+				BA675A981C2E6FE7003B3DC0 /* UltravisualLayout.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -282,9 +299,58 @@
 		BA5F53D51C2560B20071EB3F /* Modal */ = {
 			isa = PBXGroup;
 			children = (
-				04E29C4B1C2D0CC700299F64 /* Shop.swift */,
+				0409C33E1C2652EC0083AC53 /* LogInViewController.swift */,
+				BA5F53C01C255FD90071EB3F /* NTHorizontalPageViewController.swift */,
+				BA5F53C51C255FD90071EB3F /* NTWaterfallViewController.swift */,
+				04F733B81C223E1B004A4D7A /* AddingShopViewController.swift */,
+				046CBB211C2B6D61005AA0DD /* DisplayShopViewController.swift */,
+				BAFC7A2A1C2C56030034DC66 /* Market.swift */,
+				BA675A8F1C2D760E003B3DC0 /* Shop.swift */,
 			);
 			name = Modal;
+			sourceTree = "<group>";
+		};
+		BA675A971C2E6F4C003B3DC0 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				04F733BF1C223E1B004A4D7A /* LaunchScreen.storyboard */,
+				04F733BA1C223E1B004A4D7A /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		BA675A9E1C2E7087003B3DC0 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				04E29C4B1C2D0CC700299F64 /* Shop.swift */,
+				04F733B61C223E1B004A4D7A /* AppDelegate.swift */,
+				041FB7741C2563B600F31EDE /* Flea-Bridging-Header.h */,
+			);
+			name = Others;
+			sourceTree = "<group>";
+		};
+		BA675A9F1C2E709C003B3DC0 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				04F733C21C223E1B004A4D7A /* Info.plist */,
+				04F733BD1C223E1B004A4D7A /* Assets.xcassets */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		BA7FF6081C2EB9A200ED35C9 /* TabBarAnimated */ = {
+			isa = PBXGroup;
+			children = (
+				BA7FF6171C2EBA1500ED35C9 /* RAMBadge.swift */,
+				BA7FF60D1C2EBA0600ED35C9 /* RAMBounceAnimation.swift */,
+				BA7FF60E1C2EBA0600ED35C9 /* RAMFrameItemAnimation.swift */,
+				BA7FF60F1C2EBA0600ED35C9 /* RAMFumeAnimation.swift */,
+				BA7FF6101C2EBA0600ED35C9 /* RAMRotationAnimation.swift */,
+				BA7FF6111C2EBA0600ED35C9 /* RAMTransitionItemAnimation.swift */,
+				BA7FF6091C2EB9CA00ED35C9 /* RAMAnimatedTabBarController.swift */,
+				BA7FF60A1C2EB9CA00ED35C9 /* RAMItemAnimationProtocol.swift */,
+			);
+			name = TabBarAnimated;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -475,6 +541,8 @@
 			files = (
 				046CBB221C2B6D61005AA0DD /* DisplayShopViewController.swift in Sources */,
 				04F733B91C223E1B004A4D7A /* AddingShopViewController.swift in Sources */,
+				BA7FF60B1C2EB9CA00ED35C9 /* RAMAnimatedTabBarController.swift in Sources */,
+				BA675A9B1C2E703A003B3DC0 /* UIColor.swift in Sources */,
 				04F733B71C223E1B004A4D7A /* AppDelegate.swift in Sources */,
 				04E29C4C1C2D0CC700299F64 /* Shop.swift in Sources */,
 				BA5F53CC1C255FD90071EB3F /* NTTransition.swift in Sources */,
@@ -494,6 +562,29 @@
 				BA5F53C71C255FD90071EB3F /* Extension.swift in Sources */,
 				04F503901C2D43BB0076DF5E /* GalleryCollectionViewCell.swift in Sources */,
 				BA5F53C81C255FD90071EB3F /* Macro.swift in Sources */,
+				BA5F53CA1C255FD90071EB3F /* VendorViewController.swift in Sources */,
+				BA675AA71C2E9D84003B3DC0 /* ShopViewController.swift in Sources */,
+				BA675A961C2E6F30003B3DC0 /* MarketCell.swift in Sources */,
+				BA675AA91C2E9DCB003B3DC0 /* ProfileViewController.swift in Sources */,
+				BA7FF60C1C2EB9CA00ED35C9 /* RAMItemAnimationProtocol.swift in Sources */,
+				BA675A931C2E3702003B3DC0 /* ShopViewCell.swift in Sources */,
+				BA675A9D1C2E7058003B3DC0 /* UIImage.swift in Sources */,
+				BAF07CDA1C2D3A74002F173D /* ParseClient.swift in Sources */,
+				BA675AA31C2E71D5003B3DC0 /* MarketViewController.swift in Sources */,
+				BA7FF6181C2EBA1500ED35C9 /* RAMBadge.swift in Sources */,
+				045C9F341C25754A0005B278 /* ParseInterface.swift in Sources */,
+				BA7FF6151C2EBA0600ED35C9 /* RAMRotationAnimation.swift in Sources */,
+				BA7FF6131C2EBA0600ED35C9 /* RAMFrameItemAnimation.swift in Sources */,
+				BA675A901C2D760E003B3DC0 /* Shop.swift in Sources */,
+				0409C33F1C2652EC0083AC53 /* LogInViewController.swift in Sources */,
+				BA5F53CF1C255FD90071EB3F /* MarketPlaceViewController.swift in Sources */,
+				BA7FF6121C2EBA0600ED35C9 /* RAMBounceAnimation.swift in Sources */,
+				BA7FF6161C2EBA0600ED35C9 /* RAMTransitionItemAnimation.swift in Sources */,
+				BA97ED2E1C2A5F91009B5548 /* MarketViewCell.swift in Sources */,
+				BA675AAB1C2E9DE6003B3DC0 /* SettingViewController.swift in Sources */,
+				BAFC7A2B1C2C56030034DC66 /* Market.swift in Sources */,
+				BA7FF6141C2EBA0600ED35C9 /* RAMFumeAnimation.swift in Sources */,
+				BA675A991C2E6FE7003B3DC0 /* UltravisualLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
