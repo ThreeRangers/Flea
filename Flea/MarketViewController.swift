@@ -35,6 +35,25 @@ class MarketViewController: UICollectionViewController {
         collectionView!.backgroundColor = UIColor.clearColor()
         collectionView!.decelerationRate = UIScrollViewDecelerationRateFast
     }
+    
+    func updateTabbarShop() {
+        let appDelegate  = UIApplication.sharedApplication().delegate as! AppDelegate
+        if let tabBarController = appDelegate.window!.rootViewController as? RAMAnimatedTabBarController {
+            tabBarController.setSelectIndex(from: 0, to: 1)
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier  == "openShopSegue" {
+            // transfer data to 2nd view
+            let shopVC = segue.destinationViewController as! ShopViewController
+            let indexPath = collectionView?.indexPathForCell(sender as! UICollectionViewCell)
+            shopVC.market = self.markets[indexPath!.row]
+            
+            print("get this market \(shopVC.market)")
+            updateTabbarShop()
+        }
+    }
 }
 
 extension MarketViewController {
@@ -51,7 +70,6 @@ extension MarketViewController {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseMarketIdentifier, forIndexPath: indexPath) as! MarketCell
         cell.market = self.markets[indexPath.item]
         
-        print("--load image view cell")
         if cell.market!.image == nil {
             cell.market!.loadImage { () -> () in
                 collectionView.reloadData()
@@ -60,5 +78,4 @@ extension MarketViewController {
     
         return cell
     }
-    
 }

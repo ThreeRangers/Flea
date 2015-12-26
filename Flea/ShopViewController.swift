@@ -23,6 +23,8 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         // load shop by the current select market
         market.loadShops { (data) -> () in
+            print("total shop \(data.count) of \(self.market)")
+            
             self.shops = data
             self.tableView.reloadData()
         }

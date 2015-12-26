@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import DateTools
 
 class ShopViewCell : UITableViewCell {
     @IBOutlet weak var userImage: UIImageView!
@@ -21,14 +22,15 @@ class ShopViewCell : UITableViewCell {
     
     var shop: Shop? {
         didSet {
-//            if let shop = shop {
-//                self.marketLabel.text = market.name!
-//                self.marketImage.image = market.image
-//                self.locationLabel.text = market.address
-//                let dateFormatter = NSDateFormatter()
-//                dateFormatter.dateFormat = "dd/MM h:mm"
-//                self.startDateLabel.text = dateFormatter.stringFromDate(market.date_from!)
-//            }
+            if let shop = shop {
+                self.userImage.image = shop.image
+                self.shopName.text = shop.name
+                self.desc.text = shop.descriptionText
+                self.likeButton.titleLabel!.text = String(shop.likes)
+                
+                self.createLabel.text = shop.updatedAt!.shortTimeAgoSinceNow()
+
+            }
         }
     }
     
