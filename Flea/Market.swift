@@ -23,6 +23,11 @@ class Market: PFObject, PFSubclassing {
     @NSManaged var imageHeight: NSNumber?
     @NSManaged var location: String?
     
+    static func getAll(completion: (data: [Market]) -> ()) {
+        ParseClient.getAllMaket { (data) -> () in
+            completion(data: data)
+        }
+    }
     
     // load image market
     func loadImage(completion: () -> ()) {
