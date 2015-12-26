@@ -9,7 +9,6 @@
         <scene sceneID="JlD-do-vwe">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cLu-bX-qTq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="krK-t0-CbO" customClass="RAMBounceAnimation"/>
                 <collectionViewController id="ARl-bJ-2Os" customClass="MarketViewController" customModule="Flea" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="VHH-0f-Mej">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -88,7 +87,6 @@
                                     <outlet property="marketImage" destination="iOd-yo-Eyt" id="QhS-MR-P7T"/>
                                     <outlet property="marketLabel" destination="TRj-x4-tcq" id="coK-47-WyF"/>
                                     <outlet property="startDateLabel" destination="NS1-4j-1ik" id="Yb7-cR-9nt"/>
-                                    <segue destination="6qd-e3-G20" kind="push" identifier="shopSegue" id="CPU-nJ-uAQ"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -99,18 +97,19 @@
                     </collectionView>
                     <tabBarItem key="tabBarItem" title="Market" image="home" id="wXF-sE-EeG" customClass="RAMAnimatedTabBarItem">
                         <connections>
-                            <outlet property="animation" destination="krK-t0-CbO" id="W0h-tK-0uU"/>
+                            <outlet property="animation" destination="krK-t0-CbO" id="7y6-UQ-48m"/>
                         </connections>
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="XxS-wY-Nsf"/>
                 </collectionViewController>
+                <customObject id="krK-t0-CbO" customClass="RAMBounceAnimation"/>
             </objects>
             <point key="canvasLocation" x="-1165" y="-308"/>
         </scene>
         <!--Shop-->
         <scene sceneID="B20-YE-TSd">
             <objects>
-                <viewController id="6qd-e3-G20" sceneMemberID="viewController">
+                <viewController id="6qd-e3-G20" customClass="ShopViewController" customModule="Flea" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rCz-92-4se"/>
                         <viewControllerLayoutGuide type="bottom" id="Thr-d6-B9T"/>
@@ -160,7 +159,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zNC-Yi-Fyr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="Zem-85-An5" customClass="RAMBounceAnimation"/>
             </objects>
-            <point key="canvasLocation" x="-671" y="-308"/>
+            <point key="canvasLocation" x="-707" y="-308"/>
         </scene>
         <!--Log In View Controller-->
         <scene sceneID="EUq-uQ-ast">
@@ -183,7 +182,7 @@
         <!--Profile-->
         <scene sceneID="1Nz-IR-MtW">
             <objects>
-                <viewController id="ahI-fq-qKd" sceneMemberID="viewController">
+                <viewController id="ahI-fq-qKd" customClass="ProfileViewController" customModule="Flea" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bQ4-4o-bp3"/>
                         <viewControllerLayoutGuide type="bottom" id="ezd-Tj-jRc"/>
@@ -203,12 +202,12 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WSI-bq-8K7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="joS-Dy-3f9" customClass="RAMBounceAnimation"/>
             </objects>
-            <point key="canvasLocation" x="307" y="-308"/>
+            <point key="canvasLocation" x="-297" y="-308"/>
         </scene>
         <!--Setting-->
         <scene sceneID="9nE-5H-RmO">
             <objects>
-                <viewController id="QHh-e7-hm1" sceneMemberID="viewController">
+                <viewController id="QHh-e7-hm1" customClass="SettingViewController" customModule="Flea" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WAe-TS-Kw6"/>
                         <viewControllerLayoutGuide type="bottom" id="cqD-XB-biL"/>
@@ -227,7 +226,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oQg-An-cbT" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="AgY-0D-BRh" customClass="RAMBounceAnimation"/>
             </objects>
-            <point key="canvasLocation" x="-180" y="-303"/>
+            <point key="canvasLocation" x="109" y="-308"/>
         </scene>
         <!--My Shop-->
         <scene sceneID="AYs-N2-PLA">
@@ -399,7 +398,4 @@
         <image name="shopProfileImg" width="631" height="448"/>
         <image name="vendor" width="32" height="32"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="rUn-Bq-84c"/>
-    </inferredMetricsTieBreakers>
 </document>
