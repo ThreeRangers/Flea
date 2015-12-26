@@ -6,28 +6,30 @@ let VendorViewCellIdentify = "VendorViewCellIdentify"
 
 class VendorViewController : UICollectionViewController, NTTransitionProtocol , VendorControllerProtocol{
     var market : Market!
-//    var shops : [Shop]!
+    var shops : [Shop]!
     var pullOffset = CGPointZero
-    
-    // load shops data to collection view by the market
-    func loadData() {
-        
-    }
     
     init(collectionViewLayout layout: UICollectionViewLayout!, currentIndexPath indexPath: NSIndexPath){
         super.init(collectionViewLayout:layout)
         
         let collectionView :UICollectionView = self.collectionView!
         collectionView.pagingEnabled = true
-        collectionView.registerClass(VendorViewCell.self, forCellWithReuseIdentifier: VendorViewCellIdentify)
+        collectionView.registerClass(ShopViewCell.self, forCellWithReuseIdentifier: shopCellIdentify)
         collectionView.setToIndexPath(indexPath)
         
         collectionView.performBatchUpdates({collectionView.reloadData()}, completion: { finished in
             if finished {
                 collectionView.scrollToItemAtIndexPath(indexPath,atScrollPosition:.CenteredHorizontally, animated: false)
             }});
-        
+
         loadData();
+    }
+    
+    // load shops data to collection view by the market
+    func loadData() {
+        market.loadShops { (data) -> () in
+            self.shops = data
+        }
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -55,9 +57,9 @@ extension VendorViewController {
     
     // init cell
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
-        let cell: VendorViewCell = collectionView.dequeueReusableCellWithReuseIdentifier(VendorViewCellIdentify, forIndexPath: indexPath) as! VendorViewCell
+        let cell: ShopViewCell = collectionView.dequeueReusableCellWithReuseIdentifier(VendorViewCellIdentify, forIndexPath: indexPath) as! ShopViewCell
         
-  //      collectionCell.imageName = self.imageNameList[indexPath.row] as String
+        cell.shop = self.shops[indexPath.row] as Shop
         
         cell.tappedAction = {}
         cell.pullAction = { offset in

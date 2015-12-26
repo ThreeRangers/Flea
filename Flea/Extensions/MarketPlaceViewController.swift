@@ -65,6 +65,8 @@ class MarketPlaceViewController:UICollectionViewController ,CHTCollectionViewDel
            position = .Top
         }
         let currentIndexPath = NSIndexPath(forRow: pageIndex, inSection: 0)
+       
+        
         let collectionView = self.collectionView!;
         collectionView.setToIndexPath(currentIndexPath)
         
@@ -85,7 +87,7 @@ extension MarketPlaceViewController {
     // dynamic resize for the image cell view
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize{
         let market = self.data[indexPath.row]
-        let imageHeight = market.imageHeight! * gridWidth/market.imageWidth!
+        let imageHeight = CGFloat(market.imageHeight!) * gridWidth/CGFloat(market.imageWidth!)
         return CGSizeMake(gridWidth, imageHeight)
     }
     

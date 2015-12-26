@@ -29,6 +29,8 @@
 		BA5F53CC1C255FD90071EB3F /* NTTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5F53C21C255FD90071EB3F /* NTTransition.swift */; };
 		BA5F53CD1C255FD90071EB3F /* NTTransitionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5F53C31C255FD90071EB3F /* NTTransitionProtocol.swift */; };
 		BA5F53CF1C255FD90071EB3F /* MarketPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5F53C51C255FD90071EB3F /* MarketPlaceViewController.swift */; };
+		BA675A901C2D760E003B3DC0 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA675A8F1C2D760E003B3DC0 /* Shop.swift */; };
+		BA675A931C2E3702003B3DC0 /* ShopViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA675A911C2E3702003B3DC0 /* ShopViewCell.swift */; };
 		BA97ED2E1C2A5F91009B5548 /* MarketViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA97ED2D1C2A5F91009B5548 /* MarketViewCell.swift */; };
 		BAB6CC301C28698B0092FF21 /* 10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BAB6CC251C28698B0092FF21 /* 10.jpg */; };
 		BAB6CC311C28698B0092FF21 /* 9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BAB6CC261C28698B0092FF21 /* 9.jpg */; };
@@ -93,6 +95,8 @@
 		BA5F53C21C255FD90071EB3F /* NTTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NTTransition.swift; path = Extensions/NTTransition.swift; sourceTree = "<group>"; };
 		BA5F53C31C255FD90071EB3F /* NTTransitionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NTTransitionProtocol.swift; path = Extensions/NTTransitionProtocol.swift; sourceTree = "<group>"; };
 		BA5F53C51C255FD90071EB3F /* MarketPlaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MarketPlaceViewController.swift; path = Extensions/MarketPlaceViewController.swift; sourceTree = "<group>"; };
+		BA675A8F1C2D760E003B3DC0 /* Shop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
+		BA675A911C2E3702003B3DC0 /* ShopViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopViewCell.swift; sourceTree = "<group>"; };
 		BA97ED2D1C2A5F91009B5548 /* MarketViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketViewCell.swift; sourceTree = "<group>"; };
 		BAB6CC251C28698B0092FF21 /* 10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 10.jpg; path = images/10.jpg; sourceTree = "<group>"; };
 		BAB6CC261C28698B0092FF21 /* 9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 9.jpg; path = images/9.jpg; sourceTree = "<group>"; };
@@ -264,6 +268,7 @@
 			children = (
 				BA5F53BF1C255FD90071EB3F /* VendorViewCell.swift */,
 				BA97ED2D1C2A5F91009B5548 /* MarketViewCell.swift */,
+				BA675A911C2E3702003B3DC0 /* ShopViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -272,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				BAFC7A2A1C2C56030034DC66 /* Market.swift */,
+				BA675A8F1C2D760E003B3DC0 /* Shop.swift */,
 			);
 			name = Modal;
 			sourceTree = "<group>";
@@ -494,11 +500,13 @@
 				04F733B71C223E1B004A4D7A /* AppDelegate.swift in Sources */,
 				BA5F53CC1C255FD90071EB3F /* NTTransition.swift in Sources */,
 				BA5F53CA1C255FD90071EB3F /* VendorViewController.swift in Sources */,
+				BA675A931C2E3702003B3DC0 /* ShopViewCell.swift in Sources */,
 				BA5F53C61C255FD90071EB3F /* CHTCollectionViewWaterfallLayout.swift in Sources */,
 				BA5F53C91C255FD90071EB3F /* VendorViewCell.swift in Sources */,
 				BAF07CDA1C2D3A74002F173D /* ParseClient.swift in Sources */,
 				045C9F341C25754A0005B278 /* ParseInterface.swift in Sources */,
 				BA5F53CD1C255FD90071EB3F /* NTTransitionProtocol.swift in Sources */,
+				BA675A901C2D760E003B3DC0 /* Shop.swift in Sources */,
 				BA5F53CB1C255FD90071EB3F /* NTNavigationController.swift in Sources */,
 				0409C33F1C2652EC0083AC53 /* LogInViewController.swift in Sources */,
 				BA5F53CF1C255FD90071EB3F /* MarketPlaceViewController.swift in Sources */,

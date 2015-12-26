@@ -8,6 +8,7 @@
         <!--Market Place View Controller-->
         <scene sceneID="JlD-do-vwe">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cLu-bX-qTq" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <collectionViewController id="ARl-bJ-2Os" customClass="MarketPlaceViewController" customModule="Flea" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="VHH-0f-Mej">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -94,9 +95,8 @@
                         <outlet property="collection" destination="VHH-0f-Mej" id="PZN-SW-Le4"/>
                     </connections>
                 </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cLu-bX-qTq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="157" y="101"/>
+            <point key="canvasLocation" x="84" y="101"/>
         </scene>
         <!--Log In View Controller-->
         <scene sceneID="EUq-uQ-ast">
@@ -258,6 +258,7 @@
         <!--Navigation Controller-->
         <scene sceneID="feR-jX-Q7s">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WyN-6W-sdN" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="55K-PM-K7B" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
@@ -270,7 +271,6 @@
                         <segue destination="ARl-bJ-2Os" kind="relationship" relationship="rootViewController" id="DPE-9Y-bIc"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WyN-6W-sdN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-375" y="101"/>
         </scene>
