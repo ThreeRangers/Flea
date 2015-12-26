@@ -29,6 +29,7 @@
 		BA675A9B1C2E703A003B3DC0 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA675A9A1C2E703A003B3DC0 /* UIColor.swift */; };
 		BA675A9D1C2E7058003B3DC0 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA675A9C1C2E7058003B3DC0 /* UIImage.swift */; };
 		BA675AA31C2E71D5003B3DC0 /* MarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA675AA21C2E71D5003B3DC0 /* MarketViewController.swift */; };
+		BA675AA51C2E83D2003B3DC0 /* RAMAnimatedTabBarController in Resources */ = {isa = PBXBuildFile; fileRef = BA675AA41C2E83D2003B3DC0 /* RAMAnimatedTabBarController */; };
 		BA97ED2E1C2A5F91009B5548 /* MarketViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA97ED2D1C2A5F91009B5548 /* MarketViewCell.swift */; };
 		BAF07CDA1C2D3A74002F173D /* ParseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF07CD91C2D3A74002F173D /* ParseClient.swift */; };
 		BAFC7A2B1C2C56030034DC66 /* Market.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFC7A2A1C2C56030034DC66 /* Market.swift */; };
@@ -82,6 +83,7 @@
 		BA675A9A1C2E703A003B3DC0 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		BA675A9C1C2E7058003B3DC0 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		BA675AA21C2E71D5003B3DC0 /* MarketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketViewController.swift; sourceTree = "<group>"; };
+		BA675AA41C2E83D2003B3DC0 /* RAMAnimatedTabBarController */ = {isa = PBXFileReference; lastKnownFileType = folder; path = RAMAnimatedTabBarController; sourceTree = "<group>"; };
 		BA97ED2D1C2A5F91009B5548 /* MarketViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketViewCell.swift; sourceTree = "<group>"; };
 		BAF07CD91C2D3A74002F173D /* ParseClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseClient.swift; sourceTree = "<group>"; };
 		BAFC7A2A1C2C56030034DC66 /* Market.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Market.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 		BA5F53D01C255FE40071EB3F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				BA675AA41C2E83D2003B3DC0 /* RAMAnimatedTabBarController */,
 				BA675A9A1C2E703A003B3DC0 /* UIColor.swift */,
 				BA675A9C1C2E7058003B3DC0 /* UIImage.swift */,
 			);
@@ -381,6 +384,7 @@
 			files = (
 				04F733C11C223E1B004A4D7A /* LaunchScreen.storyboard in Resources */,
 				04F733BE1C223E1B004A4D7A /* Assets.xcassets in Resources */,
+				BA675AA51C2E83D2003B3DC0 /* RAMAnimatedTabBarController in Resources */,
 				04F733BC1C223E1B004A4D7A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

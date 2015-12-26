@@ -21,7 +21,7 @@ class Market: PFObject, PFSubclassing {
     @NSManaged var imageMarket: PFFile?
     @NSManaged var imageWidth: NSNumber?
     @NSManaged var imageHeight: NSNumber?
-    @NSManaged var location: String?
+   
     
     static func getAll(completion: (data: [Market]) -> ()) {
         ParseClient.getAllMaket { (data) -> () in

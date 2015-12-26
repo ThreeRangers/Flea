@@ -27,6 +27,7 @@ class ParseClient: NSObject {
                     for object in objects {
 
                         result.append(object as! Market)
+                        print(object)
                         
                         // call back function
                         completion(data: result)

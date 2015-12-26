@@ -24,7 +24,7 @@ class MarketCell: UICollectionViewCell {
             if let market = market {
                 self.marketLabel.text = market.name!
                 self.marketImage.image = market.image
-                self.locationLabel.text = market.location
+                self.locationLabel.text = market.address
                 let dateFormatter = NSDateFormatter()
                 dateFormatter.dateFormat = "dd/MM h:mm"
                 self.startDateLabel.text = dateFormatter.stringFromDate(market.date_from!)
