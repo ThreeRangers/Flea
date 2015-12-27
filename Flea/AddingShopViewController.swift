@@ -22,7 +22,7 @@ class AddingShopViewController: UIViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-//        tableView.rowHeight = UITableViewAutomaticDimension
+        //        tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 400
         
         //Add notificatioon when tap Profile Image
@@ -49,21 +49,31 @@ class AddingShopViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "displayShopSegue" {
             var newShop = Shop()
+            
+            // Prepare for shop info data from ShopInfoCell
             let indexPath = NSIndexPath(forRow: 0, inSection: InfoSection)
             let edittingCell = tableView.cellForRowAtIndexPath(indexPath) as! shopInfoTableViewCell
             edittingCell.setInfo({ (edittingShop, error) -> () in
                 if edittingShop != nil {
                     newShop = edittingShop!
-                    self.upLoadShopToParse(newShop)
                 } else {
                     print("Error call retweet API",error)
+                    return
                 }
             })
+            // Prepare for shop gallery data from shopGalleryCell
+            let galleryCellIndexPath = NSIndexPath(forRow: 0, inSection: GallerySection)
+            let galleryEdittingCell = tableView.cellForRowAtIndexPath(galleryCellIndexPath) as! shopGalleryTableViewCell
+            if galleryEdittingCell.getGalleryFile().count > 0 {
+                newShop.gallery = galleryEdittingCell.getGalleryFile()                
+                print("newShop set gallery",newShop.gallery)
+            }
+            self.upLoadShopToParse(newShop)
         }
     }
     
     func upLoadShopToParse(newShop: Shop) {
-//        newShop.uploadInfoDataWithImg()
+        newShop.uploadInfoDataWithImg()
     }
     
     
@@ -121,15 +131,26 @@ extension AddingShopViewController: UICollectionViewDelegate, UICollectionViewDa
             
             let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ImageCell",
                 forIndexPath: indexPath) as! GalleryCollectionViewCell
+            //set tag for gallery image view
+            cell.galleryImageView.tag = indexPath.item
             cell.delegate = self
             cell.backgroundColor = UIColor.whiteColor()
             return cell
     }
     
-    func tapImage(galleryColletionViewCell: GalleryCollectionViewCell, image: UIImage?) {
-        loadImageFrom(.PhotoLibrary)
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        // handle tap events
+        print("You selected cell #\(indexPath.item)!")
     }
     
+    //    func tapImage(galleryColletionViewCell: GalleryCollectionViewCell, image: UIImage?) {
+    //        loadImageFrom(.PhotoLibrary)
+    //    }
+    func tapImage(galleryColletionViewCell: GalleryCollectionViewCell, imageViewIndex: Int) {
+        imgViewPickerIndex = imageViewIndex
+        print("imgViewPickerIndex",imgViewPickerIndex)
+        loadImageFrom(.PhotoLibrary)
+    }
     
     
     func loadImageFrom(source: UIImagePickerControllerSourceType) {
@@ -154,11 +175,14 @@ extension AddingShopViewController: UICollectionViewDelegate, UICollectionViewDa
     
     func pickImage(image: UIImage) {
         if imgViewPickerIndex == ProfieImgViewIndex {
-        let indexPath = NSIndexPath(forRow: 0, inSection: InfoSection)
-        let edittingCell = tableView.cellForRowAtIndexPath(indexPath) as! shopInfoTableViewCell
-        edittingCell.shopProfileImgView.image = image
+            let indexPath = NSIndexPath(forRow: 0, inSection: InfoSection)
+            let edittingCell = tableView.cellForRowAtIndexPath(indexPath) as! shopInfoTableViewCell
+            edittingCell.shopProfileImgView.image = image
         } else {
-            
+            let indexPath = NSIndexPath(forRow: 0, inSection: GallerySection)
+            let edittingCell = tableView.cellForRowAtIndexPath(indexPath) as! shopGalleryTableViewCell
+            let galleryCollectionCell = edittingCell.collectionView.cellForItemAtIndexPath(NSIndexPath(forItem: imgViewPickerIndex, inSection: 0)) as! GalleryCollectionViewCell
+            galleryCollectionCell.galleryImageView.image = image
         }
     }
     

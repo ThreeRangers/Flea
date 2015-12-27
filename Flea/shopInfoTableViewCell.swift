@@ -25,15 +25,15 @@ class shopInfoTableViewCell: UITableViewCell {
     
     @IBOutlet weak var emailTextField: UITextField!
     
-    @IBOutlet weak var addPhotoButton: UIButton!
     
-//    var delegate: shopInfoTableViewCellDelegate?
+    @IBOutlet weak var save: UIButton!
+    //    var delegate: shopInfoTableViewCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        shopProfileImgView.addSubview(addPhotoButton)
-        shopProfileImgView.bringSubviewToFront(addPhotoButton)
+        shopProfileImgView.addSubview(save)
+        shopProfileImgView.bringSubviewToFront(save)
         
         let tap = UITapGestureRecognizer(target: self, action: Selector("handleTapProfileImg:"))
         tap.delegate = self
@@ -52,16 +52,17 @@ class shopInfoTableViewCell: UITableViewCell {
         shop.facebookLink = faceLinkTextField.text
         shop.phone = phoneTextField.text
         shop.email = emailTextField.text
-        let image = shopProfileImgView.image
-        let imageFile = PFFile(name: "shopProfileImg", data: UIImageJPEGRepresentation(image!, 0.4)!)
-        shop.profileImg = imageFile!
-        print("PFFIle: ",shop.profileImg)
+        if let image = shopProfileImgView.image {
+            let imageFile = PFFile(name: "shopProfileImg", data: UIImageJPEGRepresentation(image, 0.4)!)
+            shop.profileImg = imageFile!
+            print("PFFIle: ",shop.profileImg)
+        }
         completion(edittingShop: shop, error: nil)
     }
     
     func handleTapProfileImg(sender: UITapGestureRecognizer? = nil) {
         print("tap Image")
-//        delegate?.tapProfileImage!(self, image: shopProfileImgView.image)
+        //        delegate?.tapProfileImage!(self, image: shopProfileImgView.image)
         NSNotificationCenter.defaultCenter().postNotificationName(qTapImageNotificationKey, object: self)
     }
     

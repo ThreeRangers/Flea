@@ -28,7 +28,6 @@
 		BA3424B31C2EF4D3009C3374 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3424B21C2EF4D3009C3374 /* LogInViewController.swift */; };
 		BA3424B81C2EF509009C3374 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3424B61C2EF509009C3374 /* SignUpViewController.swift */; };
 		BA3424B91C2EF509009C3374 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3424B71C2EF509009C3374 /* SignInViewController.swift */; };
-		BA3424BF1C2EF5A1009C3374 /* shopImgCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3424BE1C2EF5A1009C3374 /* shopImgCollectionCell.swift */; };
 		BA3424C11C2EF5AD009C3374 /* ParseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3424C01C2EF5AD009C3374 /* ParseError.swift */; };
 		BA675A901C2D760E003B3DC0 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA675A8F1C2D760E003B3DC0 /* Shop.swift */; };
 		BA675A931C2E3702003B3DC0 /* ShopViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA675A911C2E3702003B3DC0 /* ShopViewCell.swift */; };
@@ -99,7 +98,6 @@
 		BA3424B21C2EF4D3009C3374 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		BA3424B61C2EF509009C3374 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		BA3424B71C2EF509009C3374 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
-		BA3424BE1C2EF5A1009C3374 /* shopImgCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = shopImgCollectionCell.swift; sourceTree = "<group>"; };
 		BA3424C01C2EF5AD009C3374 /* ParseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseError.swift; sourceTree = "<group>"; };
 		BA675A8F1C2D760E003B3DC0 /* Shop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		BA675A911C2E3702003B3DC0 /* ShopViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopViewCell.swift; sourceTree = "<group>"; };
@@ -267,7 +265,6 @@
 		BA5F53D41C25602C0071EB3F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BA3424BE1C2EF5A1009C3374 /* shopImgCollectionCell.swift */,
 				0477EEC11C27DB9A00C12BF6 /* shopInfoTableViewCell.swift */,
 				0477EEC31C27DFD700C12BF6 /* shopGalleryTableViewCell.swift */,
 				046CBB231C2B759A005AA0DD /* shopDisplayInfoTableViewCell.swift */,
@@ -531,7 +528,6 @@
 				BA7FF6181C2EBA1500ED35C9 /* RAMBadge.swift in Sources */,
 				BA7FF6151C2EBA0600ED35C9 /* RAMRotationAnimation.swift in Sources */,
 				BA7FF6131C2EBA0600ED35C9 /* RAMFrameItemAnimation.swift in Sources */,
-				BA3424BF1C2EF5A1009C3374 /* shopImgCollectionCell.swift in Sources */,
 				BA3424B91C2EF509009C3374 /* SignInViewController.swift in Sources */,
 				BA675A901C2D760E003B3DC0 /* Shop.swift in Sources */,
 				BA7FF6121C2EBA0600ED35C9 /* RAMBounceAnimation.swift in Sources */,
