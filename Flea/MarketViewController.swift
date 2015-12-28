@@ -46,10 +46,22 @@ class MarketViewController: UICollectionViewController {
         if segue.identifier  == "openShopSegue" {
             // get current select row
             let indexPath = collectionView?.indexPathForCell(sender as! UICollectionViewCell)
-            let shopVC = segue.destinationViewController as! ShopViewController
-            shopVC.market = self.markets[(indexPath?.row)!]
             
-            updateTabbarShop()
+        
+            let appDelegate  = UIApplication.sharedApplication().delegate as! AppDelegate
+            if let tabBar = appDelegate.window!.rootViewController as? RAMAnimatedTabBarController {
+                
+                let shopVC = tabBar.viewControllers![1] as! ShopViewController
+                shopVC.market = self.markets[(indexPath?.row)!]
+                tabBar.setSelectIndex(from: 0, to: 1)
+            }
+// question: not work on this tabBar ?
+//            let tabBar = segue.destinationViewController as! RAMAnimatedTabBarController
+//            let shopVC = tabBar.viewControllers![1] as! ShopViewController
+//            shopVC.market = self.markets[(indexPath?.row)!]
+            
+            
+//            self.presentViewController(shopVC, animated: true, completion: nil)
         }
     }
 }
@@ -80,6 +92,6 @@ extension MarketViewController {
 
 extension MarketViewController : UITabBarDelegate {
     func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem)  {
-            let select = item
+//            let select = item
     }
 }

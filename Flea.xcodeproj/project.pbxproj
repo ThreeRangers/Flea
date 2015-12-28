@@ -24,6 +24,7 @@
 		04F733CC1C223E1B004A4D7A /* FleaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F733CB1C223E1B004A4D7A /* FleaTests.swift */; };
 		04F733D71C223E1B004A4D7A /* FleaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F733D61C223E1B004A4D7A /* FleaUITests.swift */; };
 		53A43922D20B3F6BB59E20E9 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB8F118833FF577E5D81E38 /* Pods.framework */; };
+		BA07F5241C30FCED00F2CA14 /* DOFavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA07F5231C30FCED00F2CA14 /* DOFavoriteButton.swift */; };
 		BA3424B11C2EF4A3009C3374 /* ParseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3424B01C2EF4A3009C3374 /* ParseInterface.swift */; };
 		BA3424B31C2EF4D3009C3374 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3424B21C2EF4D3009C3374 /* LogInViewController.swift */; };
 		BA3424B81C2EF509009C3374 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3424B61C2EF509009C3374 /* SignUpViewController.swift */; };
@@ -94,6 +95,7 @@
 		04F733D81C223E1B004A4D7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BB8F118833FF577E5D81E38 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CDF51B042A53150E8CDE283 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		BA07F5231C30FCED00F2CA14 /* DOFavoriteButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DOFavoriteButton.swift; sourceTree = "<group>"; };
 		BA3424B01C2EF4A3009C3374 /* ParseInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseInterface.swift; sourceTree = "<group>"; };
 		BA3424B21C2EF4D3009C3374 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		BA3424B61C2EF509009C3374 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 				BA7FF6081C2EB9A200ED35C9 /* TabBarAnimated */,
 				BA675A9A1C2E703A003B3DC0 /* UIColor.swift */,
 				BA675A9C1C2E7058003B3DC0 /* UIImage.swift */,
+				BA07F5231C30FCED00F2CA14 /* DOFavoriteButton.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -521,6 +524,7 @@
 				BA675A961C2E6F30003B3DC0 /* MarketCell.swift in Sources */,
 				BA675AA91C2E9DCB003B3DC0 /* ProfileViewController.swift in Sources */,
 				BA7FF60C1C2EB9CA00ED35C9 /* RAMItemAnimationProtocol.swift in Sources */,
+				BA07F5241C30FCED00F2CA14 /* DOFavoriteButton.swift in Sources */,
 				BA675A931C2E3702003B3DC0 /* ShopViewCell.swift in Sources */,
 				BA675A9D1C2E7058003B3DC0 /* UIImage.swift in Sources */,
 				BAF07CDA1C2D3A74002F173D /* ParseClient.swift in Sources */,

@@ -8,20 +8,24 @@
 
 import UIKit
 
-
-
 class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     var market: Market!
     var shops : [Shop] = []
-   
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        if market == nil {
-            return
-        }
+    @IBOutlet weak var headerView: UIView!
+    
+    @IBOutlet weak var marketLabel: UILabel!
+    @IBOutlet weak var visitLabel: UILabel!
+    @IBOutlet weak var LoveLabel: UILabel!
+    @IBOutlet weak var shopLabel: UILabel!
+    
+    @IBOutlet weak var loveButton: DOFavoriteButton!
+    @IBOutlet weak var addShopButton: DOFavoriteButton!
+    
+    func loadData() {
+        // load market info
+        marketLabel.text = market.name
         
         // load shop by the current select market
         market.loadShops { (data) -> () in
@@ -30,6 +34,41 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
             self.shops = data
             self.tableView.reloadData()
         }
+        
+        // add tap button to image
+        loveButton.addTarget(self, action: Selector("tappedLoveButton:"), forControlEvents: .TouchUpInside)
+        addShopButton.addTarget(self, action: Selector("tappedShopButton:"), forControlEvents: .TouchUpInside)
+    }
+   
+    func tappedLoveButton(sender: DOFavoriteButton) {
+        if sender.selected {
+            // deselect
+            sender.deselect()
+        } else {
+            // select with animation
+            sender.select()
+        }
+    }
+    
+    func tappedShopButton(sender: DOFavoriteButton) {
+        if sender.selected {
+            // deselect
+            sender.deselect()
+        } else {
+            // select with animation
+            sender.select()
+        }
+    }
+
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        if market == nil {
+            return
+        }
+        
+        loadData()
         
         tableView.delegate = self
         tableView.dataSource = self
