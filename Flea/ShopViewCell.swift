@@ -22,15 +22,15 @@ class ShopViewCell : UITableViewCell {
     
     var shop: Shop? {
         didSet {
-            if let shop = shop {
-                self.userImage.image = shop.image
-                self.shopName.text = shop.name
-                self.desc.text = shop.descriptionText
-                self.likeButton.titleLabel!.text = String(shop.likes)
-                
-                self.createLabel.text = shop.updatedAt!.shortTimeAgoSinceNow()
-
-            }
+//            if let shop = shop {
+//                self.userImage.image = shop.image
+//                self.shopName.text = shop.name
+//                self.desc.text = shop.descriptionText
+//                self.likeButton.titleLabel!.text = String(shop.likes)
+//                
+//                self.createLabel.text = shop.updatedAt!.shortTimeAgoSinceNow()
+//
+//            }
         }
     }
     
