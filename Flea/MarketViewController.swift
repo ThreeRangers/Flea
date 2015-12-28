@@ -7,15 +7,12 @@
 //
 
 import UIKit
-
 private let reuseMarketIdentifier = "MarketCell"
 
 
-import UIKit
-
 class MarketViewController: UICollectionViewController {
     
-    var markets = [Market]()
+    var markets = [Market]()    
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
@@ -44,13 +41,14 @@ class MarketViewController: UICollectionViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        print("perform segue 1")
+        
         if segue.identifier  == "openShopSegue" {
-            // transfer data to 2nd view
-            let shopVC = segue.destinationViewController as! ShopViewController
+            // get current select row
             let indexPath = collectionView?.indexPathForCell(sender as! UICollectionViewCell)
-            shopVC.market = self.markets[indexPath!.row]
+            let shopVC = segue.destinationViewController as! ShopViewController
+            shopVC.market = self.markets[(indexPath?.row)!]
             
-            print("get this market \(shopVC.market)")
             updateTabbarShop()
         }
     }
@@ -77,5 +75,11 @@ extension MarketViewController {
         }
     
         return cell
+    }
+}
+
+extension MarketViewController : UITabBarDelegate {
+    func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem)  {
+            let select = item
     }
 }

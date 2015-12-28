@@ -8,15 +8,17 @@
 
 import UIKit
 
+
+
 class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     var market: Market!
     var shops : [Shop] = []
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         if market == nil {
             return
         }
@@ -44,7 +46,6 @@ extension ShopViewController {
         return shops.count
     }
     
-    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell : ShopViewCell = tableView.dequeueReusableCellWithIdentifier("shopViewCell", forIndexPath: indexPath) as! ShopViewCell
         
@@ -57,11 +58,4 @@ extension ShopViewController {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)  {
         // show the shop detail by listing facebook list
     }
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-
 }

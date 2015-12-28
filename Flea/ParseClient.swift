@@ -44,8 +44,8 @@ class ParseClient: NSObject {
     static func getVendorShops( market: Market, completion:(data: [Shop]) -> () ) {
         var result = [Shop]()
         
-        let query = PFQuery(className:"shop")
-        query.whereKey("market", equalTo: PFObject(withoutDataWithClassName: "market", objectId: market.objectId))
+        let query = PFQuery(className:"Shops")
+        query.whereKey("market", equalTo: market)
         
         query.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error: NSError?) -> Void in
             if error == nil {
