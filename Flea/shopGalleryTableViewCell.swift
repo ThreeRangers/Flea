@@ -37,7 +37,7 @@ class shopGalleryTableViewCell: UITableViewCell {
     func getGalleryFile() -> [PFFile] {
         var files = [PFFile]()
         for var i = 0; i < GallerryMaxCnt; i++ {
-            var indexPath = NSIndexPath(forRow: i, inSection: 0)
+            let indexPath = NSIndexPath(forRow: i, inSection: 0)
             let cell = collectionView.cellForItemAtIndexPath(indexPath) as! GalleryCollectionViewCell
             if let image = cell.galleryImageView.image {
                 let imageFile = PFFile(name: "galleryImg\(i)", data: UIImageJPEGRepresentation(image, 0.4)!)

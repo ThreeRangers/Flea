@@ -69,6 +69,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		BA7DD15A1C31BB5A00931324 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		041FB76E1C2562BB00F31EDE /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../../../../../Downloads/FacebookSDKs-iOS-20151111/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		041FB76F1C2562BB00F31EDE /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../../../../../Downloads/FacebookSDKs-iOS-20151111/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
@@ -111,6 +124,8 @@
 		BA675AA61C2E9D84003B3DC0 /* ShopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		BA675AA81C2E9DCB003B3DC0 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		BA675AAA1C2E9DE6003B3DC0 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		BA7DD1501C31BB5A00931324 /* FleaMarket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FleaMarket.h; sourceTree = "<group>"; };
+		BA7DD1521C31BB5A00931324 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA7FF6091C2EB9CA00ED35C9 /* RAMAnimatedTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RAMAnimatedTabBarController.swift; path = RAMAnimatedTabBarController/RAMAnimatedTabBarController.swift; sourceTree = "<group>"; };
 		BA7FF60A1C2EB9CA00ED35C9 /* RAMItemAnimationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RAMItemAnimationProtocol.swift; path = RAMAnimatedTabBarController/RAMItemAnimationProtocol.swift; sourceTree = "<group>"; };
 		BA7FF60D1C2EBA0600ED35C9 /* RAMBounceAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RAMBounceAnimation.swift; path = RAMAnimatedTabBarController/Animations/RAMBounceAnimation.swift; sourceTree = "<group>"; };
@@ -169,6 +184,7 @@
 				04F733B51C223E1B004A4D7A /* Flea */,
 				04F733CA1C223E1B004A4D7A /* FleaTests */,
 				04F733D51C223E1B004A4D7A /* FleaUITests */,
+				BA7DD14F1C31BB5A00931324 /* FleaMarket */,
 				04F733B41C223E1B004A4D7A /* Products */,
 				11ED2C1EBBEF2F3FB2FBC35F /* Pods */,
 				AC7B9BA4BEA6C45D94A086CB /* Frameworks */,
@@ -308,6 +324,15 @@
 			name = Assets;
 			sourceTree = "<group>";
 		};
+		BA7DD14F1C31BB5A00931324 /* FleaMarket */ = {
+			isa = PBXGroup;
+			children = (
+				BA7DD1501C31BB5A00931324 /* FleaMarket.h */,
+				BA7DD1521C31BB5A00931324 /* Info.plist */,
+			);
+			path = FleaMarket;
+			sourceTree = "<group>";
+		};
 		BA7FF6081C2EB9A200ED35C9 /* TabBarAnimated */ = {
 			isa = PBXGroup;
 			children = (
@@ -336,6 +361,7 @@
 				04F733B11C223E1B004A4D7A /* Resources */,
 				0D6010683D10DA5F1CD96BA5 /* Embed Pods Frameworks */,
 				251456DA8326C40AECFF671B /* Copy Pods Resources */,
+				BA7DD15A1C31BB5A00931324 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -689,6 +715,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Flea/Flea-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -703,6 +730,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ThreeStrangers-Flea.Flea";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Flea/Flea-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

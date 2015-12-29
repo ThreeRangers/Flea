@@ -29,7 +29,7 @@ class ShopViewCell : UITableViewCell {
                 self.desc.text = shop.descriptionText
                 self.likeButton.titleLabel!.text = String(shop.likes)
                 
-                self.createLabel.text = shop.updatedAt!.shortTimeAgoSinceNow()
+               /// self.createLabel.text = shop.updatedAt!.shortTimeAgoSinceNow()
 
             }
         }

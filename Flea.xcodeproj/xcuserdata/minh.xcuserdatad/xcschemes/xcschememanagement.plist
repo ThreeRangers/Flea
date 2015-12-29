@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>FleaMarket.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>10</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -23,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>04F733D11C223E1B004A4D7A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BA7DD14D1C31BB5A00931324</key>
 		<dict>
 			<key>primary</key>
 			<true/>

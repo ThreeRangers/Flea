@@ -20,26 +20,50 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var LoveLabel: UILabel!
     @IBOutlet weak var shopLabel: UILabel!
     
+    @IBOutlet weak var reminderButton: DOFavoriteButton!
     @IBOutlet weak var loveButton: DOFavoriteButton!
     @IBOutlet weak var addShopButton: DOFavoriteButton!
+    @IBOutlet weak var marketImage: UIImageView!
     
     func loadData() {
         // load market info
         marketLabel.text = market.name
+        
+        marketImage.image = market.image
+        let darkBlur = UIBlurEffect(style: UIBlurEffectStyle.Dark)
+        let blurView = UIVisualEffectView(effect: darkBlur)
+        blurView.frame = marketImage.bounds
+    
+        // TODO: reafactore, just one view!!!
+        marketImage.addSubview(blurView)
+        
         
         // load shop by the current select market
         market.loadShops { (data) -> () in
             print("total shop \(data.count) of \(self.market)")
             
             self.shops = data
+            self.shopLabel.text = String(data.count)
             self.tableView.reloadData()
         }
         
         // add tap button to image
         loveButton.addTarget(self, action: Selector("tappedLoveButton:"), forControlEvents: .TouchUpInside)
-        addShopButton.addTarget(self, action: Selector("tappedShopButton:"), forControlEvents: .TouchUpInside)
+        addShopButton.addTarget(self, action: Selector("tappAddingShopButton:"), forControlEvents: .TouchUpInside)
+        reminderButton.addTarget(self, action: Selector("remindButton:"), forControlEvents: .TouchUpInside)
     }
    
+    func remindButton(sender: DOFavoriteButton) {
+        if sender.selected {
+            // deselect
+            sender.deselect()
+        } else {
+            // select with animation
+            sender.select()
+
+        }
+    }
+
     func tappedLoveButton(sender: DOFavoriteButton) {
         if sender.selected {
             // deselect
@@ -47,10 +71,12 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
         } else {
             // select with animation
             sender.select()
+            
+            
         }
     }
     
-    func tappedShopButton(sender: DOFavoriteButton) {
+    func tappAddingShopButton(sender: DOFavoriteButton) {
         if sender.selected {
             // deselect
             sender.deselect()
@@ -60,23 +86,34 @@ class ShopViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
 
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         
         if market == nil {
             return
         }
         
         loadData()
-        
+    
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "addShopSegue" {
+            let navController = segue.destinationViewController as! UINavigationController
+            let addingShopVC = navController.topViewController as! AddingShopViewController
+            
+            addingShopVC.market = self.market
+        }
     }
 }
 

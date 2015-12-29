@@ -54,7 +54,9 @@ class MarketViewController: UICollectionViewController {
                 let shopVC = tabBar.viewControllers![1] as! ShopViewController
                 shopVC.market = self.markets[(indexPath?.row)!]
                 tabBar.setSelectIndex(from: 0, to: 1)
+                
             }
+            
 // question: not work on this tabBar ?
 //            let tabBar = segue.destinationViewController as! RAMAnimatedTabBarController
 //            let shopVC = tabBar.viewControllers![1] as! ShopViewController

@@ -25,6 +25,10 @@ class Shop: PFObject, PFSubclassing {
     @NSManaged var descriptionText: String?
     @NSManaged var gallery: [PFFile]
     
+    var market: PFRelation! {
+        return relationForKey("marketpalce")
+    }
+    
     @NSManaged var likes: NSNumber?
     
     var finishCallback: ((shop: Shop) -> Void)?

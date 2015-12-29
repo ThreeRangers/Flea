@@ -18,6 +18,8 @@ let ProfieImgViewIndex = 4
 class AddingShopViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var imgViewPickerIndex = 0
+    var market : Market!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -38,38 +40,46 @@ class AddingShopViewController: UIViewController {
         let nav = self.navigationController?.navigationBar
         nav?.barStyle = UIBarStyle.Black
         nav?.tintColor = MyColor.Colors.OrangePrimary
+    }
+    
+    @IBAction func saveAction(sender: AnyObject) {
+        saveShop()
+     
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+   
+    @IBAction func backAction(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
+    func saveShop() {
+        var newShop = Shop()
         
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "displayShopSegue" {
-            var newShop = Shop()
-            
-            // Prepare for shop info data from ShopInfoCell
-            let indexPath = NSIndexPath(forRow: 0, inSection: InfoSection)
-            let edittingCell = tableView.cellForRowAtIndexPath(indexPath) as! shopInfoTableViewCell
-            edittingCell.setInfo({ (edittingShop, error) -> () in
-                if edittingShop != nil {
-                    newShop = edittingShop!
-                } else {
-                    print("Error call retweet API",error)
-                    return
-                }
-            })
-            // Prepare for shop gallery data from shopGalleryCell
-            let galleryCellIndexPath = NSIndexPath(forRow: 0, inSection: GallerySection)
-            let galleryEdittingCell = tableView.cellForRowAtIndexPath(galleryCellIndexPath) as! shopGalleryTableViewCell
-            if galleryEdittingCell.getGalleryFile().count > 0 {
-                newShop.gallery = galleryEdittingCell.getGalleryFile()                
-                print("newShop set gallery",newShop.gallery)
+        // Prepare for shop info data from ShopInfoCell
+        let indexPath = NSIndexPath(forRow: 0, inSection: InfoSection)
+        let edittingCell = tableView.cellForRowAtIndexPath(indexPath) as! shopInfoTableViewCell
+        edittingCell.setInfo({ (edittingShop, error) -> () in
+            if edittingShop != nil {
+                newShop = edittingShop!
+            } else {
+                print("Error call retweet API",error)
+                return
             }
-            self.upLoadShopToParse(newShop)
+        })
+        // Prepare for shop gallery data from shopGalleryCell
+        let galleryCellIndexPath = NSIndexPath(forRow: 0, inSection: GallerySection)
+        let galleryEdittingCell = tableView.cellForRowAtIndexPath(galleryCellIndexPath) as! shopGalleryTableViewCell
+        if galleryEdittingCell.getGalleryFile().count > 0 {
+            newShop.gallery = galleryEdittingCell.getGalleryFile()
+            print("newShop set gallery",newShop.gallery)
         }
+        
+        // save market reference
+        let marketRelation = newShop.relationForKey("market")
+        marketRelation.addObject(self.market)
+        
+        self.upLoadShopToParse(newShop)
     }
     
     func upLoadShopToParse(newShop: Shop) {

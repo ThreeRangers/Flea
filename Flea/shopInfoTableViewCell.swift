@@ -32,8 +32,8 @@ class shopInfoTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        shopProfileImgView.addSubview(save)
-        shopProfileImgView.bringSubviewToFront(save)
+      // shopProfileImgView.addSubview(save)
+      //  shopProfileImgView.bringSubviewToFront(save)
         
         let tap = UITapGestureRecognizer(target: self, action: Selector("handleTapProfileImg:"))
         tap.delegate = self
