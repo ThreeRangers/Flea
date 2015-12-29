@@ -16,6 +16,7 @@ class Shop: PFObject, PFSubclassing {
     }
     
     var image : UIImage?
+    var imageGalary : [UIImage] = []
     
     @NSManaged var profileImg: PFFile
     @NSManaged var name: String?
@@ -24,12 +25,11 @@ class Shop: PFObject, PFSubclassing {
     @NSManaged var phone: String?
     @NSManaged var descriptionText: String?
     @NSManaged var gallery: [PFFile]
+    @NSManaged var likes: NSNumber?
     
     var market: PFRelation! {
         return relationForKey("marketpalce")
     }
-    
-    @NSManaged var likes: NSNumber?
     
     var finishCallback: ((shop: Shop) -> Void)?
     
@@ -76,5 +76,36 @@ class Shop: PFObject, PFSubclassing {
             }
             self.finishCallback?(shop: self)
         })
+    }
+    
+    // load image market
+    func loadImage(completion: () -> ()) {
+        self.profileImg.getDataInBackgroundWithBlock {
+            (imageData: NSData?, error: NSError?) -> Void in
+            if error == nil {
+                if let imageData = imageData {
+                    print("get shop image from background")
+                    
+                    self.image = UIImage(data:imageData)
+                    
+                    //call back the completed function
+                    completion()
+                }
+            }
+        }
+    }
+    
+
+    func loadGalary(completion: () -> ()) {
+        if imageGalary.count > 0 {
+            return
+        }
+        
+        for imageFile in gallery {
+            ParseClient.loadImage(imageFile, completion: { (data) -> () in
+                self.imageGalary.append(UIImage(data:data!)!)
+            })
+        }
+        completion()
     }
 }

@@ -28,6 +28,8 @@ class MarketCell: UICollectionViewCell {
                 let dateFormatter = NSDateFormatter()
                 dateFormatter.dateFormat = "dd/MM h:mm"
                 self.startDateLabel.text = dateFormatter.stringFromDate(market.date_from!)
+                
+                
             }
         }
     }

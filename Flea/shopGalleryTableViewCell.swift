@@ -38,7 +38,15 @@ class shopGalleryTableViewCell: UITableViewCell {
         var files = [PFFile]()
         for var i = 0; i < GallerryMaxCnt; i++ {
             let indexPath = NSIndexPath(forRow: i, inSection: 0)
+            
             let cell = collectionView.cellForItemAtIndexPath(indexPath) as! GalleryCollectionViewCell
+            
+            
+            let isEmptyImage = CGFloat((cell.galleryImageView.image?.size.width)!) == 1.0
+            if isEmptyImage {
+                continue
+            }
+            
             if let image = cell.galleryImageView.image {
                 let imageFile = PFFile(name: "galleryImg\(i)", data: UIImageJPEGRepresentation(image, 0.4)!)
                 print("Q_debug imageFile:",imageFile)
