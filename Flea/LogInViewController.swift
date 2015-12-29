@@ -28,7 +28,7 @@ class LogInViewController: UIViewController,PFLogInViewControllerDelegate {
         print("view Didappear")
         performSegueWithIdentifier("shopSegue", sender: self)
         super.viewDidAppear(animated)
-        var currentUser = PFUser.currentUser()?.username
+        let currentUser = PFUser.currentUser()?.username
         if (currentUser == nil) {
             let loginViewController = PFLogInViewController()
             loginViewController.delegate = self
