@@ -7,15 +7,67 @@
 //
 
 import UIKit
+import MapKit
 private let reuseMarketIdentifier = "MarketCell"
 
 
-class MarketViewController: UICollectionViewController {
+class MarketViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource{
     
-    var markets = [Market]()    
+    var markets = [Market]()
+    var switchButton: DOFavoriteButton!
+    
+    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var collectView: UICollectionView!
+    @IBOutlet weak var switchModeButton: DOFavoriteButton!
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
+    }
+    
+    func switchModeAction(sender: DOFavoriteButton) {
+    
+        if sender.selected {
+            sender.deselect()
+            
+            collectView.hidden = false
+            mapView.hidden = true
+        } else {
+            // select with animation
+            sender.select()
+            
+            collectView.hidden = true
+            mapView.hidden = false
+        }
+    }
+
+    func addLocation(market : Market) {
+        if market.location == nil {
+            return
+        }
+        
+        let location = CLLocationCoordinate2D(
+            latitude: (market.location?.latitude)!,
+            longitude: market.location!.longitude
+        )
+        
+        let span = MKCoordinateSpanMake(0.1, 0.1)
+        let region = MKCoordinateRegion(center: location, span: span)
+        
+        mapView.setRegion(region, animated: true)
+        
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = location
+        annotation.title = title
+        annotation.subtitle = market.address
+        
+        mapView.addAnnotation(annotation)
+    }
+    func loadMapView() {
+        if markets.count > 0 {
+            for market in markets {
+                self.addLocation(market)
+            }
+        }
     }
     
     override func viewDidLoad() {
@@ -23,14 +75,22 @@ class MarketViewController: UICollectionViewController {
         
         Market.getAll { (data) -> () in
             self.markets = data
-            self.collectionView?.reloadData()
+            self.collectView?.reloadData()
+            self.loadMapView()
         }
         
         if let patternImage = UIImage(named: "Pattern") {
             view.backgroundColor = UIColor(patternImage: patternImage)
         }
-        collectionView!.backgroundColor = UIColor.clearColor()
-        collectionView!.decelerationRate = UIScrollViewDecelerationRateFast
+       
+        mapView.hidden = true
+        collectView.dataSource = self
+        collectView.delegate = self
+        
+        collectView!.backgroundColor = UIColor.clearColor()
+        collectView!.decelerationRate = UIScrollViewDecelerationRateFast
+        
+        switchModeButton.addTarget(self, action: Selector("switchModeAction:"), forControlEvents: .AllEvents)
     }
     
     func updateTabbarShop() {
@@ -45,7 +105,7 @@ class MarketViewController: UICollectionViewController {
         
         if segue.identifier  == "openShopSegue" {
             // get current select row
-            let indexPath = collectionView?.indexPathForCell(sender as! UICollectionViewCell)
+            let indexPath = collectView?.indexPathForCell(sender as! UICollectionViewCell)
             
         
             let appDelegate  = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -68,23 +128,23 @@ class MarketViewController: UICollectionViewController {
     }
 }
 
-extension MarketViewController {
+extension MarketViewController  {
     
-    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
     }
     
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return markets.count
     }
     
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseMarketIdentifier, forIndexPath: indexPath) as! MarketCell
+     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectView.dequeueReusableCellWithReuseIdentifier(reuseMarketIdentifier, forIndexPath: indexPath) as! MarketCell
         cell.market = self.markets[indexPath.item]
         
         if cell.market!.image == nil {
             cell.market!.loadImage { () -> () in
-                collectionView.reloadData()
+                self.collectView.reloadData()
             }
         }
     

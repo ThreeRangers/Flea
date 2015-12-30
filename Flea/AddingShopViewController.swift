@@ -9,16 +9,20 @@
 import UIKit
 
 //Each shop have maximum 4 photo
-let GallerryMaxCnt = 4
+let GallerryMaxCnt = 10
 let InfoSection = 0
 let GallerySection = 1
-let ProfieImgViewIndex = 4
+let ProfieImgViewIndex = 10
 
+protocol AddingShopViewControllerDelegate  {
+    func updateMarket()
+}
 
-class AddingShopViewController: UIViewController {
+class AddingShopViewController: UIViewController  {
     @IBOutlet weak var tableView: UITableView!
     var imgViewPickerIndex = 0
     var market : Market!
+    var delegate : AddingShopViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,8 +48,10 @@ class AddingShopViewController: UIViewController {
     
     @IBAction func saveAction(sender: AnyObject) {
         saveShop()
-     
-        dismissViewControllerAnimated(true, completion: nil)
+        
+        dismissViewControllerAnimated(true) { () -> Void in
+             self.delegate?.updateMarket()
+        }
     }
    
     @IBAction func backAction(sender: AnyObject) {

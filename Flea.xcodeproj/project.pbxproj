@@ -34,11 +34,13 @@
 		04F733D71C223E1B004A4D7A /* FleaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F733D61C223E1B004A4D7A /* FleaUITests.swift */; };
 		53A43922D20B3F6BB59E20E9 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB8F118833FF577E5D81E38 /* Pods.framework */; };
 		BA07F5241C30FCED00F2CA14 /* DOFavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA07F5231C30FCED00F2CA14 /* DOFavoriteButton.swift */; };
+		BA2FE55C1C32834C001945FD /* ShopGalleryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2FE55B1C32834C001945FD /* ShopGalleryViewCell.swift */; };
 		BA3424B11C2EF4A3009C3374 /* ParseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3424B01C2EF4A3009C3374 /* ParseInterface.swift */; };
 		BA3424B31C2EF4D3009C3374 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3424B21C2EF4D3009C3374 /* LogInViewController.swift */; };
 		BA3424B81C2EF509009C3374 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3424B61C2EF509009C3374 /* SignUpViewController.swift */; };
 		BA3424B91C2EF509009C3374 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3424B71C2EF509009C3374 /* SignInViewController.swift */; };
 		BA3424C11C2EF5AD009C3374 /* ParseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3424C01C2EF5AD009C3374 /* ParseError.swift */; };
+		BA4ABC9E1C32F0CA00B87B9C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA4ABC9D1C32F0CA00B87B9C /* MapKit.framework */; };
 		BA675A901C2D760E003B3DC0 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA675A8F1C2D760E003B3DC0 /* Shop.swift */; };
 		BA675A931C2E3702003B3DC0 /* ShopViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA675A911C2E3702003B3DC0 /* ShopViewCell.swift */; };
 		BA675A961C2E6F30003B3DC0 /* MarketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA675A951C2E6F30003B3DC0 /* MarketCell.swift */; };
@@ -127,11 +129,13 @@
 		7BB8F118833FF577E5D81E38 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CDF51B042A53150E8CDE283 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		BA07F5231C30FCED00F2CA14 /* DOFavoriteButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DOFavoriteButton.swift; sourceTree = "<group>"; };
+		BA2FE55B1C32834C001945FD /* ShopGalleryViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopGalleryViewCell.swift; sourceTree = "<group>"; };
 		BA3424B01C2EF4A3009C3374 /* ParseInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseInterface.swift; sourceTree = "<group>"; };
 		BA3424B21C2EF4D3009C3374 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		BA3424B61C2EF509009C3374 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		BA3424B71C2EF509009C3374 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		BA3424C01C2EF5AD009C3374 /* ParseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseError.swift; sourceTree = "<group>"; };
+		BA4ABC9D1C32F0CA00B87B9C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		BA675A8F1C2D760E003B3DC0 /* Shop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		BA675A911C2E3702003B3DC0 /* ShopViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopViewCell.swift; sourceTree = "<group>"; };
 		BA675A951C2E6F30003B3DC0 /* MarketCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketCell.swift; sourceTree = "<group>"; };
@@ -164,6 +168,7 @@
 			files = (
 				041FB7731C2562BB00F31EDE /* FBSDKShareKit.framework in Frameworks */,
 				53A43922D20B3F6BB59E20E9 /* Pods.framework in Frameworks */,
+				BA4ABC9E1C32F0CA00B87B9C /* MapKit.framework in Frameworks */,
 				041FB7711C2562BB00F31EDE /* FBSDKCoreKit.framework in Frameworks */,
 				041FB7721C2562BB00F31EDE /* FBSDKLoginKit.framework in Frameworks */,
 			);
@@ -263,6 +268,7 @@
 		AC7B9BA4BEA6C45D94A086CB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BA4ABC9D1C32F0CA00B87B9C /* MapKit.framework */,
 				041FB76E1C2562BB00F31EDE /* FBSDKCoreKit.framework */,
 				041FB76F1C2562BB00F31EDE /* FBSDKLoginKit.framework */,
 				041FB7701C2562BB00F31EDE /* FBSDKShareKit.framework */,
@@ -314,6 +320,7 @@
 				BA675A951C2E6F30003B3DC0 /* MarketCell.swift */,
 				BA675A981C2E6FE7003B3DC0 /* UltravisualLayout.swift */,
 				04730FE71C32D2F400466603 /* ProfileShopCell.swift */,
+				BA2FE55B1C32834C001945FD /* ShopGalleryViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -448,6 +455,11 @@
 					04F733B21C223E1B004A4D7A = {
 						CreatedOnToolsVersion = 7.1.1;
 						DevelopmentTeam = 3N5R89QN4M;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					04F733C61C223E1B004A4D7A = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -572,6 +584,7 @@
 				BA675A9B1C2E703A003B3DC0 /* UIColor.swift in Sources */,
 				04F733B71C223E1B004A4D7A /* AppDelegate.swift in Sources */,
 				0477EEC41C27DFD700C12BF6 /* shopGalleryTableViewCell.swift in Sources */,
+				BA2FE55C1C32834C001945FD /* ShopGalleryViewCell.swift in Sources */,
 				0477EEC21C27DB9A00C12BF6 /* shopInfoTableViewCell.swift in Sources */,
 				047ABFEB1C298C4F00916D0A /* MyColor.swift in Sources */,
 				047D2FF91C335C3400CAB5C3 /* AddingMarketViewController.swift in Sources */,

@@ -66,4 +66,15 @@ class ParseClient: NSObject {
         }
 
     }
+    
+    static func loadImage(imageFile : PFFile, completion: (NSData?) -> ()) {
+        imageFile.getDataInBackgroundWithBlock {
+            (imageData: NSData?, error: NSError?) -> Void in
+            if error == nil {
+                if let imageData = imageData {
+                    completion(imageData)
+                }
+            }
+        }
+    }
 }
