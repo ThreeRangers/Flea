@@ -70,7 +70,7 @@ class AddingMarketViewController: UIViewController {
         newMarket.facebookPage = facebookPageTxtField.text
         newMarket.phone = phoneTxtField.text
         newMarket.email = emailTxtField.text
-        newMarket.location = locationTxtField.text
+//        newMarket.location = locationTxtField.text
         
      
         
