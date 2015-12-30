@@ -69,7 +69,7 @@ class AddingShopViewController: UIViewController  {
             if edittingShop != nil {
                 newShop = edittingShop!
             } else {
-                print("Error call retweet API",error)
+                print("Error set Info",error)
                 return
             }
         })
