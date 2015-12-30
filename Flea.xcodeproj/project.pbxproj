@@ -24,6 +24,10 @@
 		04F733CC1C223E1B004A4D7A /* FleaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F733CB1C223E1B004A4D7A /* FleaTests.swift */; };
 		04F733D71C223E1B004A4D7A /* FleaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F733D61C223E1B004A4D7A /* FleaUITests.swift */; };
 		53A43922D20B3F6BB59E20E9 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB8F118833FF577E5D81E38 /* Pods.framework */; };
+		AA2913A61C32F51400C5E8F2 /* NewShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2913A51C32F51400C5E8F2 /* NewShopViewController.swift */; };
+		AA2913A81C32F54900C5E8F2 /* NewShopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2913A71C32F54900C5E8F2 /* NewShopCell.swift */; };
+		AA2913AB1C341AB700C5E8F2 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA2913A91C341AB700C5E8F2 /* Login.storyboard */; };
+		AA2913AD1C341B4600C5E8F2 /* NewShop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA2913AC1C341B4600C5E8F2 /* NewShop.storyboard */; };
 		BA07F5241C30FCED00F2CA14 /* DOFavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA07F5231C30FCED00F2CA14 /* DOFavoriteButton.swift */; };
 		BA3424B11C2EF4A3009C3374 /* ParseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3424B01C2EF4A3009C3374 /* ParseInterface.swift */; };
 		BA3424B31C2EF4D3009C3374 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3424B21C2EF4D3009C3374 /* LogInViewController.swift */; };
@@ -95,6 +99,10 @@
 		04F733D81C223E1B004A4D7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BB8F118833FF577E5D81E38 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CDF51B042A53150E8CDE283 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		AA2913A51C32F51400C5E8F2 /* NewShopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewShopViewController.swift; sourceTree = "<group>"; };
+		AA2913A71C32F54900C5E8F2 /* NewShopCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewShopCell.swift; sourceTree = "<group>"; };
+		AA2913AA1C341AB700C5E8F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
+		AA2913AC1C341B4600C5E8F2 /* NewShop.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewShop.storyboard; sourceTree = "<group>"; };
 		BA07F5231C30FCED00F2CA14 /* DOFavoriteButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DOFavoriteButton.swift; sourceTree = "<group>"; };
 		BA3424B01C2EF4A3009C3374 /* ParseInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseInterface.swift; sourceTree = "<group>"; };
 		BA3424B21C2EF4D3009C3374 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -261,6 +269,7 @@
 				BA675AA61C2E9D84003B3DC0 /* ShopViewController.swift */,
 				BA675AA81C2E9DCB003B3DC0 /* ProfileViewController.swift */,
 				BA675AAA1C2E9DE6003B3DC0 /* SettingViewController.swift */,
+				AA2913A51C32F51400C5E8F2 /* NewShopViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -275,6 +284,7 @@
 				BA675A911C2E3702003B3DC0 /* ShopViewCell.swift */,
 				BA675A951C2E6F30003B3DC0 /* MarketCell.swift */,
 				BA675A981C2E6FE7003B3DC0 /* UltravisualLayout.swift */,
+				AA2913A71C32F54900C5E8F2 /* NewShopCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -293,6 +303,8 @@
 			children = (
 				04F733BF1C223E1B004A4D7A /* LaunchScreen.storyboard */,
 				04F733BA1C223E1B004A4D7A /* Main.storyboard */,
+				AA2913AC1C341B4600C5E8F2 /* NewShop.storyboard */,
+				AA2913A91C341AB700C5E8F2 /* Login.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -433,8 +445,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA2913AB1C341AB700C5E8F2 /* Login.storyboard in Resources */,
 				04F733C11C223E1B004A4D7A /* LaunchScreen.storyboard in Resources */,
 				04F733BE1C223E1B004A4D7A /* Assets.xcassets in Resources */,
+				AA2913AD1C341B4600C5E8F2 /* NewShop.storyboard in Resources */,
 				04F733BC1C223E1B004A4D7A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,6 +534,7 @@
 				047ABFEB1C298C4F00916D0A /* MyColor.swift in Sources */,
 				046CBB241C2B759A005AA0DD /* shopDisplayInfoTableViewCell.swift in Sources */,
 				04F503901C2D43BB0076DF5E /* GalleryCollectionViewCell.swift in Sources */,
+				AA2913A81C32F54900C5E8F2 /* NewShopCell.swift in Sources */,
 				BA675AA71C2E9D84003B3DC0 /* ShopViewController.swift in Sources */,
 				BA675A961C2E6F30003B3DC0 /* MarketCell.swift in Sources */,
 				BA675AA91C2E9DCB003B3DC0 /* ProfileViewController.swift in Sources */,
@@ -538,6 +553,7 @@
 				BA3424B11C2EF4A3009C3374 /* ParseInterface.swift in Sources */,
 				BA3424C11C2EF5AD009C3374 /* ParseError.swift in Sources */,
 				BA7FF6161C2EBA0600ED35C9 /* RAMTransitionItemAnimation.swift in Sources */,
+				AA2913A61C32F51400C5E8F2 /* NewShopViewController.swift in Sources */,
 				BA675AAB1C2E9DE6003B3DC0 /* SettingViewController.swift in Sources */,
 				BAFC7A2B1C2C56030034DC66 /* Market.swift in Sources */,
 				BA7FF6141C2EBA0600ED35C9 /* RAMFumeAnimation.swift in Sources */,
@@ -591,6 +607,14 @@
 				04F733C01C223E1B004A4D7A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		AA2913A91C341AB700C5E8F2 /* Login.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA2913AA1C341AB700C5E8F2 /* Base */,
+			);
+			name = Login.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

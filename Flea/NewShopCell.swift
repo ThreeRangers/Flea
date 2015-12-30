@@ -7,9 +7,21 @@
 //
 
 import UIKit
+import AFNetworking
 
 class NewShopCell: UITableViewCell {
 
+    @IBOutlet weak var shopImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    var shop: Shop! {
+        didSet {
+            nameLabel.text = shop.name
+            descriptionLabel.text = shop.description
+            shopImageView.setImageWithURL(NSURL(string: shop.profileImg.url!)!)
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
