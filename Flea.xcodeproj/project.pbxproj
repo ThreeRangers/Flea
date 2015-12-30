@@ -274,13 +274,13 @@
 		BA5F53D31C2560260071EB3F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BA675AA61C2E9D84003B3DC0 /* ShopViewController.swift */,
 				BA3424B61C2EF509009C3374 /* SignUpViewController.swift */,
 				BA3424B71C2EF509009C3374 /* SignInViewController.swift */,
 				BA3424B21C2EF4D3009C3374 /* LogInViewController.swift */,
 				046CBB211C2B6D61005AA0DD /* DisplayShopViewController.swift */,
 				04F733B81C223E1B004A4D7A /* AddingShopViewController.swift */,
 				BA675AA21C2E71D5003B3DC0 /* MarketViewController.swift */,
-				BA675AA61C2E9D84003B3DC0 /* ShopViewController.swift */,
 				BA675AA81C2E9DCB003B3DC0 /* ProfileViewController.swift */,
 				BA675AAA1C2E9DE6003B3DC0 /* SettingViewController.swift */,
 			);
@@ -427,7 +427,7 @@
 				TargetAttributes = {
 					04F733B21C223E1B004A4D7A = {
 						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = 3N5R89QN4M;
+						DevelopmentTeam = S9RPAM8224;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
 								enabled = 1;
@@ -722,10 +722,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Flea/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ThreeStrangers-Flea.Flea";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Flea/Flea-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -738,10 +741,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Flea/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ThreeStrangers-Flea.Flea";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Flea/Flea-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

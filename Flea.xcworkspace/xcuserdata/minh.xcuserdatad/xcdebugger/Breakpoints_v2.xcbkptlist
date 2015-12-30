@@ -222,53 +222,5 @@
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Flea/AddingShopViewController.swift"
-            timestampString = "473096733.248207"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "saveAction(_:)"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Flea.AddingShopViewController.saveAction (Flea.AddingShopViewController)(Swift.AnyObject) -&gt; ()"
-                  moduleName = "Flea"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/minh/Documents/Projects/iOS%20apps/Flea/Flea/AddingShopViewController.swift"
-                  timestampString = "473144109.017136"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "52"
-                  endingLineNumber = "52"
-                  offsetFromSymbolStart = "55">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Flea.AddingShopViewController.(saveAction (Flea.AddingShopViewController) -&gt; (Swift.AnyObject) -&gt; ()).(closure #1)"
-                  moduleName = "Flea"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/minh/Documents/Projects/iOS%20apps/Flea/Flea/AddingShopViewController.swift"
-                  timestampString = "473144109.017381"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "53"
-                  endingLineNumber = "53"
-                  offsetFromSymbolStart = "26">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
