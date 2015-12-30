@@ -27,6 +27,7 @@ class ShopViewController: UIViewController {
     
     var storedOffsets = [Int: CGFloat]()
     
+    
     func loadData() {
         // load market info
         marketLabel.text = market.name
