@@ -350,6 +350,7 @@
                     <connections>
                         <outlet property="LoveLabel" destination="3mf-v9-RAU" id="edX-u2-qqv"/>
                         <outlet property="addShopButton" destination="6K6-Gx-2bM" id="vru-DH-EfN"/>
+                        <outlet property="dateFromLabel" destination="7xu-Ge-r4n" id="VUO-b7-zRC"/>
                         <outlet property="headerView" destination="w3D-yt-nnA" id="39l-Dm-EQq"/>
                         <outlet property="loveButton" destination="8np-p4-al2" id="nqp-fv-Ont"/>
                         <outlet property="marketImage" destination="zsf-oY-KI0" id="Xg9-XM-oNb"/>
@@ -357,7 +358,6 @@
                         <outlet property="reminderButton" destination="mHf-qx-8bh" id="hAv-HH-Mhm"/>
                         <outlet property="shopLabel" destination="1qD-yT-egw" id="hCj-X4-gno"/>
                         <outlet property="tableView" destination="f8t-ro-IKS" id="tWS-Ui-GsC"/>
-                        <outlet property="visitLabel" destination="7xu-Ge-r4n" id="klW-6s-02b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zNC-Yi-Fyr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -565,7 +565,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1C8A7986-7BF6-4125-A6F3-3A60864859AC" translatesAutoresizingMaskIntoConstraints="NO" id="Bmt-Pu-zMd">
+                                                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="275324D8-9111-46CC-9F4A-888269310C22" translatesAutoresizingMaskIntoConstraints="NO" id="Bmt-Pu-zMd">
                                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                                         <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
                                                                     </imageView>
@@ -856,7 +856,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1C8A7986-7BF6-4125-A6F3-3A60864859AC" width="960" height="540">
+        <image name="275324D8-9111-46CC-9F4A-888269310C22" width="960" height="540">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA

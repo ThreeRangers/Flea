@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import DateTools
+
 
 class ShopViewController: UIViewController {
 
@@ -16,9 +18,10 @@ class ShopViewController: UIViewController {
     @IBOutlet weak var headerView: UIView!
     
     @IBOutlet weak var marketLabel: UILabel!
-    @IBOutlet weak var visitLabel: UILabel!
     @IBOutlet weak var LoveLabel: UILabel!
     @IBOutlet weak var shopLabel: UILabel!
+    @IBOutlet weak var dateFromLabel: UILabel!
+    
     
     @IBOutlet weak var reminderButton: DOFavoriteButton!
     @IBOutlet weak var loveButton: DOFavoriteButton!
@@ -31,6 +34,12 @@ class ShopViewController: UIViewController {
     func loadData() {
         // load market info
         marketLabel.text = market.name
+        LoveLabel.text = String(market.loves!)
+        
+        let calendar = NSCalendar.currentCalendar()
+        let components = calendar.components([.Day, .Hour, .Minute, .Second], fromDate: NSDate(), toDate: market.date_from!, options: [])
+        dateFromLabel.text = String(components.day)
+        
         
         marketImage.image = market.image
         let darkBlur = UIBlurEffect(style: UIBlurEffectStyle.Dark)
@@ -42,6 +51,10 @@ class ShopViewController: UIViewController {
         }
         marketImage.addSubview(blurView)
         
+        
+        
+        self.shops = []
+        self.tableView.reloadData()
         
         // load shop by the current select market
         market.loadShops { (data) -> () in
@@ -71,11 +84,13 @@ class ShopViewController: UIViewController {
         if sender.selected {
             // deselect
             sender.deselect()
+
+            LoveLabel.text = String( Int(market.loves!) - 1)
+
         } else {
             // select with animation
             sender.select()
-            
-            
+            LoveLabel.text = String( Int(market.loves!) + 1)
         }
     }
     

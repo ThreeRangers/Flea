@@ -22,6 +22,7 @@ class Market: PFObject, PFSubclassing {
     @NSManaged var imageWidth: NSNumber?
     @NSManaged var imageHeight: NSNumber?
     @NSManaged var location: PFGeoPoint?
+    @NSManaged var loves : NSNumber?
    
     
     static func getAll(completion: (data: [Market]) -> ()) {
