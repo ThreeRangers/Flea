@@ -199,6 +199,10 @@ extension ShopViewController: UICollectionViewDelegate, UICollectionViewDataSour
             
             let shop = self.shops[collectionView.tag]
             
+            if indexPath.item >= shop.imageGalary.count {
+                return cell
+            }
+            
             let shopImage : UIImage = shop.imageGalary[indexPath.item] 
             cell.shopImage.image = shopImage
             

@@ -57,8 +57,8 @@ class MarketViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         let annotation = MKPointAnnotation()
         annotation.coordinate = location
-        annotation.title = title
-        annotation.subtitle = market.address
+        annotation.title = market.name
+        annotation.subtitle = market.desc
         
         mapView.addAnnotation(annotation)
     }

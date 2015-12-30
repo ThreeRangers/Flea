@@ -31,7 +31,7 @@ class ShopViewCell : UITableViewCell {
                 
                 self.shopName.text = shop.name
                 self.desc.text = shop.descriptionText
-                self.likeButton.titleLabel!.text = shop.likes == nil ? "10" : String(shop.likes)
+                self.likeButton.titleLabel!.text = shop.likes == nil ? "10" : String(shop.likes!)
                 
                 // hide the collection view if the galllery is < 4, for the better layout
                 if shop.gallery.count < 4 {
