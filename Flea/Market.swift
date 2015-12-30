@@ -18,9 +18,13 @@ class Market: PFObject, PFSubclassing {
     @NSManaged var desc: String?
     @NSManaged var date_from: NSDate?
     @NSManaged var date_to: NSDate?
+    @NSManaged var phone: String?
+    @NSManaged var facebookPage: String?
     @NSManaged var imageMarket: PFFile?
     @NSManaged var imageWidth: NSNumber?
     @NSManaged var imageHeight: NSNumber?
+    @NSManaged var email: String?
+    @NSManaged var location: String?
    
     
     static func getAll(completion: (data: [Market]) -> ()) {
@@ -51,5 +55,35 @@ class Market: PFObject, PFSubclassing {
         ParseClient.getVendorShops(self) { (data) -> () in
             completion(data: data)
         }
+    }
+    
+    var finishCallback: ((market: Market) -> Void)?
+    
+    func uploadInfoDataWithImg() {
+        if let file: PFFile = imageMarket{
+            file.saveInBackgroundWithBlock({ (succeeded, error) -> Void in
+                if succeeded {
+                    //                    self.saveData()
+                    //2
+                } else if let error = error {
+                    //3
+                    print("error uploading file",error)
+                    return
+                }
+                }, progressBlock: { percent in
+                    //4
+                    print("Uploaded: \(percent)%")
+            })
+        }
+        self.saveData()
+    }
+    func saveData() {
+        saveInBackgroundWithBlock({ (success, error) -> Void in
+            guard error == nil else {
+                print(error)
+                return
+            }
+            self.finishCallback?(market: self)
+        })
     }
 }
