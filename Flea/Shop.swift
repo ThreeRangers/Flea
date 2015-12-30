@@ -33,6 +33,20 @@ class Shop: PFObject, PFSubclassing {
     
     var finishCallback: ((shop: Shop) -> Void)?
     
+    override init() {
+        super.init()
+    }
+    
+    init(shopData: NSDictionary) {
+        super.init()
+        
+        self.name = shopData["name"] as? String
+        self.facebookLink = shopData["link"] as? String
+        self.phone = shopData["phone"] as? String
+        self.descriptionText = shopData["description"] as? String
+        self.email   = shopData["emails"]?[0] as? String
+    }
+    
     func uploadInfoDataWithImg() {
         if let file: PFFile = profileImg{
             file.saveInBackgroundWithBlock({ (succeeded, error) -> Void in

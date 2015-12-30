@@ -131,7 +131,7 @@ class SignInViewController: UIViewController, FBSDKLoginButtonDelegate, PFSignUp
                             PFUser.currentUser()!["profilePicture"] = profileURL
                         }
                         
-                        FBSDKLoginManager().logOut()
+                        //FBSDKLoginManager().logOut()
                         
                         print("user", PFUser.currentUser())
                     })
