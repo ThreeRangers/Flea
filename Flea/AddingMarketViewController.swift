@@ -67,9 +67,9 @@ class AddingMarketViewController: UIViewController {
         
         newMarket.name = marketNameTxtField.text
         newMarket.desc = dexcriptionTxtField.text
-        newMarket.facebookPage = facebookPageTxtField.text
-        newMarket.phone = phoneTxtField.text
-        newMarket.email = emailTxtField.text
+//        newMarket.facebookPage = facebookPageTxtField.text
+//        newMarket.phone = phoneTxtField.text
+//        newMarket.email = emailTxtField.text
 //        newMarket.location = locationTxtField.text
         
      
@@ -78,7 +78,7 @@ class AddingMarketViewController: UIViewController {
     }
     
     func upLoadMarketToParse(newMarket: Market) {
-        newMarket.uploadInfoDataWithImg()
+//        newMarket.uploadInfoDataWithImg()
     }
     
     

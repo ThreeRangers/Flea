@@ -63,6 +63,8 @@
 		BA7FF6151C2EBA0600ED35C9 /* RAMRotationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7FF6101C2EBA0600ED35C9 /* RAMRotationAnimation.swift */; };
 		BA7FF6161C2EBA0600ED35C9 /* RAMTransitionItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7FF6111C2EBA0600ED35C9 /* RAMTransitionItemAnimation.swift */; };
 		BA7FF6181C2EBA1500ED35C9 /* RAMBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7FF6171C2EBA1500ED35C9 /* RAMBadge.swift */; };
+		BA9A54BA1C36DFFB00C373C6 /* ViewParallaxTableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9A54B91C36DFFB00C373C6 /* ViewParallaxTableHeader.swift */; };
+		BA9A54BC1C36E52300C373C6 /* ShopHeaderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9A54BB1C36E52300C373C6 /* ShopHeaderViewCell.swift */; };
 		BAF07CDA1C2D3A74002F173D /* ParseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF07CD91C2D3A74002F173D /* ParseClient.swift */; };
 		BAFC7A2B1C2C56030034DC66 /* Market.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFC7A2A1C2C56030034DC66 /* Market.swift */; };
 /* End PBXBuildFile section */
@@ -164,6 +166,8 @@
 		BA7FF6101C2EBA0600ED35C9 /* RAMRotationAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RAMRotationAnimation.swift; path = RAMAnimatedTabBarController/Animations/RAMRotationAnimation.swift; sourceTree = "<group>"; };
 		BA7FF6111C2EBA0600ED35C9 /* RAMTransitionItemAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RAMTransitionItemAnimation.swift; path = RAMAnimatedTabBarController/Animations/RAMTransitionItemAnimation.swift; sourceTree = "<group>"; };
 		BA7FF6171C2EBA1500ED35C9 /* RAMBadge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RAMBadge.swift; path = RAMAnimatedTabBarController/RAMBadge.swift; sourceTree = "<group>"; };
+		BA9A54B91C36DFFB00C373C6 /* ViewParallaxTableHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewParallaxTableHeader.swift; sourceTree = "<group>"; };
+		BA9A54BB1C36E52300C373C6 /* ShopHeaderViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopHeaderViewCell.swift; sourceTree = "<group>"; };
 		BAF07CD91C2D3A74002F173D /* ParseClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseClient.swift; sourceTree = "<group>"; };
 		BAFC7A2A1C2C56030034DC66 /* Market.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Market.swift; sourceTree = "<group>"; };
 		FED34CB362B9056C5D26139F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -293,6 +297,7 @@
 				BA675A9A1C2E703A003B3DC0 /* UIColor.swift */,
 				BA675A9C1C2E7058003B3DC0 /* UIImage.swift */,
 				BA07F5231C30FCED00F2CA14 /* DOFavoriteButton.swift */,
+				BA9A54B91C36DFFB00C373C6 /* ViewParallaxTableHeader.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -326,6 +331,7 @@
 				046CBB231C2B759A005AA0DD /* shopDisplayInfoTableViewCell.swift */,
 				04F5038F1C2D43BB0076DF5E /* GalleryCollectionViewCell.swift */,
 				BA675A911C2E3702003B3DC0 /* ShopViewCell.swift */,
+				BA9A54BB1C36E52300C373C6 /* ShopHeaderViewCell.swift */,
 				BA675A951C2E6F30003B3DC0 /* MarketCell.swift */,
 				BA675A981C2E6FE7003B3DC0 /* UltravisualLayout.swift */,
 				04730FE71C32D2F400466603 /* ProfileShopCell.swift */,
@@ -590,6 +596,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA9A54BC1C36E52300C373C6 /* ShopHeaderViewCell.swift in Sources */,
 				BA3424B81C2EF509009C3374 /* SignUpViewController.swift in Sources */,
 				046CBB221C2B6D61005AA0DD /* DisplayShopViewController.swift in Sources */,
 				04F733B91C223E1B004A4D7A /* AddingShopViewController.swift in Sources */,
@@ -619,6 +626,7 @@
 				BA675AA31C2E71D5003B3DC0 /* MarketViewController.swift in Sources */,
 				BA7FF6181C2EBA1500ED35C9 /* RAMBadge.swift in Sources */,
 				BA7FF6151C2EBA0600ED35C9 /* RAMRotationAnimation.swift in Sources */,
+				BA9A54BA1C36DFFB00C373C6 /* ViewParallaxTableHeader.swift in Sources */,
 				0400F8AE1C32867F0083F0D0 /* ProfileShopViewController.swift in Sources */,
 				BA7FF6131C2EBA0600ED35C9 /* RAMFrameItemAnimation.swift in Sources */,
 				BA3424B91C2EF509009C3374 /* SignInViewController.swift in Sources */,

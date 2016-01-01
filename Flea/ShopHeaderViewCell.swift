@@ -1,0 +1,83 @@
+//
+//  ShopHeaderViewCell.swift
+//  Flea
+//
+//  Created by minh on 1/1/16.
+//  Copyright © 2016 ThreeStrangers. All rights reserved.
+//
+
+import Foundation
+import UIKit
+
+class ShopHeaderViewCell: UITableViewCell {
+
+    @IBOutlet weak var marketLabel: UILabel!
+    @IBOutlet weak var LoveLabel: UILabel!
+    @IBOutlet weak var shopLabel: UILabel!
+    @IBOutlet weak var dateFromLabel: UILabel!
+    @IBOutlet weak var reminderButton: DOFavoriteButton!
+    @IBOutlet weak var loveButton: DOFavoriteButton!
+    @IBOutlet weak var addShopButton: DOFavoriteButton!
+    
+    @IBOutlet weak var headerView: UIView!
+    
+    var market : Market? {
+        didSet {
+            if let market = market {
+
+                // load market info
+                marketLabel.text = market.name
+                LoveLabel.text = String(market.loves!)
+                
+                let calendar = NSCalendar.currentCalendar()
+                let components = calendar.components([.Day, .Hour, .Minute, .Second], fromDate: NSDate(), toDate: market.date_from!, options: [])
+                dateFromLabel.text = String(components.day)
+                
+                
+                // add tap button to image
+                loveButton.addTarget(self, action: Selector("tappedLoveButton:"), forControlEvents: .TouchUpInside)
+                addShopButton.addTarget(self, action: Selector("tappAddingShopButton:"), forControlEvents: .TouchUpInside)
+                reminderButton.addTarget(self, action: Selector("remindButton:"), forControlEvents: .TouchUpInside)
+            }
+        }
+    }
+    
+    func loadShop(shops : [Shop]) {
+        self.shopLabel.text = String(shops.count)
+    }
+    
+    func remindButton(sender: DOFavoriteButton) {
+        if sender.selected {
+            // deselect
+            sender.deselect()
+        } else {
+            // select with animation
+            sender.select()
+            
+        }
+    }
+    
+    func tappedLoveButton(sender: DOFavoriteButton) {
+        if sender.selected {
+            // deselect
+            sender.deselect()
+            
+            LoveLabel.text = String( Int(market!.loves!) - 1)
+            
+        } else {
+            // select with animation
+            sender.select()
+            LoveLabel.text = String( Int(market!.loves!) + 1)
+        }
+    }
+    
+    func tappAddingShopButton(sender: DOFavoriteButton) {
+        if sender.selected {
+            // deselect
+            sender.deselect()
+        } else {
+            // select with animation
+            sender.select()
+        }
+    }
+}
