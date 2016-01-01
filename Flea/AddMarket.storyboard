@@ -40,6 +40,9 @@
                                 <rect key="frame" x="8" y="360" width="304" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="dateFromBeginEditing:" destination="Fad-9V-lhl" eventType="editingDidBegin" id="FRV-nc-dg1"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Market name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iuh-Vp-vtr">
                                 <rect key="frame" x="8" y="208" width="304" height="30"/>
@@ -54,8 +57,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fdx-UL-wdr">
+                            <textField opaque="NO" clipsSubviews="YES" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fdx-UL-wdr">
                                 <rect key="frame" x="8" y="322" width="304" height="30"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -63,6 +67,9 @@
                                 <rect key="frame" x="8" y="398" width="304" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="dateToBeginEditing:" destination="Fad-9V-lhl" eventType="editingDidBegin" id="NlG-Yr-VUm"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h6g-sY-9oK">
                                 <rect key="frame" x="8" y="436" width="304" height="30"/>
@@ -79,6 +86,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0VH-1e-OQ3">
+                                <rect key="frame" x="8" y="322" width="304" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="E7a-it-YNg" appends="YES" id="epA-5l-BKS"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -88,12 +103,16 @@
                             <constraint firstItem="Ky4-VM-PHm" firstAttribute="top" secondItem="h6g-sY-9oK" secondAttribute="bottom" constant="8" id="4p3-6y-Y8g"/>
                             <constraint firstItem="fdx-UL-wdr" firstAttribute="trailing" secondItem="iuh-Vp-vtr" secondAttribute="trailing" id="AOb-vN-DJM"/>
                             <constraint firstItem="ddz-TQ-aLG" firstAttribute="trailing" secondItem="hYn-6Q-33Q" secondAttribute="trailing" id="B0j-BL-45K"/>
+                            <constraint firstItem="0VH-1e-OQ3" firstAttribute="trailing" secondItem="fdx-UL-wdr" secondAttribute="trailing" id="G9a-o7-Pks"/>
                             <constraint firstItem="ecI-pk-tpU" firstAttribute="leading" secondItem="iuh-Vp-vtr" secondAttribute="leading" id="GgI-8L-GbZ"/>
                             <constraint firstItem="Ky4-VM-PHm" firstAttribute="trailing" secondItem="h6g-sY-9oK" secondAttribute="trailing" id="ISW-AR-uak"/>
+                            <constraint firstItem="0VH-1e-OQ3" firstAttribute="bottom" secondItem="fdx-UL-wdr" secondAttribute="bottom" id="Kmm-n5-5ql"/>
                             <constraint firstItem="hYn-6Q-33Q" firstAttribute="top" secondItem="iuh-Vp-vtr" secondAttribute="bottom" constant="8" id="M7I-1V-V19"/>
                             <constraint firstItem="hYn-6Q-33Q" firstAttribute="trailing" secondItem="iuh-Vp-vtr" secondAttribute="trailing" id="MGX-tk-g1y"/>
                             <constraint firstItem="h6g-sY-9oK" firstAttribute="trailing" secondItem="hYn-6Q-33Q" secondAttribute="trailing" id="NCb-oo-RXw"/>
+                            <constraint firstItem="0VH-1e-OQ3" firstAttribute="leading" secondItem="fdx-UL-wdr" secondAttribute="leading" id="NMD-el-8yF"/>
                             <constraint firstItem="h6g-sY-9oK" firstAttribute="leading" secondItem="hYn-6Q-33Q" secondAttribute="leading" id="ODA-zo-Mix"/>
+                            <constraint firstItem="0VH-1e-OQ3" firstAttribute="top" secondItem="fdx-UL-wdr" secondAttribute="top" id="RHi-Wj-9We"/>
                             <constraint firstAttribute="trailing" secondItem="Saw-68-X9k" secondAttribute="trailing" id="W7c-Xx-3jL"/>
                             <constraint firstItem="ecI-pk-tpU" firstAttribute="top" secondItem="fdx-UL-wdr" secondAttribute="bottom" constant="8" id="Wbm-W7-4Ig"/>
                             <constraint firstItem="Saw-68-X9k" firstAttribute="leading" secondItem="HwT-br-tiI" secondAttribute="leading" id="aRd-YM-VLO"/>
@@ -135,6 +154,7 @@
                         <outlet property="locationTxtField" destination="fdx-UL-wdr" id="UVK-Na-LFz"/>
                         <outlet property="marketNameTxtField" destination="iuh-Vp-vtr" id="L6f-73-xJe"/>
                         <outlet property="phoneTxtField" destination="h6g-sY-9oK" id="g39-o1-ZAk"/>
+                        <segue destination="fB1-Vm-RH5" kind="push" identifier="ShowAddLocationMap" id="0cX-NW-FCc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZbZ-k2-fqT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -144,8 +164,46 @@
                         <action selector="onTapImgView:" destination="Fad-9V-lhl" id="rrO-sP-gID"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer id="E7a-it-YNg">
+                    <connections>
+                        <action selector="onTapLocationView:" destination="Fad-9V-lhl" id="qcQ-SN-OyE"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="966" y="384"/>
+        </scene>
+        <!--Add Location Map View Controller-->
+        <scene sceneID="lJ4-i3-puo">
+            <objects>
+                <viewController id="fB1-Vm-RH5" customClass="AddLocationMapViewController" customModule="Flea" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8ky-Bl-OA1"/>
+                        <viewControllerLayoutGuide type="bottom" id="qjD-m9-Ynh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LEN-VG-GWL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="P5K-D4-ljI">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="P5K-D4-ljI" secondAttribute="trailing" id="ETG-kW-nyh"/>
+                            <constraint firstItem="P5K-D4-ljI" firstAttribute="top" secondItem="LEN-VG-GWL" secondAttribute="top" id="MG8-bA-6Ru"/>
+                            <constraint firstItem="P5K-D4-ljI" firstAttribute="leading" secondItem="LEN-VG-GWL" secondAttribute="leading" id="cdV-eQ-DUF"/>
+                            <constraint firstItem="qjD-m9-Ynh" firstAttribute="top" secondItem="P5K-D4-ljI" secondAttribute="bottom" id="hs4-up-2kS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ymB-6x-xbx"/>
+                    <connections>
+                        <outlet property="mapview" destination="P5K-D4-ljI" id="EEy-6U-53e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FMY-Hm-lyI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1340" y="384"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mwA-eV-t0j">

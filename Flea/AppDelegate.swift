@@ -38,6 +38,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         PFACL.setDefaultACL(defaultACL, withAccessForCurrentUser:true)
         PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
         
+        // Q_add for show Add market view as root view
+        let storyboard = UIStoryboard(name: "AddMarket", bundle: nil)
+        let vc: UINavigationController = storyboard.instantiateViewControllerWithIdentifier("MarketNavigationControllerID") as! UINavigationController
+        
+        self.window?.rootViewController = vc
+        
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
     }
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {

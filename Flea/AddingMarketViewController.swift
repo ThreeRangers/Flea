@@ -8,7 +8,9 @@
 
 import UIKit
 
-class AddingMarketViewController: UIViewController {
+let myDateFormat = "dd-MM-yyyy HH:mm"
+
+class AddingMarketViewController: UIViewController, AddLocationMapViewControllerDelegate {
     
     @IBOutlet weak var backgroundImgView: UIImageView!
     
@@ -25,16 +27,34 @@ class AddingMarketViewController: UIViewController {
     @IBOutlet weak var dexcriptionTxtField: UITextField!
     
     @IBOutlet weak var dateFromTxtField: UITextField!
-
+    
+    var locationUpdated: CLLocation!
+    
     @IBOutlet weak var dateToTxtField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         print("Q_debug: View did load")
-
+        dateFromTxtField.delegate = self
+        dateToTxtField.delegate = self
+        
         // Do any additional setup after loading the view.
     }
-
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        print("Prepare for segueeee")
+        if (segue.identifier == "ShowAddLocationMap") {
+            let vc = segue.destinationViewController as! AddLocationMapViewController
+            vc.delegate = self
+        }
+    }
+    
+    func updateLocation(addLocationViewController: AddLocationMapViewController, locationMark: Dictionary<String, String>, location: CLLocation) {
+        locationTxtField.text = locationMark["name"]
+        locationUpdated = location
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -53,7 +73,7 @@ class AddingMarketViewController: UIViewController {
     
     @IBAction func onBack(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
-
+        
     }
     
     func saveMarket() {
@@ -70,9 +90,12 @@ class AddingMarketViewController: UIViewController {
         newMarket.facebookPage = facebookPageTxtField.text
         newMarket.phone = phoneTxtField.text
         newMarket.email = emailTxtField.text
-//        newMarket.location = locationTxtField.text
+        newMarket.date_from = NSDate(string: dateFromTxtField.text, formatString: myDateFormat)
+        newMarket.date_to = NSDate(string: dateToTxtField.text, formatString: myDateFormat)
+        //        newMarket.location = locationTxtField.text
+        newMarket.location = PFGeoPoint(location: locationUpdated)
         
-     
+        
         
         self.upLoadMarketToParse(newMarket)
     }
@@ -83,17 +106,17 @@ class AddingMarketViewController: UIViewController {
     
     
     
-
+    
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
 
 extension AddingMarketViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -120,5 +143,62 @@ extension AddingMarketViewController: UIImagePickerControllerDelegate, UINavigat
     
     func pickImage(image: UIImage) {
         self.backgroundImgView.image = image
+    }
+}
+
+extension AddingMarketViewController: UITextFieldDelegate {
+    
+    
+    @IBAction func onTapLocationView(sender: UITapGestureRecognizer) {
+        performSegueWithIdentifier("ShowAddLocationMap", sender: self)
+    }
+    
+    
+    @IBAction func dateFromBeginEditing(sender: UITextField) {
+        // 6
+        let datePickerView:UIDatePicker = UIDatePicker()
+        
+        datePickerView.datePickerMode = UIDatePickerMode.DateAndTime
+        
+        sender.inputView = datePickerView
+        
+        datePickerView.addTarget(self, action: Selector("dateFromPickerValueChanged:"), forControlEvents: UIControlEvents.ValueChanged)
+    }
+    
+    
+    @IBAction func dateToBeginEditing(sender: UITextField) {
+        // 6
+        let datePickerView:UIDatePicker = UIDatePicker()
+        
+        datePickerView.datePickerMode = UIDatePickerMode.DateAndTime
+        
+        sender.inputView = datePickerView
+        
+        datePickerView.addTarget(self, action: Selector("dateToPickerValueChanged:"), forControlEvents: UIControlEvents.ValueChanged)
+    }
+    
+    
+    func dateFromPickerValueChanged(sender:UIDatePicker) {
+        
+        let dateFormatter = NSDateFormatter()
+        
+        //        dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
+        //
+        //        dateFormatter.timeStyle = NSDateFormatterStyle.MediumStyle
+        dateFormatter.dateFormat = myDateFormat
+        dateFromTxtField.text = dateFormatter.stringFromDate(sender.date)
+        
+    }
+    
+    func dateToPickerValueChanged(sender:UIDatePicker) {
+        
+        let dateFormatter = NSDateFormatter()
+        //
+        //        dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
+        //
+        //        dateFormatter.timeStyle = NSDateFormatterStyle.MediumStyle
+        dateFormatter.dateFormat = myDateFormat
+        dateToTxtField.text = dateFormatter.stringFromDate(sender.date)
+        
     }
 }
