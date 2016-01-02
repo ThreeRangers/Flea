@@ -9,6 +9,13 @@
 import Foundation
 import UIKit
 
+
+@objc protocol shopHeaderDelegate {
+    optional func nextMarket()
+    optional func backMarket()
+}
+
+
 class ShopHeaderViewCell: UITableViewCell {
 
     @IBOutlet weak var marketLabel: UILabel!
@@ -20,14 +27,22 @@ class ShopHeaderViewCell: UITableViewCell {
     @IBOutlet weak var addShopButton: DOFavoriteButton!
     
     @IBOutlet weak var headerView: UIView!
+    var delegate : shopHeaderDelegate?
     
     var market : Market? {
         didSet {
             if let market = market {
+                
+                print("init data for header")
 
                 // load market info
                 marketLabel.text = market.name
-                LoveLabel.text = String(market.loves!)
+                
+                var loveMarket = market.loves
+                if loveMarket == nil {
+                    loveMarket = 0
+                }
+                LoveLabel.text = String(loveMarket!)
                 
                 let calendar = NSCalendar.currentCalendar()
                 let components = calendar.components([.Day, .Hour, .Minute, .Second], fromDate: NSDate(), toDate: market.date_from!, options: [])
@@ -36,7 +51,9 @@ class ShopHeaderViewCell: UITableViewCell {
                 
                 // add tap button to image
                 loveButton.addTarget(self, action: Selector("tappedLoveButton:"), forControlEvents: .TouchUpInside)
+                
                 addShopButton.addTarget(self, action: Selector("tappAddingShopButton:"), forControlEvents: .TouchUpInside)
+                
                 reminderButton.addTarget(self, action: Selector("remindButton:"), forControlEvents: .TouchUpInside)
             }
         }
@@ -80,4 +97,16 @@ class ShopHeaderViewCell: UITableViewCell {
             sender.select()
         }
     }
+    
+    
+    @IBAction func nextMarketAction(sender: AnyObject) {
+        print("trigger delegate next")
+        delegate?.nextMarket!()
+    }
+    
+    @IBAction func backMarketAction(sender: AnyObject) {
+        print("trigger delegate next")
+        delegate?.backMarket!()
+    }
+    
 }

@@ -37,8 +37,6 @@ class Market: PFObject, PFSubclassing {
             (imageData: NSData?, error: NSError?) -> Void in
             if error == nil {
                 if let imageData = imageData {
-                    print("get image from background")
-
                     self.image = UIImage(data:imageData)
                     
                     //call back the completed function

@@ -15,7 +15,7 @@ class MarketViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     var markets = [Market]()
     var switchButton: DOFavoriteButton!
-    
+ 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var collectView: UICollectionView!
     @IBOutlet weak var switchModeButton: DOFavoriteButton!
@@ -113,6 +113,8 @@ class MarketViewController: UIViewController, UICollectionViewDelegate, UICollec
                 
                 let shopVC = tabBar.viewControllers![1] as! ShopViewController
                 shopVC.market = self.markets[(indexPath?.row)!]
+                shopVC.markets = self.markets
+                
                 tabBar.setSelectIndex(from: 0, to: 1)
                 
             }
@@ -157,3 +159,4 @@ extension MarketViewController : UITabBarDelegate {
 //            let select = item
     }
 }
+

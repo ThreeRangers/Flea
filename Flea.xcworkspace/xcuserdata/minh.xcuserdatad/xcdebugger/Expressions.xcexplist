@@ -3,21 +3,10 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "NTWaterfallViewController.viewDidLoad() -&gt; ():NTWaterfallViewController.swift">
+         contextName = "ShopViewController.updateHeaderBackground(Bool) -&gt; ():ShopViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "delegateHolder">
-            </PersistentString>
-            <PersistentString
-               value = "self.navigationController">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "MarketPlaceViewController.collectionView(UICollectionView, cellForItemAtIndexPath : NSIndexPath) -&gt; UICollectionViewCell:MarketPlaceViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.imageNameList[indexPath.row]">
+               value = "cell.headerView.backgroundColor">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -38,6 +27,44 @@
             </PersistentString>
             <PersistentString
                value = "indexPath.row">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ShopViewController.(loadData(ShopViewController) -&gt; () -&gt; ()).(closure #1):ShopViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.tableView">
+            </PersistentString>
+            <PersistentString
+               value = "self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0))">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "NTWaterfallViewController.viewDidLoad() -&gt; ():NTWaterfallViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "delegateHolder">
+            </PersistentString>
+            <PersistentString
+               value = "self.navigationController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ShopViewController.mapView(MKMapView, viewForAnnotation : MKAnnotation) -&gt; MKAnnotationView?:ShopViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "annotation">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MarketPlaceViewController.collectionView(UICollectionView, cellForItemAtIndexPath : NSIndexPath) -&gt; UICollectionViewCell:MarketPlaceViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.imageNameList[indexPath.row]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
