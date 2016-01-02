@@ -18,6 +18,11 @@ import UIKit
 
 class ShopHeaderViewCell: UITableViewCell {
 
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var headerConstrain: NSLayoutConstraint!
+    
+    @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var marketLabel: UILabel!
     @IBOutlet weak var LoveLabel: UILabel!
     @IBOutlet weak var shopLabel: UILabel!
@@ -44,6 +49,8 @@ class ShopHeaderViewCell: UITableViewCell {
                 }
                 LoveLabel.text = String(loveMarket!)
                 
+                addressLabel.text = market.address == nil ? "" : market.address
+                
                 let calendar = NSCalendar.currentCalendar()
                 let components = calendar.components([.Day, .Hour, .Minute, .Second], fromDate: NSDate(), toDate: market.date_from!, options: [])
                 dateFromLabel.text = String(components.day)
@@ -60,6 +67,7 @@ class ShopHeaderViewCell: UITableViewCell {
     }
     
     func loadShop(shops : [Shop]) {
+
         self.shopLabel.text = String(shops.count)
     }
     

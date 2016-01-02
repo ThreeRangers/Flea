@@ -17,7 +17,7 @@ class ShopViewController: UIViewController {
     @IBOutlet weak var marketImage: UIImageView!
     var headerCell : ShopHeaderViewCell!
     
-    static let mapHeight = CGFloat(360.0)
+    var mapHeight = CGFloat(360.0)
     
     var market: Market!
     var markets: [Market] = []
@@ -109,6 +109,10 @@ class ShopViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        hideHeaderAnimate()
+        
+        self.mapHeight = self.view.frame.height - 140.0
     }
 
     override func didReceiveMemoryWarning() {
@@ -131,7 +135,7 @@ class ShopViewController: UIViewController {
 extension ShopViewController : MKMapViewDelegate {
     func loadMapView() {
         // Set the table views header cell and delegate
-        let tableHeaderViewHeight:CGFloat = ShopViewController.mapHeight
+        let tableHeaderViewHeight:CGFloat = self.mapHeight
         self.mapView = MKMapView(frame: CGRectMake(0,0, self.view.frame.width, tableHeaderViewHeight))
         
         if markets.count > 0 {
@@ -215,18 +219,72 @@ extension ShopViewController : UITableViewDataSource, UITableViewDelegate {
         return self.headerCell
     }
     
+    
+    func showHeaderAnimate() {
+        UIView.animateWithDuration(0.3, delay: 0.1, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+                let cell : ShopHeaderViewCell = self.getHeaderCell()
+                let transfromScale = CGAffineTransformMakeScale(0.8, 0.8)
+                let transfromNormal = CGAffineTransformMakeScale(1, 1)
+            
+                cell.headerView .backgroundColor = UIColor(red: 0/255.0, green: 0/255.0, blue: 0/255.0, alpha: 0.75)
+            
+                cell.addressLabel.hidden = true
+            
+                cell.marketLabel.transform = transfromScale
+            
+                cell.loveButton.transform = transfromNormal
+                cell.addShopButton.transform = transfromNormal
+                cell.reminderButton.transform = transfromNormal
+            
+                cell.headerConstrain.constant = 20
+                cell.backButton.hidden = true
+                cell.nextButton.hidden = true
+            
+            
+                var viewFrame = self.headerCell.frame
+                viewFrame.size.height = 80.0
+                self.headerCell.frame = viewFrame
+            }, completion: nil)
+        
+    }
+    
+    func hideHeaderAnimate() {
+        UIView.animateWithDuration(0.3, delay: 0.1, options: UIViewAnimationOptions.CurveEaseOut, animations: { () -> Void in
+            let transfromNormal = CGAffineTransformMakeScale(1, 1)
+            let transfromScale = CGAffineTransformMakeScale(0.8, 0.8)
+            
+            let cell : ShopHeaderViewCell = self.getHeaderCell()
+            
+            cell.headerView.backgroundColor = UIColor.clearColor()
+            cell.addressLabel.hidden = false
+            
+            
+            cell.marketLabel.transform = transfromNormal
+            cell.loveButton.transform = transfromScale
+            cell.addShopButton.transform = transfromScale
+            cell.reminderButton.transform = transfromScale
+            
+            cell.headerConstrain.constant = 47
+            cell.backButton.hidden = false
+            cell.nextButton.hidden = false
+            
+            var viewFrame = self.headerCell.frame
+            viewFrame.size.height = 114.0
+            self.headerCell.frame = viewFrame
+            
+            }, completion: nil)
+        
+    }
+    
     // update background of header and animate
     func updateHeaderBackground() {
-        let hasColor = tableView.contentOffset.y >= ShopViewController.mapHeight
+        let hasColor = tableView.contentOffset.y >= self.mapHeight
         
         if currentHasColor == !hasColor {
-            let cell = self.getHeaderCell()
-            
-            print("==> update the cell header when offset change \(cell)")
             if hasColor {
-                cell.headerView .backgroundColor = UIColor(red: 0/255.0, green: 0/255.0, blue: 0/255.0, alpha: 0.75)
+                showHeaderAnimate()
             } else {
-                cell.headerView.backgroundColor = UIColor.clearColor()
+                hideHeaderAnimate()
             }
             currentHasColor = hasColor
             tableView.reloadData()
@@ -239,6 +297,9 @@ extension ShopViewController : UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if self.headerCell != nil {
+            return self.headerCell.frame.height
+        }
         return 114.0
     }
     
@@ -304,7 +365,7 @@ extension ShopViewController: shopHeaderDelegate {
     func updateMarketIndex(idx : Int) {
         var indexMarket = Int(self.markets.indexOf(market)!) + idx
         
-        if (indexMarket == Int(markets.count) - 1) {
+        if (indexMarket == Int(markets.count)) {
             indexMarket = 0
         }
         else if (indexMarket == -1) {

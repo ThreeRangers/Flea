@@ -76,7 +76,7 @@ class MarketViewController: UIViewController, UICollectionViewDelegate, UICollec
         Market.getAll { (data) -> () in
             self.markets = data
             self.collectView?.reloadData()
-            self.loadMapView()
+            //self.loadMapView()
         }
         
         if let patternImage = UIImage(named: "Pattern") {
@@ -90,7 +90,7 @@ class MarketViewController: UIViewController, UICollectionViewDelegate, UICollec
         collectView!.backgroundColor = UIColor.clearColor()
         collectView!.decelerationRate = UIScrollViewDecelerationRateFast
         
-        switchModeButton.addTarget(self, action: Selector("switchModeAction:"), forControlEvents: .AllEvents)
+//        switchModeButton.addTarget(self, action: Selector("switchModeAction:"), forControlEvents: .AllEvents)
     }
     
     func updateTabbarShop() {
