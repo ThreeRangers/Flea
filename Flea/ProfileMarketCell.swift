@@ -14,9 +14,23 @@ class ProfileMarketCell: UITableViewCell {
     
     @IBOutlet weak var marketNameLabel: UILabel!
     
-    @IBOutlet weak var marketLocationLabel: UILabel!
+    @IBOutlet weak var marketAddressLabel: UILabel!
+
 
     @IBOutlet weak var maketTimeLabel: UILabel!
+    
+    var market: Market? {
+        didSet {
+            if let market = market {
+                self.marketBgImgView.image = market.image
+                self.marketNameLabel.text = market.name
+                self.marketAddressLabel.text = market.address
+                let dateFormatter = NSDateFormatter()
+                dateFormatter.dateFormat = myDateFormat
+                self.maketTimeLabel.text = dateFormatter.stringFromDate(market.date_from!)
+            }
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

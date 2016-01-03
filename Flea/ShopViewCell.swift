@@ -24,6 +24,7 @@ class ShopViewCell : UITableViewCell {
     
     @IBOutlet weak var shopView: UIView!
     
+    
     var shop: Shop? {
         didSet {
             if let shop = shop {
@@ -62,6 +63,22 @@ class ShopViewCell : UITableViewCell {
             }
         }
     }
+    
+    
+    @IBAction func onTapLoveButton(sender: AnyObject) {
+        if let shop = shop {
+            shop.love(true) { (successful: Bool, error: NSError?) -> Void in
+                if successful {
+                    print("loved")
+              
+                } else {
+                    print("failed to love")
+                  
+                }
+            }
+        }
+    }
+  
 }
 
 extension ShopViewCell {

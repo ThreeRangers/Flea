@@ -17,6 +17,8 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var marketView: UIView!
     
+    @IBOutlet weak var notificationView: UIView!
+    
     @IBAction func indexChanged(sender: UISegmentedControl) {
         
         switchView()
@@ -27,9 +29,15 @@ class ProfileViewController: UIViewController {
         case 0:
             marketView.hidden = false
             shopView.hidden = true
+            notificationView.hidden = true
         case 1:
-            marketView.hidden = true
             shopView.hidden = false
+            marketView.hidden = true
+            notificationView.hidden = true
+        case 2:
+            notificationView.hidden = false
+            shopView.hidden = true
+            marketView.hidden = true
         default:
             break;
         }
@@ -52,7 +60,6 @@ class ProfileViewController: UIViewController {
         //Load user data
         if let currentUser = User.currentUser()  {
             getUserInfor(currentUser)
-            
         }
         
     }

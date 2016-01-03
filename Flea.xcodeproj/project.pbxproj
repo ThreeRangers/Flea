@@ -17,11 +17,16 @@
 		046CBB221C2B6D61005AA0DD /* DisplayShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046CBB211C2B6D61005AA0DD /* DisplayShopViewController.swift */; };
 		046CBB241C2B759A005AA0DD /* shopDisplayInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046CBB231C2B759A005AA0DD /* shopDisplayInfoTableViewCell.swift */; };
 		04730FE81C32D2F400466603 /* ProfileShopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04730FE71C32D2F400466603 /* ProfileShopCell.swift */; };
+		047450E21C369BE0005269A1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047450E11C369BE0005269A1 /* CoreLocation.framework */; };
+		047450E41C369E92005269A1 /* AddLocationMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047450E31C369E92005269A1 /* AddLocationMapViewController.swift */; };
 		0477EEC21C27DB9A00C12BF6 /* shopInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0477EEC11C27DB9A00C12BF6 /* shopInfoTableViewCell.swift */; };
 		0477EEC41C27DFD700C12BF6 /* shopGalleryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0477EEC31C27DFD700C12BF6 /* shopGalleryTableViewCell.swift */; };
 		047ABFEB1C298C4F00916D0A /* MyColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047ABFEA1C298C4F00916D0A /* MyColor.swift */; };
 		047D2FF71C33333C00CAB5C3 /* AddMarket.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047D2FF61C33333C00CAB5C3 /* AddMarket.storyboard */; };
 		047D2FF91C335C3400CAB5C3 /* AddingMarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D2FF81C335C3400CAB5C3 /* AddingMarketViewController.swift */; };
+		047E7DC71C38A14800F55F42 /* ProfileNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E7DC61C38A14800F55F42 /* ProfileNotificationViewController.swift */; };
+		047E7DC91C38A19900F55F42 /* ProfileNotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E7DC81C38A19900F55F42 /* ProfileNotificationCell.swift */; };
+		04E3CDE21C330FFC003C523E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E3CDE01C330FFC003C523E /* Login.storyboard */; };
 		04F503901C2D43BB0076DF5E /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5038F1C2D43BB0076DF5E /* GalleryCollectionViewCell.swift */; };
 		04F733B71C223E1B004A4D7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F733B61C223E1B004A4D7A /* AppDelegate.swift */; };
 		04F733B91C223E1B004A4D7A /* AddingShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F733B81C223E1B004A4D7A /* AddingShopViewController.swift */; };
@@ -111,11 +116,16 @@
 		046CBB211C2B6D61005AA0DD /* DisplayShopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayShopViewController.swift; sourceTree = "<group>"; };
 		046CBB231C2B759A005AA0DD /* shopDisplayInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = shopDisplayInfoTableViewCell.swift; sourceTree = "<group>"; };
 		04730FE71C32D2F400466603 /* ProfileShopCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileShopCell.swift; sourceTree = "<group>"; };
+		047450E11C369BE0005269A1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		047450E31C369E92005269A1 /* AddLocationMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLocationMapViewController.swift; sourceTree = "<group>"; };
 		0477EEC11C27DB9A00C12BF6 /* shopInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = shopInfoTableViewCell.swift; sourceTree = "<group>"; };
 		0477EEC31C27DFD700C12BF6 /* shopGalleryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = shopGalleryTableViewCell.swift; sourceTree = "<group>"; };
 		047ABFEA1C298C4F00916D0A /* MyColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyColor.swift; sourceTree = "<group>"; };
 		047D2FF61C33333C00CAB5C3 /* AddMarket.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddMarket.storyboard; sourceTree = "<group>"; };
 		047D2FF81C335C3400CAB5C3 /* AddingMarketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddingMarketViewController.swift; sourceTree = "<group>"; };
+		047E7DC61C38A14800F55F42 /* ProfileNotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileNotificationViewController.swift; sourceTree = "<group>"; };
+		047E7DC81C38A19900F55F42 /* ProfileNotificationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileNotificationCell.swift; sourceTree = "<group>"; };
+		04E3CDE11C330FFC003C523E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ../../../Dat/Flea/Flea/Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		04F5038F1C2D43BB0076DF5E /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 		04F733B31C223E1B004A4D7A /* Flea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F733B61C223E1B004A4D7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -178,6 +188,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047450E21C369BE0005269A1 /* CoreLocation.framework in Frameworks */,
 				041FB7731C2562BB00F31EDE /* FBSDKShareKit.framework in Frameworks */,
 				53A43922D20B3F6BB59E20E9 /* Pods.framework in Frameworks */,
 				BA4ABC9E1C32F0CA00B87B9C /* MapKit.framework in Frameworks */,
@@ -280,6 +291,7 @@
 		AC7B9BA4BEA6C45D94A086CB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				047450E11C369BE0005269A1 /* CoreLocation.framework */,
 				BA4ABC9D1C32F0CA00B87B9C /* MapKit.framework */,
 				041FB76E1C2562BB00F31EDE /* FBSDKCoreKit.framework */,
 				041FB76F1C2562BB00F31EDE /* FBSDKLoginKit.framework */,
@@ -318,6 +330,8 @@
 				BA675AAA1C2E9DE6003B3DC0 /* SettingViewController.swift */,
 				AA2913A51C32F51400C5E8F2 /* NewShopViewController.swift */,
 				047D2FF81C335C3400CAB5C3 /* AddingMarketViewController.swift */,
+				047450E31C369E92005269A1 /* AddLocationMapViewController.swift */,
+				047E7DC61C38A14800F55F42 /* ProfileNotificationViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -337,6 +351,7 @@
 				04730FE71C32D2F400466603 /* ProfileShopCell.swift */,
 				BA2FE55B1C32834C001945FD /* ShopGalleryViewCell.swift */,
 				AA2913A71C32F54900C5E8F2 /* NewShopCell.swift */,
+				047E7DC81C38A19900F55F42 /* ProfileNotificationCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -601,6 +616,7 @@
 				046CBB221C2B6D61005AA0DD /* DisplayShopViewController.swift in Sources */,
 				04F733B91C223E1B004A4D7A /* AddingShopViewController.swift in Sources */,
 				BA3424B31C2EF4D3009C3374 /* LogInViewController.swift in Sources */,
+				047E7DC71C38A14800F55F42 /* ProfileNotificationViewController.swift in Sources */,
 				BA7FF60B1C2EB9CA00ED35C9 /* RAMAnimatedTabBarController.swift in Sources */,
 				BA675A9B1C2E703A003B3DC0 /* UIColor.swift in Sources */,
 				04F733B71C223E1B004A4D7A /* AppDelegate.swift in Sources */,
@@ -625,6 +641,8 @@
 				BAF07CDA1C2D3A74002F173D /* ParseClient.swift in Sources */,
 				BA675AA31C2E71D5003B3DC0 /* MarketViewController.swift in Sources */,
 				BA7FF6181C2EBA1500ED35C9 /* RAMBadge.swift in Sources */,
+				047450E41C369E92005269A1 /* AddLocationMapViewController.swift in Sources */,
+				047E7DC91C38A19900F55F42 /* ProfileNotificationCell.swift in Sources */,
 				BA7FF6151C2EBA0600ED35C9 /* RAMRotationAnimation.swift in Sources */,
 				BA9A54BA1C36DFFB00C373C6 /* ViewParallaxTableHeader.swift in Sources */,
 				0400F8AE1C32867F0083F0D0 /* ProfileShopViewController.swift in Sources */,
