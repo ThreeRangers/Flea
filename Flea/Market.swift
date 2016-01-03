@@ -26,6 +26,7 @@ class Market: PFObject, PFSubclassing {
     @NSManaged var email: String?
     @NSManaged var location: PFGeoPoint?
     @NSManaged var loves : NSNumber?
+    @NSManaged var user: User
 
    
     
@@ -62,6 +63,10 @@ class Market: PFObject, PFSubclassing {
     var finishCallback: ((market: Market) -> Void)?
     
     func uploadInfoDataWithImg() {
+        
+        if let currentUser = User.currentUser() {
+            user = currentUser
+        }
         if let file: PFFile = imageMarket{
             file.saveInBackgroundWithBlock({ (succeeded, error) -> Void in
                 if succeeded {

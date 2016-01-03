@@ -92,7 +92,7 @@ class Shop: PFObject, PFSubclassing {
         })
     }
     
-    // load image market
+    // load image shop
     func loadImage(completion: () -> ()) {
         self.profileImg.getDataInBackgroundWithBlock {
             (imageData: NSData?, error: NSError?) -> Void in
@@ -121,5 +121,22 @@ class Shop: PFObject, PFSubclassing {
             })
         }
         completion()
+    }
+}
+
+// MARK: Love
+extension Shop {
+    //love shop
+    func love(enable: Bool, callback: PFBooleanResultBlock) {
+        if let currentUser = User.currentUser() {
+            if enable {
+                print("Add object to loveshops list")
+                currentUser.loveShops.addObject(self)
+            } else {
+                print("Remove object to loveshops list")
+                currentUser.loveShops.removeObject(self)
+            }
+            currentUser.saveInBackgroundWithBlock(callback)
+        }
     }
 }

@@ -10,6 +10,7 @@ import UIKit
 import Parse
 import Foundation
 
+let limitMarketsQuery = 10
 typealias MarketResultBlock = (markets: [Market]?, error: NSError?) -> Void
 typealias ShopResultBlock = (shops: [Shop]?, error: NSError?) -> Void
 class User: PFUser {
@@ -18,17 +19,25 @@ class User: PFUser {
     @NSManaged var phone: String?
     @NSManaged var role: PFRole
     
-    var markets: PFRelation! {
-        return relationForKey("marketplace")
-    }
+    //    var markets: PFRelation! {
+    //        return relationForKey("marketplace")
+    //    }
     
-    var shops: PFRelation! {
-        return relationForKey("shop")
+    var loveShops: PFRelation! {
+        return relationForKey("loveShops")
     }
     
     func getMarkets(lastUpdated:NSDate?, callback: MarketResultBlock) {
         if let query = Market.query() {
             // defines query
+            query.limit = limitMarketsQuery
+            //            query.selectKeys(["name", "desc", "user", "imageMarket", "location", "condition"])
+            if let lastUpdated = lastUpdated {
+                query.whereKey("updatedAt", lessThan: lastUpdated)
+            }
+            query.includeKey("user")
+            query.whereKey("user", equalTo: self)
+            query.orderByDescending("updatedAt")
             query.findObjectsInBackgroundWithBlock({ (pfObj: [PFObject]?, error: NSError?) -> Void in
                 guard error == nil else {
                     callback(markets: nil, error: error)
@@ -41,18 +50,19 @@ class User: PFUser {
         }
     }
     
-    func getShops(lastUpdated:NSDate?, callback: ShopResultBlock) {
-        if let query = Market.query() {
-            // defines query
-            query.findObjectsInBackgroundWithBlock({ (pfObj: [PFObject]?, error: NSError?) -> Void in
-                guard error == nil else {
-                    callback(shops: nil, error: error)
-                    return
-                }
-                if let shops = pfObj as? [Shop] {
-                    callback(shops: shops, error: nil)
-                }
-            })
+    func getLoveShops(lastUpdatedAt:NSDate?, callback: ShopResultBlock) {
+        let query = loveShops.query()
+        query.includeKey("user")
+        query.findObjectsInBackgroundWithBlock { (pfObjs, error) -> Void in
+            guard error == nil else {
+                callback(shops: nil, error: error)
+                return
+            }
+            
+            if let shops = pfObjs as? [Shop] {
+                callback(shops: shops, error: nil)
+            }
         }
     }
+    
 }

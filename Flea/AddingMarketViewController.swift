@@ -46,6 +46,7 @@ class AddingMarketViewController: UIViewController, AddLocationMapViewController
         print("Prepare for segueeee")
         if (segue.identifier == "ShowAddLocationMap") {
             let vc = segue.destinationViewController as! AddLocationMapViewController
+            vc.currentLocation = locationUpdated
             vc.delegate = self
         }
     }
@@ -94,7 +95,7 @@ class AddingMarketViewController: UIViewController, AddLocationMapViewController
         newMarket.date_to = NSDate(string: dateToTxtField.text, formatString: myDateFormat)
         //        newMarket.location = locationTxtField.text
         newMarket.location = PFGeoPoint(location: locationUpdated)
-        
+        newMarket.address = locationTxtField.text
         
         
         self.upLoadMarketToParse(newMarket)
