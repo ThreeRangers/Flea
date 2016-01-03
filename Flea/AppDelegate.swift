@@ -20,6 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
+        // get permission access on map view
+        let locationManager: CLLocationManager! = CLLocationManager()
+        locationManager.requestAlwaysAuthorization()
+        locationManager.startUpdatingLocation()
+        
         setupSubclass()
         ParseInterface.sharedInstance.parseSetup()
         

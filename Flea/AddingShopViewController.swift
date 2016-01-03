@@ -14,8 +14,8 @@ let InfoSection = 0
 let GallerySection = 1
 let ProfieImgViewIndex = 10
 
-protocol AddingShopViewControllerDelegate  {
-    func updateMarket()
+@objc protocol AddingShopViewControllerDelegate  {
+    optional func updateShops()
 }
 
 class AddingShopViewController: UIViewController  {
@@ -50,7 +50,7 @@ class AddingShopViewController: UIViewController  {
         saveShop()
         
         dismissViewControllerAnimated(true) { () -> Void in
-             self.delegate?.updateMarket()
+             self.delegate!.updateShops!()
         }
     }
    

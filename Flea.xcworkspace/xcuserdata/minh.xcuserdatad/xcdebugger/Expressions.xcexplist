@@ -3,25 +3,6 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "NTWaterfallViewController.viewDidLoad() -&gt; ():NTWaterfallViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "delegateHolder">
-            </PersistentString>
-            <PersistentString
-               value = "self.navigationController">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "MarketPlaceViewController.collectionView(UICollectionView, cellForItemAtIndexPath : NSIndexPath) -&gt; UICollectionViewCell:MarketPlaceViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.imageNameList[indexPath.row]">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "NTWaterfallViewController.collectionView(UICollectionView, layout : UICollectionViewLayout, sizeForItemAtIndexPath : NSIndexPath) -&gt; CGSize:NTWaterfallViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -38,6 +19,71 @@
             </PersistentString>
             <PersistentString
                value = "indexPath.row">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ShopViewController.updateHeaderBackground(Bool) -&gt; ():ShopViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "cell.headerView.backgroundColor">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "NTWaterfallViewController.viewDidLoad() -&gt; ():NTWaterfallViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "delegateHolder">
+            </PersistentString>
+            <PersistentString
+               value = "self.navigationController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ShopViewController.updateHeaderBackground() -&gt; ():ShopViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "cell.headerView.frame">
+            </PersistentString>
+            <PersistentString
+               value = "self.headerCell.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MarketPlaceViewController.collectionView(UICollectionView, cellForItemAtIndexPath : NSIndexPath) -&gt; UICollectionViewCell:MarketPlaceViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.imageNameList[indexPath.row]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ShopViewController.tableView(UITableView, heightForHeaderInSection : Int) -&gt; CGFloat:ShopViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.headerCell.frame.height">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ShopViewController.mapView(MKMapView, viewForAnnotation : MKAnnotation) -&gt; MKAnnotationView?:ShopViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "annotation">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ShopViewController.(loadData(ShopViewController) -&gt; () -&gt; ()).(closure #1):ShopViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.tableView">
+            </PersistentString>
+            <PersistentString
+               value = "self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0))">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

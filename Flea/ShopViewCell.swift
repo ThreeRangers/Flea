@@ -49,7 +49,7 @@ class ShopViewCell : UITableViewCell {
                 
                 self.userImage.layer.cornerRadius = 3.0
                 self.userImage.layer.borderColor = UIColor.whiteColor().CGColor;
-                self.userImage.layer.borderWidth = 4.0;
+                self.userImage.layer.borderWidth = 1.0;
                 
                 self.userImage.layer.shadowColor = UIColor.blackColor().CGColor;
                 self.userImage.layer.shadowRadius = 2.0;

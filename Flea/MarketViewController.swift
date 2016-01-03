@@ -15,7 +15,7 @@ class MarketViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     var markets = [Market]()
     var switchButton: DOFavoriteButton!
-    
+ 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var collectView: UICollectionView!
     @IBOutlet weak var switchModeButton: DOFavoriteButton!
@@ -76,7 +76,7 @@ class MarketViewController: UIViewController, UICollectionViewDelegate, UICollec
         Market.getAll { (data) -> () in
             self.markets = data
             self.collectView?.reloadData()
-            self.loadMapView()
+            //self.loadMapView()
         }
         
         if let patternImage = UIImage(named: "Pattern") {
@@ -90,7 +90,7 @@ class MarketViewController: UIViewController, UICollectionViewDelegate, UICollec
         collectView!.backgroundColor = UIColor.clearColor()
         collectView!.decelerationRate = UIScrollViewDecelerationRateFast
         
-        switchModeButton.addTarget(self, action: Selector("switchModeAction:"), forControlEvents: .AllEvents)
+//        switchModeButton.addTarget(self, action: Selector("switchModeAction:"), forControlEvents: .AllEvents)
     }
     
     func updateTabbarShop() {
@@ -113,6 +113,8 @@ class MarketViewController: UIViewController, UICollectionViewDelegate, UICollec
                 
                 let shopVC = tabBar.viewControllers![1] as! ShopViewController
                 shopVC.market = self.markets[(indexPath?.row)!]
+                shopVC.markets = self.markets
+                
                 tabBar.setSelectIndex(from: 0, to: 1)
                 
             }
@@ -157,3 +159,4 @@ extension MarketViewController : UITabBarDelegate {
 //            let select = item
     }
 }
+
