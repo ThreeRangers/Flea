@@ -28,10 +28,10 @@ class ParseClient: NSObject {
 
                         result.append(object as! Market)
                         print(object)
-                        
-                        // call back function
-                        completion(data: result)
                     }
+                    
+                    // call back function
+                    completion(data: result)
                 }
             } else {
                 // Log details of the failure
@@ -52,12 +52,10 @@ class ParseClient: NSObject {
                 print("Successfully retrieved \(objects!.count) shops")
                 if let objects = objects {
                     for object in objects {
-                        
                         result.append(object as! Shop)
-                        
-                        // call back function
-                        completion(data: result)
                     }
+                    // call back function
+                    completion(data: result)
                 }
             } else {
                 // Log details of the failure
