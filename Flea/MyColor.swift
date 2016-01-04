@@ -20,6 +20,8 @@ class MyColor: UIColor {
         static let Gray = UIColor(red: 237, green: 241, blue: 247)
         //87 88 89
         static let GraySecondary = UIColor(red: 87, green: 88, blue: 89)
+        
+        static let RedPrimary = UIColor(red: 253, green: 105, blue: 92)
      }
 }
 extension UIColor {

@@ -11,3 +11,4 @@ use_frameworks!
     pod 'DateTools'
     pod 'AFNetworking'
     pod 'SCLAlertView'
+    pod 'SVPullToRefresh'

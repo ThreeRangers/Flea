@@ -42,6 +42,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
 //        self.window?.rootViewController = vc
         
+        //User.logOut()
+        
+        
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
     }
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
@@ -49,7 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func applicationDidBecomeActive(application: UIApplication) {
-        //FBSDKAppEvents.activateApp()
+        FBSDKAppEvents.activateApp()
     }
     
     func setupSubclass() {

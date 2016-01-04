@@ -54,14 +54,32 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var wishListShopCntLabel: UILabel!
     
+    let loginStoryboard = UIStoryboard(name: "Login", bundle: nil)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        switchView()
+        
         //Load user data
         if let currentUser = User.currentUser()  {
-            getUserInfor(currentUser)
+            if currentUser.username == nil {
+                let vc = loginStoryboard.instantiateViewControllerWithIdentifier("LoginViewController")
+                
+                presentViewController(vc, animated: true, completion: nil)
+            }
+            
         }
         
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        if let currentUser = User.currentUser()  {
+            if currentUser.username != nil {
+                getUserInfor(currentUser)
+                switchView()
+            }
+            
+        }
     }
     
     func getUserInfor(currentUser: PFUser) {

@@ -15,8 +15,14 @@ class ProfileMarketViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        loadMarkets()
+        
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        loadMarkets()
     }
     
     override func didReceiveMemoryWarning() {

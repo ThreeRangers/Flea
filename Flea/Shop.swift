@@ -8,6 +8,7 @@
 
 import Foundation
 import Parse
+import SCLAlertView
 
 class Shop: PFObject, PFSubclassing {
     
@@ -26,6 +27,10 @@ class Shop: PFObject, PFSubclassing {
     @NSManaged var descriptionText: String?
     @NSManaged var gallery: [PFFile]
     @NSManaged var likes: NSNumber?
+    @NSManaged var facebookID: String?
+    var profileImageUrl: String?
+    var address: String?
+    var coverUrl: String?
     
     var market: PFRelation! {
         return relationForKey("marketpalce")
@@ -43,8 +48,12 @@ class Shop: PFObject, PFSubclassing {
         self.name = shopData["name"] as? String
         self.facebookLink = shopData["link"] as? String
         self.phone = shopData["phone"] as? String
-        self.descriptionText = shopData["description"] as? String
+        self.descriptionText = shopData["about"] as? String
         self.email   = shopData["emails"]?[0] as? String
+        self.profileImageUrl = shopData["picture"]?["data"]??["url"] as? String
+        self.coverUrl = shopData["cover"]?["source"] as? String
+        self.address = shopData["single_line_address"] as? String
+        self.facebookID = shopData["id"] as? String
     }
     
     func uploadInfoDataWithImg() {
@@ -86,6 +95,9 @@ class Shop: PFObject, PFSubclassing {
         saveInBackgroundWithBlock({ (success, error) -> Void in
             guard error == nil else {
                 print(error)
+                if let errorMsg = error?.userInfo["error"] as? String {
+                    SCLAlertView().showError("Error", subTitle: errorMsg, closeButtonTitle: "Dismiss", duration: 0.0, colorStyle: 0xFD695C, colorTextButton: 0xFFFFFF)
+                }
                 return
             }
             self.finishCallback?(shop: self)

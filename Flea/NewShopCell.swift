@@ -19,7 +19,7 @@ class NewShopCell: UITableViewCell {
         didSet {
             nameLabel.text = shop.name
             descriptionLabel.text = shop.description
-            shopImageView.setImageWithURL(NSURL(string: shop.profileImg.url!)!)
+            //shopImageView.setImageWithURL(NSURL(string: shop.profileImg.url!)!)
         }
     }
     override func awakeFromNib() {
