@@ -9,8 +9,8 @@
 import UIKit
 
 class ProfileShopViewController: UIViewController {
-
     @IBOutlet weak var tableView: UITableView!
+    var shops = [Shop]()
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -18,6 +18,8 @@ class ProfileShopViewController: UIViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 150
         tableView.reloadData()
+        
+        loadShops()
 
         // Do any additional setup after loading the view.
     }
@@ -26,6 +28,21 @@ class ProfileShopViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func loadShops() {
+        print("loading user's love shops")
+        if let currentUser = User.currentUser() {
+            currentUser.getLoveShops(NSDate(), callback: { (shops, error) -> Void in
+                if let shops = shops {
+                    self.shops = shops
+                    self.tableView.reloadData()
+                } else {
+                    print(error)
+                }
+            })
+        }
+    }
+
     
 
     /*
@@ -42,11 +59,17 @@ class ProfileShopViewController: UIViewController {
 extension ProfileShopViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return shops.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ProfileShopCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("ProfileShopCell", forIndexPath: indexPath) as! ProfileShopCell
+        cell.shop = shops[indexPath.row]
+        if cell.shop!.image == nil {
+            cell.shop!.loadImage { () -> () in
+                self.tableView.reloadData()
+            }
+        }
         return cell
     }
     

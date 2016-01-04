@@ -20,11 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        // get permission access on map view
-        let locationManager: CLLocationManager! = CLLocationManager()
-        locationManager.requestAlwaysAuthorization()
-        locationManager.startUpdatingLocation()
-        
         setupSubclass()
         ParseInterface.sharedInstance.parseSetup()
         
@@ -33,15 +28,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If you would like all objects to be private by default, remove this line.
         defaultACL.publicReadAccess = true
         
-        
-        // register subclass of parse so that it could be cast
-        Market.registerSubclass()
-        Shop.registerSubclass()
-        
         // override select color of tabbard
-    
+        
         PFACL.setDefaultACL(defaultACL, withAccessForCurrentUser:true)
         PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
+        
+        // Q_add for show Add market view as root view
+//                let storyboard = UIStoryboard(name: "AddMarket", bundle: nil)
+//                let vc: UINavigationController = storyboard.instantiateViewControllerWithIdentifier("MarketNavigationControllerID") as! UINavigationController
+        
+//        let storyboard = UIStoryboard(name: "Profile", bundle: nil)
+//        let vc: ProfileViewController = storyboard.instantiateViewControllerWithIdentifier("ProfileViewControllerID") as! ProfileViewController
+        
+//        self.window?.rootViewController = vc
         
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
     }
@@ -54,7 +53,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func setupSubclass() {
+        // register subclass of parse so that it could be cast
+        Market.registerSubclass()
         Shop.registerSubclass()
+        User.registerSubclass()
     }
     
 }

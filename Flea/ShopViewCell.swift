@@ -62,6 +62,20 @@ class ShopViewCell : UITableViewCell {
             }
         }
     }
+    @IBAction func onTapLoveButton(sender: AnyObject) {
+        if let shop = shop {
+            shop.love(true) { (successful: Bool, error: NSError?) -> Void in
+                if successful {
+                    print("loved")
+                    
+                } else {
+                    print("failed to love")
+                    
+                }
+            }
+        }
+    }
+    
 }
 
 extension ShopViewCell {
