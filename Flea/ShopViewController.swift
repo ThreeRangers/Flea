@@ -138,6 +138,8 @@ extension ShopViewController : MKMapViewDelegate {
         let tableHeaderViewHeight:CGFloat = self.mapHeight
         self.mapView = MKMapView(frame: CGRectMake(0,0, self.view.frame.width, tableHeaderViewHeight))
         
+        self.annotationMapping.removeAll()
+        
         if markets.count > 0 {
             for marketItem in markets {
                 if market.location == nil {
