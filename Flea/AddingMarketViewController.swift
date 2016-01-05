@@ -38,8 +38,13 @@ class AddingMarketViewController: UIViewController, AddLocationMapViewController
         dateFromTxtField.delegate = self
         dateToTxtField.delegate = self
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWasShown:"), name:UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWasHiden:"), name:UIKeyboardWillHideNotification, object: nil)
+        
         // Do any additional setup after loading the view.
     }
+    
+    
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -148,7 +153,25 @@ extension AddingMarketViewController: UIImagePickerControllerDelegate, UINavigat
 }
 
 extension AddingMarketViewController: UITextFieldDelegate {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        resignFirstResponder()
+    }
     
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func keyboardWasShown(notification: NSNotification) {
+        var info = notification.userInfo!
+        let keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+       
+    }
+    
+    func keyboardWasHiden(notification: NSNotification) {
+        
+  
+    }
     
     @IBAction func onTapLocationView(sender: UITapGestureRecognizer) {
         performSegueWithIdentifier("ShowAddLocationMap", sender: self)

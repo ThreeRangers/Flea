@@ -93,7 +93,7 @@ class ProfileViewController: UIViewController {
         }
         
         //load other information
-        self.nameLabel.text = currentUser.username
+        self.nameLabel.text = currentUser.objectForKey("firstname") as? String
         self.phoneLabel.text = currentUser.objectForKey("phone") as? String
         self.emailLabel.text = currentUser.email
     }

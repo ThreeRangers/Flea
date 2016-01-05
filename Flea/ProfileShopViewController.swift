@@ -17,11 +17,13 @@ class ProfileShopViewController: UIViewController {
         tableView.delegate = self
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 150
-        tableView.reloadData()
-        
-        loadShops()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        loadShops()
     }
 
     override func didReceiveMemoryWarning() {

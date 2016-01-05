@@ -15,17 +15,18 @@ class MarketViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     var markets = [Market]()
     var switchButton: DOFavoriteButton!
- 
+    
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var collectView: UICollectionView!
     @IBOutlet weak var switchModeButton: DOFavoriteButton!
     
+    @IBOutlet weak var addMarketButton: UIButton!
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
     }
     
     func switchModeAction(sender: DOFavoriteButton) {
-    
+        
         if sender.selected {
             sender.deselect()
             
@@ -39,7 +40,7 @@ class MarketViewController: UIViewController, UICollectionViewDelegate, UICollec
             mapView.hidden = false
         }
     }
-
+    
     func addLocation(market : Market) {
         if market.location == nil {
             return
@@ -82,7 +83,7 @@ class MarketViewController: UIViewController, UICollectionViewDelegate, UICollec
         if let patternImage = UIImage(named: "Pattern") {
             view.backgroundColor = UIColor(patternImage: patternImage)
         }
-       
+        
         mapView.hidden = true
         collectView.dataSource = self
         collectView.delegate = self
@@ -90,7 +91,21 @@ class MarketViewController: UIViewController, UICollectionViewDelegate, UICollec
         collectView!.backgroundColor = UIColor.clearColor()
         collectView!.decelerationRate = UIScrollViewDecelerationRateFast
         
-//        switchModeButton.addTarget(self, action: Selector("switchModeAction:"), forControlEvents: .AllEvents)
+        //        switchModeButton.addTarget(self, action: Selector("switchModeAction:"), forControlEvents: .AllEvents)
+    }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        UIView.animateWithDuration(0.3) { () -> Void in
+            self.addMarketButton.alpha = 0
+        }
+        
+    }
+    
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        UIView.animateWithDuration(0.3) { () -> Void in
+            self.addMarketButton.alpha = 1
+        }
+        
     }
     
     func updateTabbarShop() {
@@ -107,7 +122,7 @@ class MarketViewController: UIViewController, UICollectionViewDelegate, UICollec
             // get current select row
             let indexPath = collectView?.indexPathForCell(sender as! UICollectionViewCell)
             
-        
+            
             let appDelegate  = UIApplication.sharedApplication().delegate as! AppDelegate
             if let tabBar = appDelegate.window!.rootViewController as? RAMAnimatedTabBarController {
                 
@@ -119,13 +134,13 @@ class MarketViewController: UIViewController, UICollectionViewDelegate, UICollec
                 
             }
             
-// question: not work on this tabBar ?
-//            let tabBar = segue.destinationViewController as! RAMAnimatedTabBarController
-//            let shopVC = tabBar.viewControllers![1] as! ShopViewController
-//            shopVC.market = self.markets[(indexPath?.row)!]
+            // question: not work on this tabBar ?
+            //            let tabBar = segue.destinationViewController as! RAMAnimatedTabBarController
+            //            let shopVC = tabBar.viewControllers![1] as! ShopViewController
+            //            shopVC.market = self.markets[(indexPath?.row)!]
             
             
-//            self.presentViewController(shopVC, animated: true, completion: nil)
+            //            self.presentViewController(shopVC, animated: true, completion: nil)
         }
     }
 }
@@ -140,7 +155,7 @@ extension MarketViewController  {
         return markets.count
     }
     
-     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectView.dequeueReusableCellWithReuseIdentifier(reuseMarketIdentifier, forIndexPath: indexPath) as! MarketCell
         cell.market = self.markets[indexPath.item]
         
@@ -149,14 +164,14 @@ extension MarketViewController  {
                 self.collectView.reloadData()
             }
         }
-    
+        
         return cell
     }
 }
 
 extension MarketViewController : UITabBarDelegate {
     func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem)  {
-//            let select = item
+        //            let select = item
     }
 }
 

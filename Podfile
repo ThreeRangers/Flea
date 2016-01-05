@@ -12,3 +12,4 @@ use_frameworks!
     pod 'AFNetworking'
     pod 'SCLAlertView'
     pod 'SVPullToRefresh'
+    pod 'IQKeyboardManagerSwift'

@@ -12,6 +12,7 @@ import Bolts
 import ParseFacebookUtilsV4
 import FBSDKCoreKit
 import FBSDKLoginKit
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
+        IQKeyboardManager.sharedManager().enable = true
         setupSubclass()
         ParseInterface.sharedInstance.parseSetup()
         
@@ -42,7 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
 //        self.window?.rootViewController = vc
         
-        //User.logOut()
+//        User.logOut()
         
         
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
