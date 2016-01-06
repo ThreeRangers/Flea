@@ -72,13 +72,7 @@ class MarketViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        Market.getAll { (data) -> () in
-            self.markets = data
-            self.collectView?.reloadData()
-            //self.loadMapView()
-        }
-        
+
         if let patternImage = UIImage(named: "Pattern") {
             view.backgroundColor = UIColor(patternImage: patternImage)
         }
@@ -91,6 +85,16 @@ class MarketViewController: UIViewController, UICollectionViewDelegate, UICollec
         collectView!.decelerationRate = UIScrollViewDecelerationRateFast
         
 //        switchModeButton.addTarget(self, action: Selector("switchModeAction:"), forControlEvents: .AllEvents)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        Market.getAll { (data) -> () in
+            self.markets = data
+            self.collectView?.reloadData()
+            //self.loadMapView()
+        }
     }
     
     func updateTabbarShop() {

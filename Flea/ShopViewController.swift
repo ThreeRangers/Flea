@@ -74,7 +74,14 @@ class ShopViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        
+    
+        mapView.delegate = self
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         if market == nil {
             return
         }
@@ -82,10 +89,6 @@ class ShopViewController: UIViewController {
         loadData()
         
         loadMapView()
-    
-        mapView.delegate = self
-        tableView.delegate = self
-        tableView.dataSource = self
     }
     
     func getCellHeader() -> ShopHeaderViewCell{

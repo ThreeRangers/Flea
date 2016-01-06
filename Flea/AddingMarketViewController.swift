@@ -74,7 +74,7 @@ class AddingMarketViewController: UIViewController, AddLocationMapViewController
     
     @IBAction func onBack(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
-        
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     func saveMarket() {
