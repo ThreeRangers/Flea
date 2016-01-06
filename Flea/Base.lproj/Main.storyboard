@@ -150,7 +150,7 @@
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
                                                                     <connections>
-                                                                        <segue destination="5sw-Cd-7Di" kind="modal" identifier="addShopSegue" id="c7C-on-OfC"/>
+                                                                        <action selector="onAddTapped:" destination="6qd-e3-G20" eventType="touchUpInside" id="fBq-us-g1E"/>
                                                                     </connections>
                                                                 </button>
                                                             </subviews>
@@ -386,6 +386,7 @@
                                             <outlet property="shopName" destination="1Xh-cI-lIa" id="eHk-Uy-oGG"/>
                                             <outlet property="shopView" destination="ak4-SV-Ek7" id="Ryv-5L-gnR"/>
                                             <outlet property="userImage" destination="kMl-G4-n9t" id="hcg-Xo-Z0T"/>
+                                            <segue destination="YWJ-vW-qIG" kind="modal" identifier="feedSegue" modalTransitionStyle="coverVertical" id="8Uz-7w-KcK"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -418,6 +419,8 @@
                     <connections>
                         <outlet property="marketImage" destination="zsf-oY-KI0" id="Xg9-XM-oNb"/>
                         <outlet property="tableView" destination="f8t-ro-IKS" id="tWS-Ui-GsC"/>
+                        <segue destination="5sw-Cd-7Di" kind="modal" identifier="addShopSegue" modalTransitionStyle="coverVertical" id="QT5-CE-8ku"/>
+                        <segue destination="5h6-ZD-xD8" kind="modal" identifier="searchSegue" modalTransitionStyle="coverVertical" id="wm1-s6-GMA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zNC-Yi-Fyr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -464,6 +467,16 @@
                 <customObject id="AgY-0D-BRh" customClass="RAMFlipLeftTransitionItemAniamtions" customModule="Flea"/>
             </objects>
             <point key="canvasLocation" x="809" y="-324"/>
+        </scene>
+        <!--FeedView-->
+        <scene sceneID="pmj-jE-My7">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="FeedView" storyboardName="Shop" referencedIdentifier="FeedView" id="YWJ-vW-qIG" userLabel="FeedView" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="3xs-hs-c3q"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PXa-cy-5wI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1216.5" y="-324"/>
         </scene>
         <!--Animated Tab Bar Controller-->
         <scene sceneID="kz1-OS-tvo">
@@ -626,7 +639,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="E23E8F34-255E-4E83-9A0B-F166E0F415C2" translatesAutoresizingMaskIntoConstraints="NO" id="Bmt-Pu-zMd">
+                                                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="520B6250-B6B0-41A6-A28F-E92026773538" translatesAutoresizingMaskIntoConstraints="NO" id="Bmt-Pu-zMd">
                                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                                         <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
                                                                     </imageView>
@@ -853,6 +866,14 @@
             </objects>
             <point key="canvasLocation" x="-134" y="-337"/>
         </scene>
+        <!--SearchViewController-->
+        <scene sceneID="kk1-uc-hpF">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="SearchViewController" storyboardName="Shop" referencedIdentifier="SearchViewController" id="5h6-ZD-xD8" userLabel="SearchViewController" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V5t-nI-e8b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-189.5" y="134"/>
+        </scene>
         <!--Home-->
         <scene sceneID="YmJ-MG-mXH">
             <objects>
@@ -882,46 +903,6 @@
                 <customObject id="yWB-Md-JQ2" customClass="RAMBounceAnimation" customModule="Flea"/>
             </objects>
             <point key="canvasLocation" x="-607" y="-343"/>
-        </scene>
-        <!--Profile-->
-        <scene sceneID="jmL-Eq-geQ">
-            <objects>
-                <viewController id="eH8-f6-0W2" customClass="SettingViewController" customModule="Flea" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="QU1-nW-N0g"/>
-                        <viewControllerLayoutGuide type="bottom" id="3Lh-3i-C2v"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="o3Z-a4-O6z">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="setting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F1o-jz-ZQy">
-                                <rect key="frame" x="132" y="15" width="53" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="profile" selectedImage="setting-active" id="5HC-we-6Pk" customClass="RAMAnimatedTabBarItem" customModule="Flea">
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                <color key="value" red="0.71364659070000003" green="0.71377098559999996" blue="0.71363878250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                        <connections>
-                            <outlet property="animation" destination="rRp-di-8ji" id="ePZ-LE-pSx"/>
-                        </connections>
-                    </tabBarItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="57Q-ov-1dj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="rRp-di-8ji" customClass="RAMFlipLeftTransitionItemAniamtions" customModule="Flea"/>
-            </objects>
-            <point key="canvasLocation" x="1283" y="-270"/>
         </scene>
         <!--Profile-->
         <scene sceneID="g8s-Oe-NEc">
@@ -1352,7 +1333,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="E23E8F34-255E-4E83-9A0B-F166E0F415C2" width="960" height="540">
+        <image name="520B6250-B6B0-41A6-A28F-E92026773538" width="960" height="540">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA

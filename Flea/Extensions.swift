@@ -8,6 +8,7 @@
 
 import UIKit
 import SCLAlertView
+import DateTools
 
 class Extensions: NSObject {
 
@@ -46,5 +47,21 @@ extension String {
         
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailTest.evaluateWithObject(self)
+    }
+}
+
+extension NSDate {
+    func timeSinceNow(formatter: NSDateFormatter) -> String {
+        let elapseTime = Int(NSDate().timeIntervalSinceDate(self))
+        
+        if elapseTime < 3600*24 {
+            return self.timeAgoSinceNow()
+        }
+        
+        if elapseTime < 3600*24*2 {
+            return "Yesterday"
+        }
+        
+        return formatter.stringFromDate(self)
     }
 }

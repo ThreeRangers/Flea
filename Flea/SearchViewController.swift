@@ -11,15 +11,23 @@ import SVPullToRefresh
 
 var market: Market?
 
+@objc protocol SearchViewControllerDelegate  {
+    optional func updateShops()
+}
+
 class SearchViewController: UIViewController {
 
     @IBOutlet weak var shopTableView: UITableView!
     @IBOutlet weak var emptyLabel: UILabel!
     @IBOutlet weak var shopSearchBar: UISearchBar!
     
+    var market: Market!
+    
     var shops:[Shop] = []
     
     var after: String?
+    
+    var delegate : SearchViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +52,12 @@ class SearchViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func onBackTapped(sender: UIBarButtonItem) {
+        dismissViewControllerAnimated(true) { () -> Void in
+            self.delegate!.updateShops!()
+        }
     }
     
     func performSearch(searchTerm: String) {
@@ -109,6 +123,7 @@ class SearchViewController: UIViewController {
             let resultViewController = segue.destinationViewController as!  ResultViewController
             
             resultViewController.shops = shops
+            resultViewController.market = market
             break
             
         default: break

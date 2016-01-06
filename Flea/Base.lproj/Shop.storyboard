@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="RtI-RU-chx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Qzr-WQ-1fs">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--Search View Controller-->
+        <!--Search-->
         <scene sceneID="7pR-tw-SPa">
             <objects>
-                <viewController storyboardIdentifier="NewShop" id="RtI-RU-chx" customClass="SearchViewController" customModule="Flea" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="RtI-RU-chx" customClass="SearchViewController" customModule="Flea" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WqH-je-ZwF"/>
                         <viewControllerLayoutGuide type="bottom" id="y3T-G0-e1J"/>
@@ -18,12 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="67" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jr4-Q8-kRA">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="67" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jr4-Q8-kRA">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="newShopCell" rowHeight="67" id="tgs-GT-0cr" customClass="NewShopCell" customModule="Flea" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="67"/>
+                                        <rect key="frame" x="0.0" y="92" width="320" height="67"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tgs-GT-0cr" id="lcV-mS-Uyz">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="66.5"/>
@@ -72,7 +72,7 @@
                                 </prototypes>
                                 <sections/>
                             </tableView>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="oH9-vo-VEm">
+                            <searchBar contentMode="redraw" misplaced="YES" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="oH9-vo-VEm">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
@@ -96,7 +96,13 @@
                             <constraint firstItem="y3T-G0-e1J" firstAttribute="top" secondItem="jr4-Q8-kRA" secondAttribute="bottom" id="unx-Lr-ZfD"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="6hJ-FV-1FW"/>
+                    <navigationItem key="navigationItem" title="Search" id="6hJ-FV-1FW">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="FxV-N6-9td">
+                            <connections>
+                                <action selector="onBackTapped:" destination="RtI-RU-chx" id="4Mo-1q-1VG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="emptyLabel" destination="SMj-DG-bIm" id="XJE-sr-96d"/>
                         <outlet property="shopSearchBar" destination="oH9-vo-VEm" id="pNp-Hh-vfC"/>
@@ -106,7 +112,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ukl-EH-bOg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-101" y="1093"/>
+            <point key="canvasLocation" x="431" y="1093"/>
         </scene>
         <!--Feeds-->
         <scene sceneID="qcj-bL-vX7">
@@ -242,7 +248,11 @@ Góc nhỏ trong #‎Viets ạk</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Feeds" id="dmc-Nq-VNU">
-                        <barButtonItem key="leftBarButtonItem" title="Close" id="7Jv-KI-jPi"/>
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="7Jv-KI-jPi">
+                            <connections>
+                                <action selector="onCloseTapped:" destination="ecV-Zb-dGK" id="JF1-Om-1Pn"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="feedTableView" destination="vay-wQ-cnE" id="Cu4-N9-qGf"/>
@@ -255,6 +265,7 @@ Góc nhỏ trong #‎Viets ạk</string>
         <!--View Controller-->
         <scene sceneID="sdD-Ri-1Qp">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sbQ-iP-y8F" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="AjJ-Kh-gmB" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BTj-eb-XH1"/>
@@ -283,7 +294,6 @@ Góc nhỏ trong #‎Viets ạk</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sbQ-iP-y8F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="856" y="1740"/>
         </scene>
@@ -534,12 +544,13 @@ Góc nhỏ trong #‎Viets ạk</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z5C-ay-nAB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="437" y="1093"/>
+            <point key="canvasLocation" x="969" y="1093"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fvF-8v-UEj">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QvF-H0-JMj" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RTb-Zk-EQz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="FeedView" automaticallyAdjustsScrollViewInsets="NO" id="QvF-H0-JMj" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4fj-FZ-c6L">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -550,9 +561,26 @@ Góc nhỏ trong #‎Viets ạk</string>
                         <segue destination="ecV-Zb-dGK" kind="relationship" relationship="rootViewController" id="IXp-uB-8kw"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RTb-Zk-EQz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-99" y="1740"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PjI-5D-m2l">
+            <objects>
+                <navigationController storyboardIdentifier="SearchViewController" automaticallyAdjustsScrollViewInsets="NO" id="Qzr-WQ-1fs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pXm-dH-FHE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RtI-RU-chx" kind="relationship" relationship="rootViewController" id="4eG-pq-bfy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LTc-zZ-wqr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-101" y="1093"/>
         </scene>
     </scenes>
     <resources>

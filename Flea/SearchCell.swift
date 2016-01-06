@@ -15,6 +15,8 @@ class SearchCell: UICollectionViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var infoTableView: UITableView!
     
+    var market: Market!
+    
     var shop: Shop! {
         didSet {
             nameLabel.text = shop.name
@@ -32,6 +34,8 @@ class SearchCell: UICollectionViewCell {
     
     @IBAction func onAddButtonTapped(sender: UIButton) {
         print("shop", shop)
+        let marketRelation = shop.relationForKey("market")
+        marketRelation.addObject(self.market)
         shop.saveData()
         
     }

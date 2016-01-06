@@ -20,12 +20,16 @@ class Feed: NSObject {
         self.message = feedData["message"] as? String
         
         let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-ddTHH:mm:ss.SSSZ"
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss+SSSS"
+        dateFormatter.timeZone = NSTimeZone.systemTimeZone()
+        
+        let defaultFormatter = NSDateFormatter()
+        defaultFormatter.dateFormat = "dd/MM/yyyy HH:mm:ss"
 
         let dt = dateFormatter.dateFromString(feedData["created_time"] as! String)
-        print("date", dt)
         
-        self.createdAt = feedData["created_time"] as? String
+        self.createdAt = dt?.timeSinceNow(defaultFormatter)
+        print(createdAt)
         self.imageUrl = feedData["picture"] as? String
         self.link = feedData["link"] as? String
         self.location = feedData["place"]?["name"] as? String

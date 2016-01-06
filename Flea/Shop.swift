@@ -101,6 +101,7 @@ class Shop: PFObject, PFSubclassing {
                 return
             }
             self.finishCallback?(shop: self)
+            SCLAlertView().showSuccess("Success", subTitle: "New shop is added", closeButtonTitle: "Dismiss", duration: 0.0, colorStyle: 0x6EB007, colorTextButton: 0xFFFFFF)
         })
     }
     

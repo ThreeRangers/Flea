@@ -17,6 +17,8 @@ class ResultViewController: UIViewController, UICollectionViewDelegate, UICollec
     var shops: [Shop] = []
     var storedOffsets = [Int: CGFloat]()
     
+    var market: Market!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -48,6 +50,7 @@ class ResultViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         // Configure the cell
         cell.shop = shops[indexPath.row]
+        cell.market = market
         
         return cell
     }

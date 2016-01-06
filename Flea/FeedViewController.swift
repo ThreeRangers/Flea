@@ -13,7 +13,7 @@ class FeedViewController: UIViewController {
     
     @IBOutlet weak var feedTableView: UITableView!
     var feeds: [Feed] = []
-    var facebookID: String = "172715606249414"
+    var shop: Shop!
     
     var after: String?
 
@@ -26,10 +26,15 @@ class FeedViewController: UIViewController {
         
         //after = "172715606249414_461962963991342"
         
-        loadFeeds("172715606249414")
+        if let facebookID = shop.facebookID {
+            loadFeeds(facebookID)
+        } else {
+            showDialog("Invalid", msg: "This shop does not associate with any facebook account", colorStyle: 0xFD695C)
+            dismissViewControllerAnimated(true, completion: nil)
+        }
         
         feedTableView.addInfiniteScrollingWithActionHandler { () -> Void in
-            self.loadFeeds(self.facebookID)
+            self.loadFeeds(self.shop.facebookID!)
         }
         
         navigationController?.navigationBar.barTintColor = MyColor.Colors.RedPrimary
@@ -80,15 +85,11 @@ class FeedViewController: UIViewController {
         }
         
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func onCloseTapped(sender: UIBarButtonItem) {
+        dismissViewControllerAnimated(true, completion: nil)
     }
-    */
+    
 
 }
 

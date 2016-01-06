@@ -9,6 +9,7 @@
 import UIKit
 import DateTools
 import MapKit
+import SCLAlertView
 
 var headViewCellID = "shopHeaderViewCell"
 class ShopViewController: UIViewController {
@@ -128,7 +129,40 @@ class ShopViewController: UIViewController {
             addingShopVC.market = self.market
         
         }
+        
+        if segue.identifier == "searchSegue" {
+            let navController = segue.destinationViewController as! UINavigationController
+            let searchViewController = navController.topViewController as! SearchViewController
+            
+            searchViewController.delegate = self
+            searchViewController.market = self.market
+            
+        }
+        
+        if segue.identifier == "feedSegue" {
+            let nav = segue.destinationViewController as! UINavigationController
+            let vc = nav.viewControllers.first   as! FeedViewController
+            
+            let cell = sender as! UITableViewCell
+            let indexPath = tableView.indexPathForCell(cell)!
+            
+            vc.shop = shops[indexPath.row]
+        }
     }
+    
+    @IBAction func onAddTapped(sender: DOFavoriteButton) {
+        let alertView = SCLAlertView()
+        alertView.addButton("New Shop") { () -> Void in
+            self.performSegueWithIdentifier("addShopSegue", sender: self)
+        }
+        
+        alertView.addButton("From Facebook") { () -> Void in
+            self.performSegueWithIdentifier("searchSegue", sender: self)
+        }
+        
+        alertView.showNotice("Add New Shop", subTitle: "Add new shop or import from Facebook")
+    }
+    
 }
 
 
@@ -357,7 +391,7 @@ extension ShopViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
 }
 
-extension ShopViewController: AddingShopViewControllerDelegate {
+extension ShopViewController: AddingShopViewControllerDelegate, SearchViewControllerDelegate {
     func updateShops() {
         loadData()
     }
